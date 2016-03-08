@@ -66,7 +66,17 @@
 \newcommand{\hmpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc}\fi}}  
 \newcommand{\hkpc}{{\ifmmode{h^{-1}{\rm kpc}}\else{$h^{-1}$kpc}\fi}}  
 \newcommand{\hMsun}{{\ifmmode{h^{-1}{\rm {M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}  
-\newcommand{\hmsun}{{\ifmmode{h^{-1}{\rm {M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}  
+\newcommand{\Mmin}{{\ifmmode{{M_{\rm min}}}\else{${M_{\rm min}}$}\fi}}
+\newcommand{\mmin}{{\ifmmode{{M_{\rm min}}}\else{${M_{\rm min}}$}\fi}}
+\newcommand{\mmax}{{\ifmmode{{M_{\rm max}}}\else{${M_{\rm max}}$}\fi}}
+\newcommand{\lmmin}{{\ifmmode{{\log M_{\rm min}}}\else{${\log M_{\rm min}}$}\fi}}
+\newcommand{\lmmax}{{\ifmmode{{\log M_{\rm max}}}\else{${\log M_{\rm max}}$}\fi}}
+
+\newcommand{\Mmax}{{\ifmmode{{M_{\rm max}}}\else{${M_{\rm max}}$}\fi}}
+\newcommand{\dm}{{\ifmmode{{\Delta M}}\else{$\Delta M$}\fi}}
+\newcommand{\dlm}{{\ifmmode{{\Delta \log M}}\else{$\Delta \log M$}\fi}}
+\newcommand{\focc}{{\ifmmode{{f_{\rm occ}}}\else{${f_{\rm occ}}$}\fi}}
+
 \newcommand{\Msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}  
 \newcommand{\msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}  
 \newcommand{\lya}{{Lyman$\alpha$~}}
@@ -100,19 +110,26 @@
 \newcommand{\reff}{{\ifmmode{r_{\mbox{\tiny eff}}}\else{$r_{\mbox{\tiny eff}}$}\fi}}
 %#########################################################################
 
+%TO DO COMMANDS. Highlight region that needs extra work  #############################################################
+\newcommand{\todo}{\ifmmode \text{\Huge{\(\bullet\)}} \else {\Huge$\bullet$}\fi}
+% \newcommand{\todo}{\ifmmode {\Huge \bullet} \else {\Huge$\bullet$}\fi}
+\newcommand{\tido}{\ifmmode {\bullet} \else $\bullet$\fi}
+\newcommand{\REFS}{(\todo REFS) }
+\newcommand{\toref}{(\todo REFS)}
+%#########################################################################
+
 \begin{document}
 
 %=========================================================================
 %		FRONT MATTER
 %=========================================================================
-\title{The galaxy-halo connection for Lyman-$\alpha$ emitters at $z=3$}
-\author[J. Mejia and J.E. Forero-Romero]{
-\parbox[t]{\textwidth}{\raggedright 
-  J. Mejia \thanks{---}$^{1}$,
+\title{Uncertainty on the galaxy-halo connection for Lyman-$\alpha$ emitters at $z=3$}
+\author[J. Mejia-Restrepo and J.E. Forero-Romero]{\parbox[t]{\textwidth}{\raggedright 
+  J. Mejia-Restrepo \thanks{jemejia@das.uchile.cl}$^{1}$,
   Jaime E. Forero-Romero \thanks{je.forero@uniandes.edu.co}$^{2}$ 
 }
 \vspace*{6pt}\\
-$^1$Chile\\
+$^1,^3$Departamento de Astronom\'{i}a, Universidad de Chile, Camino el Observatorio 1515, Santiago, Chile\\
 $^2$Departamento de F\'{i}sica, Universidad de los Andes, Cra. 1
 No. 18A-10, Edificio Ip, Bogot\'a, Colombia
 }
@@ -128,15 +145,207 @@ Cosmology: theory - large-scale structure of Universe -
 Methods: data analysis - numerical - N-body simulations
 \end{keywords}
 
-
+% JF - 1. Intro 3/10
+% JF - 2. Methodology 1/7
 
 %*************************************************************************
 \section{Introduction}
 \label{sec:introduction}
+\toref ADD NEWER REFERENCES
+Lyman-$\alpha$ emitting galaxies (LAEs) are central to a wide range
+of subjects in extragalactic astronomy. 
+LAEs can be used as probes of reionization \citep{Dijkstra11}, tracers of large scale structure \citep{Koehler2007},  signposts for low metallicity stellar populations, markers of the galaxy formation process at high redshift \citep{Dayal2009,ForeroRomero2012} and tracers of active star formation \citep{Guaita2013}. 
+
+In most of those cases, capitalizing the observations requires  understanding how LAEs are formed within an explicit cosmological context. 
+Under the current structure formation paradigm the dominant matter content of the Universe is dark matter (DM). 
+Each galaxy is thought to be hosted by a larger dark matter structure known as a halo. \citep{Peebles1980,SpringelNature05}. 
+Understanding the cosmological context of LAEs thus implies studying the galaxy-halo connection. 
+Galaxy formation models suggest that the physical processes that regulate the star formation cycle are dependent on halo mass \citep{Behroozi2013a}.
+The mass becomes the most important element in the halo-galaxy connection. 
+   
+The goal becomes finding the typical DM halo mass of halos hosting LAES.
+In the case of LAEs there are different ways to find this mass range.
+One approach is theoretical, using general astrophysical principles to find the relationship between halo mass, intrinsic \ly\ luminosities and observed \ly\ luminosities. This approach is usually implemented through semi-analytic models \citep{Garel2012,Orsi2012} and  full N-body hydrodynamical simulations \citep{Laursen2007, Dayal2009, ForeroRomero2011, Yajima2012}. 
+
+%JF
+
+The downside of these calculations is the uncertainty in the estimation of the escape fraction of \ly\ photons. Given the resonant nature of the \ly\ line, the escape fraction is sensitive to  the dust contents, density, temperature, topology and kinematics of the neutral Hydrogen in the interstellar medium (ISM). The process of finding a consensus on the expected value
+for the \ly\ escape fraction in high redshift galaxies is still matter
+of open debate
+\citep{Neufeld1991,Verhamme2006,ForeroRomero2011,Dijkstra2012,Laursen2013,Orsi2012}.
+
+A different approach to infer the typical mass of halos hosting
+LAEs is based on the spatial clustering information. 
+This approach uses the fact
+that in CDM cosmologies the spatial clustering of galaxies on large
+scales is entirely dictated by the halo distribution
+\citep{Colberg00}, which in turn has a strong dependence on halo
+mass. 
+Using measurements of the angular correlation function of LAEs,
+observers have put constraints on the typical mass and occupation
+fraction of the putative halos hosting these galaxies
+\citep{Hayashino2004,Gawiser07,Nilsson2007,Ouchi2010,Bielby16}. 
+In these studies the observations are done on fields of $\sim 1$ deg$^{2}$ and
+the conclusions derived on the halo host mass do not elaborate on the uncertainty resulting from the cosmic variance on these fields.
+
+In this letter we investigate the impact of cosmic variance in
+constraining the mass and occupation fraction of halos hosting LAEs at $z=3$.
+We build mock surveys from a cosmological N-body to compare them against the observations in \cite{Bielby16} using the angular correlation function. 
+We use a simple model to populate a halo in the simulation with a LAE   
+assuming a minimum (\mmin) and maximum mass (\mmax) for the dark matter halos hosting LAEs without predicting a \ly\  luminosity. 
+This approach bypasses all the physical uncertainties associated to star formation and radiative transfer.
+We use the Markov Chain Monte Carlo technique to obtain the likelihood of the parameters given the observational constraints.
+
+Throughout this letter we assume a $\Lambda$CDM cosmology with the
+following values for the cosmological parameters, $\Omega_{m}=0.27$,
+$\Omega_{\Lambda}=0.73$ and $h=0.70$, corresponding to the matter
+density, vacuum density and the Hubble constant in units of 100 km
+s$^{-1}$ Mpc$^{-1}$. 
+
+\section{Methodology}
+
+The base of our method is the comparison between observations and mock
+catalogs. 
+This approach allows us to take explicitly into account cosmic variance. 
+The comparison has four key elements. First, the observations we take as a benchmark. Second, the N-body simulation and the halo catalogs we use to build the mocks. Third, the parameters describing our model to assign a LAE to a halo. Fourth, the statistical method we adopt to compare observations and simulations.
+We describe in detail these four elements in the following subsections.
+
+
+\begin{figure*}
+\includegraphics[width=0.99\textwidth]{likelyplot_1deg_total.png}
+%\includegraphics[width=0.47\textwidth]{likelyplot_1degf.png}
+%\includegraphics[width=0.47\textwidth]{likelyplot_1degdM.png}
+%\includegraphics[width=0.47\textwidth]{likelyplot_1degdMf.png}
+\caption{Likelihood}
+\label{fig:like}
+\end{figure*}
+
+\subsection{Observational constraints}
+\label{subsec:obs}
+\citet{Bielby16} used narrow band imaging to detect 643 LAE candidates
+at $z\sim 3$  with equivalent widths of $\gtrsim$65\AA and a flux limit
+of $2\times10^17{\rm erg/cm^2/s}$ ($L\sim 7\times10^{42}{\rm erg/s} $). 
+Using spectroscopy they found a 22\% contamination fraction.
+Their observations cover 5 (out of 9) independent and co-spatial fields of the VLT LBG Redshift Survey (VLRS). 
+The  total observed  area corresponds to 1.07$\rm deg^2$ that translates to
+$\sim$80$^2\hMpc^2$ in a comoving scale. \citet{Bielby16} used the
+NB497  narrow-band filter whose 77\AA FWHM and 154\AA FWTM correspond to a total observational depth of 44\hMpc  and 82\hMpc comoving, respectively.
+
+%JF
+
+\subsection{Simulation and halo catalog}
+\label{subsec:sim}
+
+We use results from the \todo Bolshoi simulation \citep{Bolshoi}\toref which was performed in a cubic volume of 250 $h^{-1}$ Mpc comoving on a side. The dark matter distribution was sampled using \todo $2048^{3}$ particles. The cosmological parameters are consistent with a Wilkinson Microwave Anisotropy Probe (WMAP) ninth year data \todo PLANK? (\toref) with a matter density
+$\Omega_{\rm m} = 0.307$, cosmological constant
+$\Omega_{\Lambda}=0.693$, dimensionless Hubble constant $h=0.70$, slope
+of the power spectrum \todo $n=0.95$ and normalization of the power
+spectrum\todo $\sigma_{8}=0.82$ \todo.  
+This translates into a particle mass of \todo $m_{\rm p}=1.54\times 10^{8}$ $h^{-1}$ M$_{\odot}$.  
+
+We use halo catalogs constructed with a Bound-Density-Maxima (BDM) algorithm. The catalogs were obtained from the publicly available
+Multidark database \todo \footnote{{\tt
+    http://www.multidark.org/MultiDark/}} \citep{MultiDark}. For each
+halo in the box we extract its comoving position and mass. 
+We focus our work on halos more massive than $1.54\times 10^{9}$\hMsun resolved with at least  $10$ particles.
+%the reasons for this choice are explained in the next sub-section. 
+
+We divide the total volume of the snapshot of the simulation at z$\sim$3
+into  27 smaller mock volumes mimicking the  comoving area and depth  
+reported in \citet{Bielby16} and described in \S \ref{subsec:obs}. 
+This allows  us  to take explicitly into account the effects of cosmic variance.
+
+\subsection{A model to populate halos with LAEs}
+\label{subsec:mocks}
+
+We build a model to assign LAEs to a DM halo. 
+We are not concerned on the exact LAE luminosity, we only care about a yes/no answer to the following question. Does this halo host a LAE?
+
+We first assume that a dark matter halo can host one detectable LAE at most.  
+This assumption is consistent with theoretical analysis of the correlation function \citep{Jose2013b} and observations that confirm a lack of class pairs in LAEs \cite{Bond2009}. 
+
+Then we say that a halo will host a LAE with probability $f_{\rm occ}$ if and only if the halo mass is in the range $M_{\rm min}< M_{\rm h} < M_{\rm max}$.
+The probability $f_{\rm occ}$ can be thought as the occupation fraction of halos which can be automatically set as the ration of the observed number of LAEs to the number of halos within the considered mass range, that is $f_{\rm occ}\equiv N_{\rm LAE}/N_{\rm halos}$.
+
+The occupation fraction varies along  the mock fields tracing the cosmic variance changing in a factor $\sim 2$ ($\sim 0.3$, see left panel in Fig. \ref{fig:cosmicv}). The interpretation of the occupation fraction $f_{\rm occ}$ involves two phenomena: the actual presence of a star forming galaxy in a halo and its detectability as a LAE. 
+
+We do not explore any physical model to disentangle these two effects. This means that our model does not assign a luminosity or escape fraction to each
+LAE.
+We avoid this in order to maintain theoretical uncertainties to a minimum. 
+This flexibility allows us to explore a wide range of possible masses for
+the host halos without any strong theoretical prejudice regarding the
+details of star formation and \ly\  escape fraction.
+
+We also artificially contaminate our mock catalogs with 22$\%$ randomly distributed data points to mimic the fraction of interlopers in observations \citet{Bielby16} .
+On top of that we apply rejection sampling  to our LAE selection taking the transmission function of the NB479 filter used in their observations as a radial selection factor.
+
+In what follows we note by the letter ${\mathcal M}$ a model
+defined by a particular choice of the two parameters $M_{\rm min}$, 
+$M_{\rm  max}$. For each model  ${\mathcal M}$ we define $\tilde{f}_{\rm occ}$ as the median occupation fraction within the the mock fields and  $\Delta M \equiv \mmax-\mmin$.
+
+\subsection{Exploring and selecting consistent models}
+
+We use the angular correlation function to compare the observations with our mock catalogs. 
+This is done trough a thorough exploration of the parameter space of the models ${\mathcal M}$  by  means of a Monte Carlo Markov Chain minimization using  the EMCEE python package \citep{emcee2013}.
+We put a flat prior on $\log M_{\rm min}$ and $\log \mmax$ to vary between  $9.2$ up to $13.4$, corresponding to the halo mass range of the simulation at $z=3$. 
+Given that the typical scatter  in $N_{\rm halos}$ is about 0.3 dex (i.e. about  a factor of 2), our parameter space is restricted to models where the median number of dark matter halos is larger than  $N_{\rm LAE}/3$. 
+The MCMC exploration is done using a total of 24 seeds and 400 iterations (9600 models) to sample the posterior PDF,  $P(\mmin, \mmax, f_{\rm occ}| \mathcal{M}) \propto \exp(-\chi_{\mathcal M}^2/2)$, with
+
+\begin{equation}
+\chi_{\mathcal M}^2=\sum_{\theta}\left[\frac{\left( \rm{ACF}_{\mathcal M}\left(\theta\right) - \rm{ACF}_{\rm obs}\left(\theta\right)\right)^2}{ \sigma_{\rm \mathcal M}^{2}\left(\theta\right) + \sigma_{\rm obs}^{2}\left(\theta\right)}\right]
+\end{equation}
+%
+where  $\rm{ACF}_{\mathcal M}$ and  $\rm{ACF}_{\rm obs}$ are the ACF of the explored model ${\mathcal M}$ and the observational ACF reported by \citet{Bielby16} respectively. $\sigma_{\rm \mathcal M}$ is the associated 1-$\sigma$ scatter 
+of the $\rm{ACF}_{\mathcal M}$ as a product of cosmic variance and $\sigma_{\rm obs}$ is the observational error associated to $\rm{ACF}_{\rm obs}$.  The $\rm{ACF}_{\mathcal M}$s are computed using  the Landy \&  Szalay estimator  \citep{Landy1993}.
+
+
+
+
+\section{Results and Discussion}
+
+
+
+
+\subsection{Constraining \mmin, \mmax and \focc in DHM hosting LAEs} 
+
+In Fig. \ref{fig:like} the posterior probability distributions in the \mmin-\mmax, \mmin-\focc, \mmin-\dm, \mmax-\focc, \mmax-\dm and \focc-\dm\ parameter spaces. We find that the \mmin and \mmax parameter space cannot be well constrained mainly because of cosmic variance and the large observational Poisonnian uncertainty in the ACF. We however found that 10.0$<\log \mmin<$11.1 and 11.0$<\log\mmax<$12.8.   We interestingly find that \focc\ is basically completely determine by \mmin  going from \focc$=$0.015 when $\log\mmin=$10.0 to \focc$=$0.43 when $\log\mmin=$11.1. We remark that those models where $\log \focc>0.0$ ($\focc>1$) correspond 
+to models where the number density  of halos is smaller than the number of observed LAEs but are
+still consistent because of the uncertainty in the median number of LAEs in the universe due to cosmic variance.
+
+\begin{figure}
+\includegraphics[width=0.47\textwidth]{mmin_dev.png}
+\includegraphics[width=0.47\textwidth]{corr.png}
+\caption{Left: $\log M_{\rm min}$ vs $\log M_{\rm 50\%}$ (black), $\log M_{\rm 16\%}$-$\log M_{\rm 84\%}$ (blue) and  $\log M_{\rm 2.5\%}$-$\log M_{\rm 97.5\%}$(red) for different values of $\log M_{\rm max}$. The points are color coded by $\Delta \log M\left[\rm{M_{\odot}h^{-1} ]}\right]$. THe green line accounts for the 1:1 relation. Right: Angular Correlation functions for $\log M_{\rm min}[\rm{M_{\odot}h^{-1}}]=10.5$ and different values of $\Delta M$. The error bars represent the 1 sigma deviation due to cosmic variance.}
+\label{fig:mmed}
+\end{figure}
+
+\subsection{Halo mass distribution within models}
+
+In  the top panel of Fig. \ref{fig:mmed} we show the 50 ($\log M_{50}$, black dots), the 84 ($\log M_{84}$,blue diamonds) and 95 ($\log M_{95}$, red squares) percentiles of the LAE halo mass as a function of \lmmin\ for each of the models that we run in our MCMC simulation.  The points are color coded according to their \dlm\ associated value. We can see that the median mass, $M_{50}$, and $M_{84}$ are not very sensitive to  $\lmmax=\lmmin +\dlm$ specially when $\dlm\gtrsim1.0$dex. We particularly found that  $\lmmin\lesssim\log M_{50}\lesssim\lmmin+0.2\rm{dex}$ and that $\lmmin+0.1\rm{dex}\lesssim\log M_{50}\lesssim\lmmin+0.5\rm{dex}$ regardless of the value of \dlm. The latter is a consequence of the very steepen distribution of the dark matter mass function  and is at the same time the reason for the almost perfect one to one relation between \mmin\ and \focc. However, it can also be seen in Fig. \ref{fig:mmed} that $\log M_{84}$ is very sensitive to \lmmax ($\lmmin+0.2\rm{dex}\lesssim\log M_{50}\lesssim\lmmin+1.5\rm{dex}$). Thereby, any differences in the clustering strength of models sharing the same \mmin but different \mmax should be mainly driven by the  $\sim16\%$ most massive  halos of each model $\mathcal{M}$. 
+
+In order to estimate the effect of most massive halos in  $ACF_{\mathcal{M}}$ in the bottom panel of Fig. \ref{fig:mmed} we show the computed $ACF_{\mathcal{M}}$ of models with $\lmmin=0.5$ and different values of $\dlm$. We can see that the clustering gets stronger for larger values of \dlm. Nevertheless, due to the large impact of cosmic variance at the volume of the current observations all the models  are basically consistent within errors. The last result explain the current difficulty to put tighter constrains in \lmmax\ in our model.
+
+\subsection{Constraining DMH mass with cosmic variance}
+In the left panel of Fig. \ref{fig:cosmicv} we show the number halo distribution (NHD) in the  mock fields of the simulation for different models $\mathcal{M}$. By simple inspection one can infer an increase in the distribution with as \lmmin increase.  This trend is confirmed in the right panel of Fig. \ref{fig:cosmicv}  where we plot the central 1-$\sigma$ (blue diamonds) and 2-$\sigma$  (red dots) widths  of the NDH as a function of \lmmin. We particularly found that when we consider survey fields of $\sim1{\rm deg^2}$, the central  1-$\sigma$ (2-$\sigma$) width of the NHD increases monotonically from 0.05dex (0.10dex) when $\lmmin=9.5$ to 0.20dex (0.35dex) when $\lmmin=12.0$. The latter result opens the possibility to constrain the \lmmin (as well as the median mass) of LAEs by simply measure the width of the distribution of observed LAE along several observational fields mapping $\sim1{\rm deg^2}$ in area and the observational depth determined by the NB479 filter.
+
+
+
 %*************************************************************************
 
+
+
+
+
+\begin{figure}
+\includegraphics[width=0.23\textwidth, height=0.19\textwidth]{ndist.png}
+\includegraphics[width=0.23\textwidth, height=0.19\textwidth]{mmin_dfocc1.png}
+\caption{Left: Halo number distribution  over the 54 mock field of the simulation for different models of $M_{\rm min}$-$M_{\rm max}$.Right:Width of the halo number distribution over the 54 mock field of the simulation ($\Delta \log \left( N_{\rm halos}/\tilde{N}_{\rm halos}\right)$) of the central 68 (blue diamonds) and  95(red circles)  percentiles vs $M_{\rm min}$. Points are color coded according to their associated value of $\Delta M \equiv M_{\rm min}-M_{\rm min}$. }
+\label{fig:cosmicv}
+\end{figure}
+
+
+
 \bibliographystyle{mn2e}
-\citep{Hinshaw2013}
-\bibliography{references}
+\bibliography{references.bib}
 
 \end{document}
