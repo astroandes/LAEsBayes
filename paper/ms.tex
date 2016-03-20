@@ -1,41 +1,9 @@
-\documentclass{emulateapj} 
-%\documentclass[a4,useAMS,usenatbib,usegraphicx]{mn2e} 
-
-%External Packages and personalized macros
-%=========================================================================
-%		EXTERNAL PACKAGES
-%=========================================================================
-%\usepackage{amsmath} 
-%\usepackage{amssymb} 
-%\usepackage[section]{placeins}
-
+\documentclass{emulateapj}
+\submitted{{\it Submitted for publication in ApJ}}
+\usepackage{multirow,color,wrapfig,ulem}
 \usepackage {graphicx}
-
-\usepackage{amsmath}
-\usepackage{amssymb}
 \usepackage{graphics}
-\usepackage{epsfig}
-\usepackage{float}
-\bibliographystyle{apj}
-
-\usepackage {graphicx}
-
-%\usepackage{graphics}
-%\usepackage[dvips]{epsfig}
-%\usepackage{epsfig}  
-\usepackage{color}
-\usepackage[normalem]{ulem}
-\usepackage{hyperref}
-\usepackage{caption}
-%Non reposionated tables
-%\usepackage{float}
-\restylefloat{table}
-%Multiple columns support for tables
-\usepackage{array}
-\usepackage{booktabs}
-\setlength{\heavyrulewidth}{1.5pt}
-\setlength{\abovetopsep}{4pt}
-\pdfminorversion=5
+\usepackage[dvips]{epsfig}
 
 %=========================================================================
 %		INTERNAL MACROS
@@ -58,19 +26,6 @@
 \newcommand{\beq}{\begin{eqnarray}}  
 \newcommand{\eeq}{\end{eqnarray}}  
 \newcommand{\zz}{$z\sim 3$} 
-%\newcommand{\apj}{ApJ}  
-%\newcommand{\apjs}{ApJS}  
-%\newcommand{\apjl}{ApJL}  
-%\newcommand{\aj}{AJ}  
-%\newcommand{\mnras}{MNRAS}  
-%\newcommand{\mnrassub}{MNRAS accepted}  
-%\newcommand{\aap}{A\&A}  
-%\newcommand{\aaps}{A\&AS}  
-%\newcommand{\araa}{ARA\&A}  
-%\newcommand{\nat}{Nature}  
-%\newcommand{\physrep}{PhR}
-%\newcommand{\pasp}{PASP}    
-%\newcommand{\pasj}{PASJ}    
 \newcommand{\avg}[1]{\langle{#1}\rangle}  
 \newcommand{\ly}{{\ifmmode{{\rm Ly}\alpha}\else{Ly$\alpha$}\fi}}
 \newcommand{\hMpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc}\fi}}  
@@ -95,16 +50,6 @@
 \newcommand{\clara}{{\texttt{CLARA}}~}
 \newcommand{\rand}{{\ifmmode{{\mathcal{R}}}\else{${\mathcal{R}}$ }\fi}}  
 %SAMPLES
-\newcommand{\GHBDM}{\texttt{GH}$_{\mbox{\tiny{BDM}}}$ }
-\newcommand{\GHFOF}{\texttt{GH}$_{\mbox{\tiny{FOF}}}$ }
-\newcommand{\IHBDM}{\texttt{IH}$_{\mbox{\tiny{BDM}}}$ }
-\newcommand{\IHFOF}{\texttt{IH}$_{\mbox{\tiny{FOF}}}$ }
-\newcommand{\PBDM}{\texttt{P}$_{\mbox{\tiny{BDM}}}$ }
-\newcommand{\PFOF}{\texttt{P}$_{\mbox{\tiny{FOF}}}$ }
-\newcommand{\IPBDM}{\texttt{IP}$_{\mbox{\tiny{BDM}}}$ }
-\newcommand{\IPFOF}{\texttt{IP}$_{\mbox{\tiny{FOF}}}$ }
-\newcommand{\RIPBDM}{\texttt{RIP}$_{\mbox{\tiny{BDM}}}$ }
-\newcommand{\RIPFOF}{\texttt{RIP}$_{\mbox{\tiny{FOF}}}$ }
 
 
 %MY COMMANDS #############################################################
@@ -130,8 +75,9 @@
 \newcommand{\toref}{(\todo REFS)}
 %#########################################################################
 
-\begin{document}
 
+
+\begin{document}
 %=========================================================================
 %		FRONT MATTER
 %=========================================================================
@@ -155,7 +101,7 @@ $^3$FACom-Instituto de F\'isica-FCEN, Universidad de Antioquia, Calle 70 No. 52-
 \begin{abstract}
 We study the impact of cosmic variance and observational uncertainties in constraining the mass and  occupation fraction ($f_{\rm occ}$) of dark matter halos hosting \ly\ Emitting  Galaxies at high redshift (LAEs).
 We use a N-body simulation to construct mock catalogs with the same typical size  of observed fields at $z=3.1$ ($\sim 1 {\rm deg^2}$) to match the observed  angular correlation function (ACF) and number density of LAEs.  
-In our model a dark matter halo with mass in the range $M_{\rm min}<M_{\rm h}<M_{\rm   max}$ can only host one detectable LAE at most. By following a thorough Markov Chain Monte-Carlo exploration of the parameter space determined by $M_{\rm min}$ and $M_{\rm   max}$, our analysis shows that $f_{\rm occ}$ is uniquely determined by $M_{\rm min}$ regardless of $M_{\rm max}$ using the relation $\focc\sim0.1\left(\mmin/10^{10.5}\right)^{0.93}$ . 
+In our model a dark matter halo with mass in the range $M_{\rm min}<M_{\mathrm h}<M_{\rm   max}$ can only host one detectable LAE at most. By following a thorough Markov Chain Monte-Carlo exploration of the parameter space determined by $M_{\rm min}$ and $M_{\rm   max}$, our analysis shows that $f_{\rm occ}$ is uniquely determined by $M_{\rm min}$ regardless of $M_{\rm max}$ using the relation $\focc\sim0.1\left(\mmin/10^{10.5}\right)^{0.93}$ . 
 However, the current observational data only allows us to put weak constraints on $M_{\rm min}$, $M_{\rm max}$ and consequently on $f_{\rm occ}$. 
 Particularly, we find that $10^{9.6}\hMsun\leq M_{\rm min}\leq 10^{11.0}\hMsun$ , $10^{10.9}\hMsun\leq M_{\rm max}\leq 10^{13.0}\hMsun$ and $0.02\leq f_{\rm occ}\leq 0.30$. 
 Nevertheless, we also find that  the upcoming large surveys can help to put tighter constraints on $M_{\rm min}$ and $f_{\rm occ}$ through the width measurement of the LAE number distribution function obtained over several fields of the same size of current observations. 
@@ -293,8 +239,8 @@ We are not concerned on the exact LAE luminosity, we only care about a yes/no an
 We first assume that a dark matter halo can host one detectable LAE at most.  
 This assumption is consistent with theoretical analysis of the correlation function \citep{Jose2013b} and observations that confirm a lack of class pairs in LAEs \cite{Bond2009}. 
 
-Then we say that a halo will host a LAE with probability $f_{\rm occ}$ if and only if the halo mass is in the range $M_{\rm min}< M_{\rm h} < M_{\rm max}$.
-The probability $f_{\rm occ}$ can be thought as the occupation fraction of halos which can be automatically set as the ration of the observed number of LAEs to the number of halos within the considered mass range, that is $f_{\rm occ}\equiv N_{\rm LAE}/N_{\rm halos}$.
+Then we say that a halo will host a LAE with probability $f_{\rm occ}$ if and only if the halo mass is in the range $M_{\rm min}< M_{\mathrm h} < M_{\rm max}$.
+The probability $f_{\rm occ}$ can be thought as the occupation fraction of halos which can be automatically set as the ration of the observed number of LAEs to the number of halos within the considered mass range, that is $f_{\rm occ}\equiv N_{\rm LAE}/N_{\mathrm halos}$.
 
 Fig. \ref{fig:cosmicv0}  shows the cumulative halo number distribution (HND) in the  mock fields of the simulation for different models $\mathcal{M}$. From this figure we can see that the number of dark matter halos along the mock fields for different models $\mathcal{M}$ varies within a factor of $\sim 2$ ($\sim 0.3$dex) tracing the cosmic variance. As a consequence, the occupation fraction varies along  the mock fields  by the same factor factor. The interpretation of the occupation fraction $f_{\rm occ}$ involves two phenomena: the actual presence of a star forming galaxy in a halo and its detectability as a LAE. 
 
@@ -317,15 +263,24 @@ $M_{\rm  max}$. For each model  ${\mathcal M}$ we define $\tilde{f}_{\rm occ}$ a
 We use the angular correlation function to compare the observations with our mock catalogs. 
 This is done trough a thorough exploration of the parameter space of the models ${\mathcal M}$  by  means of a Monte Carlo Markov Chain minimization using  the EMCEE python package \citep{emcee2013}.
 We put a flat prior on $\log M_{\rm min}$ and $\log \mmax$ to vary between  $9.2$ up to $13.4$, corresponding to the halo mass range of the simulation at $z=3$. 
-Given that the typical scatter  in $N_{\rm halos}$ is about 0.3 dex (i.e. about  a factor of 2), our parameter space is restricted to models where the median number of dark matter halos is larger than  $N_{\rm LAE}/3$. 
-The MCMC exploration is done using a total of 24 seeds and 400 iterations (9600 models) to sample the posterior PDF,  $P(\mmin, \mmax, f_{\rm occ}| \mathcal{M}) \propto \exp(-\chi_{\mathcal M}^2/2)$, with
+Given that the typical scatter  in $N_{\mathrm halos}$ is about 0.3 dex (i.e. about  a factor of 2), our parameter space is restricted to models where the median number of dark matter halos is larger than  $N_{\rm LAE}/3$. 
+The MCMC exploration is done using a total of 24 seeds and 400
+iterations (9600 models) to sample the posterior PDF,  $P(\mmin,
+\mmax, f_{\rm occ}| \mathcal{M}) \propto \exp(-\chi_{\mathcal
+  M}^2/2)$, with 
 
 \begin{equation}
 \chi_{\mathcal M}^2=\sum_{\theta}\left[\frac{\left( \rm{ACF}_{\mathcal M}\left(\theta\right) - \rm{ACF}_{\rm obs}\left(\theta\right)\right)^2}{ \sigma_{\rm \mathcal M}^{2}\left(\theta\right) + \sigma_{\rm obs}^{2}\left(\theta\right)}\right]
 \end{equation}
 %
-where  $\rm{ACF}_{\mathcal M}$ and  $\rm{ACF}_{\rm obs}$ are the ACF of the explored model ${\mathcal M}$ and the observational ACF reported by \citet{Bielby16} respectively. $\sigma_{\rm \mathcal M}$ is the associated 1-$\sigma$ scatter 
-of the $\rm{ACF}_{\mathcal M}$ as a product of cosmic variance and $\sigma_{\rm obs}$ is the observational error associated to $\rm{ACF}_{\rm obs}$.  The $\rm{ACF}_{\mathcal M}$s are computed using  the Landy \&  Szalay estimator  \citep{Landy1993}.
+where  $\rm{ACF}_{\mathcal M}$ and  $\rm{ACF}_{\rm obs}$ are the ACF
+of the explored model ${\mathcal M}$ and the observational ACF
+reported by \citet{Bielby16} respectively. $\sigma_{\rm \mathcal M}$
+is the associated 1-$\sigma$ scatter  of the $\rm{ACF}_{\mathcal M}$
+as a product of cosmic variance and  $\sigma_{\rm obs}$ is the
+observational error associated to $\rm{ACF}_{\rm obs}$.  The
+$\rm{ACF}_{\mathcal M}$s are computed using the Landy \&  Szalay
+estimator  \citep{Landy1993}.  
 
 
 
@@ -337,23 +292,88 @@ of the $\rm{ACF}_{\mathcal M}$ as a product of cosmic variance and $\sigma_{\rm 
 
 \subsection{Constraining \mmin, \mmax\ and \focc\ in Dark Matter Halos hosting LAEs} 
 
-In Fig. \ref{fig:like} we present yhe one and two dimensional projections of the posterior probability distributions of \mmin, \mmax and \focc. We find that the \mmin and \mmax parameter space cannot be tightly constrained mainly because of cosmic variance and the large observational Poisonnian uncertainty in the ACF. We however found that 9.6$<\log \mmin<$11.0 and 10.9$<\log\mmax<$13.0.   We interestingly find that \focc\ is basically completely determined by \mmin  going from \focc$=$0.015 when $\log\mmin=$9.6 to \focc$=$0.30 when $\log\mmin=$11.0  ($\focc\sim0.1\left(\mmin/10^{10.5}\right)^{0.93}$). We remark that those models where $\log \focc>0.00$ ($\focc>1$) correspond 
-to models where the number density  of halos is smaller than the number of observed LAEs but are
-still consistent because of the uncertainty in the median number density of LAEs in the universe due to cosmic variance (see Fig. \ref{fig:cosmicv0}).%in the number of dark matter halos along the mock fields 
+In Fig. \ref{fig:like} we present yhe one and two dimensional
+projections of the posterior probability distributions of \mmin, \mmax
+and \focc. We find that the \mmin and \mmax parameter space cannot be
+tightly constrained mainly because of cosmic variance and the large
+observational Poisonnian uncertainty in the ACF. We however found that
+9.6$<\log \mmin<$11.0 and 10.9$<\log\mmax<$13.0.   We interestingly
+find that \focc\ is basically completely determined by \mmin  going
+from \focc$=$0.015 when $\log\mmin=$9.6 to \focc$=$0.30 when
+$\log\mmin=$11.0
+($\focc\sim0.1\left(\mmin/10^{10.5}\right)^{0.93}$). We remark that
+those models where $\log \focc>0.00$ ($\focc>1$) correspond  to models where the number density  of halos is smaller than the number of observed LAEs but are
+still consistent because of the uncertainty in the median number
+density of LAEs in the universe due to cosmic variance (see
+Fig. \ref{fig:cosmicv0}).%in the number of dark matter halos along the
+                         %mock fields  
 
 \begin{figure}
 \includegraphics[width=0.47\textwidth]{mmin_mmed_colordm.png}
-\caption{ $\log M_{\rm min}$ vs $\log M_{\rm 50\%}$ (black), $\log M_{\rm 16\%}$-$\log M_{\rm 84\%}$ (blue) and  $\log M_{\rm 2.5\%}$-$\log M_{\rm 97.5\%}$(red) for different values of $\log M_{\rm max}$. The points are color coded by $\Delta \log M\left[\rm{M_{\odot}h^{-1} ]}\right]$. The green line diagonal line accounts for the 1:1 relation and the green vertical lines represent  the 16, 50 and 84 percentiles  of the posterior probability distribution of \mmin.}
+\caption{ $\log M_{\rm min}$ vs $\log M_{\rm 50\%}$ (black), $\log
+  M_{\rm 16\%}$-$\log M_{\rm 84\%}$ (blue) and  $\log M_{\rm
+    2.5\%}$-$\log M_{\rm 97.5\%}$(red) for different values of $\log
+  M_{\rm max}$. The points are color coded by $\Delta \log
+  M\left[\rm{M_{\odot}h^{-1} ]}\right]$. The green line diagonal line
+accounts for the 1:1 relation and the green vertical lines represent
+the 16, 50 and 84 percentiles  of the posterior probability
+distribution of \mmin.} 
 \label{fig:mmed}
 \end{figure}
 
 \subsection{Halo mass distribution within models}
 
-Previous  attempts to constrain the DMH mass of LAEs by means of the ACF   present their result in terms of the median mass of LAEs that is derived from the derived correlation length by means of semi-analitical prescriptions  \citep[e.g.][]{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16}. Instead, in this work we directly compare the ACF of our simulated mock catalogs with the observational ACF and present our results in terms of a  minimum and maximum mass DMH hosting LAEs. It is therefore necessary to connect our approach by computing the median mass of the DMH in each of the models $\mathcal{M}$.  In   Fig. \ref{fig:mmed} we show the 50 ($\log M_{50}$, black dots), the 84 ($\log M_{84}$,blue diamonds) and 95 ($\log M_{95}$, red squares) percentiles of the LAE halo mass as a function of \lmmin\ for each of the models that we run in our MCMC simulation.  The points are color coded according to their \dlm\ associated value. We can see that the median mass ($M_{50}$) and $M_{84}$ are not very sensitive to  $\lmmax=\lmmin +\dlm$ specially when $\dlm\gtrsim1.0$dex. We particularly found that  $\lmmin\lesssim\log M_{50}\lesssim\lmmin+0.2\rm{dex}$ and that $\lmmin+0.1\rm{dex}\lesssim\log M_{50}\lesssim\lmmin+0.5\rm{dex}$ regardless of the value of \dlm. The latter is a consequence of the very steepen distribution of the dark matter mass function  and is at the same time the reason for the almost perfect one to one relation between \mmin\ and \focc. However, it can also be seen in Fig. \ref{fig:mmed} that $\log M_{84}$ is very sensitive to \lmmax ($\lmmin+0.2\rm{dex}\lesssim\log M_{50}\lesssim\lmmin+1.5\rm{dex}$). Thereby, any differences in the clustering strength of models sharing the same \mmin but different \mmax should be mainly driven by the  $\sim16\%$ most massive  halos of each model $\mathcal{M}$. 
+Previous  attempts to constrain the DMH mass of LAEs by means of the
+ACF   present their result in terms of the median mass of LAEs that is
+derived from the derived correlation length by means of
+semi-analitical prescriptions
+\citep[e.g.][]{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16}. Instead,
+in this work we directly compare the ACF of our simulated mock
+catalogs with the observational ACF and present our results in terms
+of a  minimum and maximum mass DMH hosting LAEs. It is therefore
+necessary to connect our approach by computing the median mass of the
+DMH in each of the models $\mathcal{M}$.  In   Fig. \ref{fig:mmed} we
+show the 50 ($\log M_{50}$, black dots), the 84 ($\log M_{84}$,blue
+diamonds) and 95 ($\log M_{95}$, red squares) percentiles of the LAE
+halo mass as a function of \lmmin\ for each of the models that we run
+in our MCMC simulation.  The points are color coded according to their
+\dlm\ associated value. We can see that the median mass ($M_{50}$) and
+$M_{84}$ are not very sensitive to  $\lmmax=\lmmin +\dlm$ specially
+when $\dlm\gtrsim1.0$dex. We particularly found that
+$\lmmin\lesssim\log M_{50}\lesssim\lmmin+0.2\rm{dex}$ and that
+$\lmmin+0.1\rm{dex}\lesssim\log M_{50}\lesssim\lmmin+0.5\rm{dex}$
+regardless of the value of \dlm. The latter is a consequence of the
+very steepen distribution of the dark matter mass function  and is at
+the same time the reason for the almost perfect one to one relation
+between \mmin\ and \focc. However, it can also be seen in
+Fig. \ref{fig:mmed} that $\log M_{84}$ is very sensitive to \lmmax
+($\lmmin+0.2\rm{dex}\lesssim\log
+M_{50}\lesssim\lmmin+1.5\rm{dex}$). Thereby, any differences in the
+clustering strength of models sharing the same \mmin but different
+\mmax should be mainly driven by the  $\sim16\%$ most massive  halos
+of each model $\mathcal{M}$.  
 
-In order to estimate the effect of most massive halos in  $ACF_{\mathcal{M}}$ in Fig. \ref{fig:corr} we show the computed $ACF_{\mathcal{M}}$ of models with $\lmmin=0.5$ and different values of $\dlm$. We can see that the clustering gets stronger for larger values of \dlm. Nevertheless, due to the large impact of cosmic variance at the volume of the current observations all the models  are basically consistent within errors. The last result together with the large Poissonian observational error in the ACF explain the current difficulty to put tighter constrains in \lmmax\ in our model.
+In order to estimate the effect of most massive halos in
+$ACF_{\mathcal{M}}$ in Fig. \ref{fig:corr} we show the computed
+$ACF_{\mathcal{M}}$ of models with $\lmmin=0.5$ and different values
+of $\dlm$. We can see that the clustering gets stronger for larger
+values of \dlm. Nevertheless, due to the large impact of cosmic
+variance at the volume of the current observations all the models  are
+basically consistent within errors. The last result together with the
+large Poissonian observational error in the ACF explain the current
+difficulty to put tighter constrains in \lmmax\ in our model. 
 
- In Fig. \ref{fig:mmed} the green vertical lines represent  the 16, 50 and 84 percentiles  of the posterior probability distribution of \mmin that we previously obtained. From this figure we find that the median dark matter halo mass is $\tilde{M}_{\rm h} = 10^{10.6^{+0.7}_{-0.6}$. This result is consistent with previous estimations of  the  median dark matter halo mass reported by  \citet{Bielby16} ($\tilde{M}_{\rm h} = 10^{11.0\pm0.6}$), \citet{Gawiser07} ($\tilde{M}_{\rm h} = 10^{10.9\pm0.9}$) and \citet{Ouchi2010} ($\tilde{M}_{\rm h} = 6.7^{+42.0}_{6.7}\times10^{10}}$) using semi-analitical approaches. 
+ In Fig. \ref{fig:mmed} the green vertical lines represent  the 16, 50
+ and 84 percentiles  of the posterior probability distribution of
+ \mmin that we previously obtained. From this figure we find that the
+ median dark matter halo mass is $\tilde{M}_{\mathrm h} =
+ 10^{10.6^{+0.7}_{-0.6}} $. 
+This result is consistent with previous
+ estimations of  the  median dark matter halo mass reported by
+ \citet{Bielby16} ($\tilde{M}_{\mathrm h} = 10^{11.0\pm0.6}$),
+ \citet{Gawiser07} ($\tilde{M}_{\mathrm h} = 10^{10.9\pm0.9}$) and
+ \citet{Ouchi2010} ($\tilde{M}_{\mathrm h} =
+ 6.7^{+42.0}_{6.7}\times10^{10}$) using semi-analitical approaches.   
 
 
 \begin{figure}
@@ -374,7 +394,7 @@ Fig. \ref{fig:cosmicv0}  shows the  halo number distribution (HND) in the  mock 
 
 \begin{figure}
 \includegraphics[width=0.46\textwidth, height=0.33\textwidth]{mmin_dfocc1.png}
-\caption{Width of the halo number distribution over the 54 mock field of the simulation ($\Delta \log \left( N_{\rm halos}/\tilde{N}_{\rm halos}\right)$) of the central 68 (blue diamonds) and  95(red circles)  percentiles vs $M_{\rm min}$. Points are color coded according to their associated value of $\Delta M \equiv M_{\rm min}-M_{\rm min}$. The green line diagonal line accounts for the 1:1 relation and the green vertical lines represent  the 16, 50 and 84 percentiles  of the posterior probability distribution of \mmin.}
+\caption{Width of the halo number distribution over the 54 mock field of the simulation ($\Delta \log \left( N_{\mathrm halos}/\tilde{N}_{\mathrm halos}\right)$) of the central 68 (blue diamonds) and  95(red circles)  percentiles vs $M_{\rm min}$. Points are color coded according to their associated value of $\Delta M \equiv M_{\rm min}-M_{\rm min}$. The green line diagonal line accounts for the 1:1 relation and the green vertical lines represent  the 16, 50 and 84 percentiles  of the posterior probability distribution of \mmin.}
 \label{fig:cosmicv}
 \end{figure}
 
@@ -383,7 +403,7 @@ Fig. \ref{fig:cosmicv0}  shows the  halo number distribution (HND) in the  mock 
 
 In this letter we studied the impact of cosmic variance and observational uncertainties in constraining the mass range and  occupation fraction of dark matter halos hosting  LAEs.  
 To this end, we used the BolshoiP N-body simulation to construct  27 mock fields  with the same typical size  of observed fields at  $z=3.1$ ($\sim 1 {\rm deg^2}$).  
-In our model a dark matter halo with mass in the range $M_{\rm min}<M_{\rm h}<M_{\rm   max}$ can only host one detectable LAE at most. 
+In our model a dark matter halo with mass in the range $M_{\rm min}<M_{\mathrm h}<M_{\rm   max}$ can only host one detectable LAE at most. 
 We explored the parameter space determined by \mmin\ and \mmax\ using Monte Carlo Markov-Chain minimization to match the observed  ACF and mean number density of LAEs. 
 
 Our analysis allowed us to put weak constraints on $M_{\rm min}$, $M_{\rm max}$ and $f_{\rm occ}$ where $10^{9.7}\hMsun\leq \log M_{\rm min}\leq 10^{11.2}\hMsun$, $10^{10.9}\hMsun\leq \log M_{\rm max}\leq 10^{13.0}\hMsun$ and $0.02\hMsun\leq f_{\rm occ}\leq 0.5$, spanning three orders of magnitude in halo mass.
