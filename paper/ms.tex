@@ -195,8 +195,12 @@ We describe in detail these four elements in the following subsections.
 \includegraphics[width=0.85\textwidth]{likelyplot_1deg_total.png}
 \end{center}
 \caption{One and two dimensional projections of the posterior
-  probability distributions of \mmin, \mmax and \focc as described in
-  the label of each sub-figure.} 
+  probability distributions of \mmin, \mmax\ and \focc\ as described in
+  the label of each sub-figure. We remark that
+those models where $\log \focc>0.00$ ($\focc>1$) correspond  to models where the number density  of halos is smaller than the number of observed LAEs but are
+still consistent because of the uncertainty in the median number
+density of LAEs in the universe due to cosmic variance. See
+Fig. \ref{fig:cosmicv0} and \S\ref{subsec:explore} for details.} 
 \label{fig:like}
 \end{figure*}
 
@@ -204,12 +208,12 @@ We describe in detail these four elements in the following subsections.
 \label{subsec:obs}
 \citet{Bielby16} used narrow band imaging to detect 643 LAE candidates
 at $z\sim 3$  with equivalent widths of $\gtrsim$65\AA\ and a flux limit
-of $2\times10^17{\rm erg/cm^2/s}$ ($L\sim 7\times10^{42}{\rm erg/s} $). 
+of $2\times10^{17}{\rm erg/cm^2/s}$ ($L\sim 7\times10^{42}{\rm erg/s} $). 
 Using spectroscopy they found a 22\% contamination fraction.
 Their observations cover 5 (out of 9) independent and co-spatial fields of the VLT LBG Redshift Survey (VLRS). 
 The  total observed  area corresponds to 1.07$\rm deg^2$ that translates to
 $\sim$80$^2\hMpc^2$ in a comoving scale. \citet{Bielby16} used the
-NB497  narrow-band filter whose 77\AA FWHM and 154\AA FWTM correspond to a total observational depth of 44\hMpc  and 82\hMpc comoving, respectively.
+NB497  narrow-band filter whose 77\AA\ FWHM and 154\AA FWTM correspond to a total observational depth of 44\hMpc\  and 82\hMpc\ comoving, respectively.
 
 %JF
 
@@ -227,7 +231,7 @@ We use halo catalogs constructed with a Bound-Density-Maxima (BDM) algorithm. Th
 Multidark database  \footnote{{\tt
     http://www.multidark.org/MultiDark/}} \citep{MultiDark}. For each
 halo in the box we extract its comoving position and mass. 
-We focus our work on halos more massive than $1.54\times 10^{9}$\hMsun resolved with at least  $10$ particles.
+We focus our work on halos more massive than $1.54\times 10^{9}$\hMsun\ resolved with at least  $10$ particles.
 %the reasons for this choice are explained in the next sub-section. 
 
 We divide the total volume of the snapshot of the simulation at z$\sim$3
@@ -264,11 +268,13 @@ defined by a particular choice of the two parameters $M_{\rm min}$,
 $M_{\rm  max}$. For each model  ${\mathcal M}$ we define $\tilde{f}_{\rm occ}$ as the median occupation fraction within the the mock fields and  $\Delta M \equiv \mmax-\mmin$.
 
 \subsection{Exploring and selecting consistent models}
-
+\label{subsec:explore}
 We use the angular correlation function to compare the observations with our mock catalogs. 
-This is done trough a thorough exploration of the parameter space of the models ${\mathcal M}$  by  means of a Monte Carlo Markov Chain minimization using  the EMCEE python package \citep{emcee2013}.
-We put a flat prior on $\log M_{\rm min}$ and $\log \mmax$ to vary between  $9.2$ up to $13.4$, corresponding to the halo mass range of the simulation at $z=3$. 
-Given that the typical scatter  in $N_{\mathrm halos}$ is about 0.3 dex (i.e. about  a factor of 2), our parameter space is restricted to models where the median number of dark matter halos is larger than  $N_{\rm LAE}/3$. 
+This is done trough a thorough exploration of the parameter space of the models ${\mathcal M}$ by  means of a Monte Carlo Markov Chain minimization using  the EMCEE python package \citep{emcee2013}.
+We put a flat prior on $\log M_{\rm min}$ and $\log \mmax$ to vary between $9.2$ up to $13.4$, corresponding to the halo mass range of the simulation at $z=3$. 
+Given that the typical scatter  in $N_{\mathrm halos}$ is about 0.3 dex (i.e. about  a factor of 2), our parameter space is restricted to models where the median number of dark matter halos is larger than  $N_{\rm LAE}/3$. Because of this posibility of having $N_{\mathrm halos}$  smaller than $N_{\rm LAE}$ there will be some models where    $\focc\equivN_{\rm LAE}/N_{\mathrm halo}>1$. Those models only reflect the uncertainty in the number density of LAEs due to cosmic variance.
+
+
 The MCMC exploration is done using a total of 24 seeds and 400
 iterations (9600 models) to sample the posterior PDF,  $P(\mmin,
 \mmax, f_{\rm occ}| \mathcal{M}) \propto \exp(-\chi_{\mathcal
@@ -310,7 +316,7 @@ $\log\mmin=$11.0
 those models where $\log \focc>0.00$ ($\focc>1$) correspond  to models where the number density  of halos is smaller than the number of observed LAEs but are
 still consistent because of the uncertainty in the median number
 density of LAEs in the universe due to cosmic variance (see
-Fig. \ref{fig:cosmicv0}).%in the number of dark matter halos along the
+Fig. \ref{fig:cosmicv0} and \S\ref{subsec:explore}).%in the number of dark matter halos along the
                          %mock fields  
 
 \begin{figure}
