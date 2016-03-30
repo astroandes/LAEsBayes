@@ -186,7 +186,14 @@ width increases with \mmin. }
 The base of our method is the comparison between observations and mock
 catalogs. 
 This approach allows us to take explicitly into account cosmic variance. 
-The comparison has four key elements. First, the observations we take as a benchmark. Second, the N-body simulation and the halo catalogs we use to build the mocks. Third, the parameters describing our model to assign a LAE to a halo. Fourth, the statistical method we adopt to compare observations and simulations.
+The comparison has four key elements. 
+First, the observations we take as a benchmark. 
+Second, the N-body simulation and the halo catalogs we use to build
+the mocks. 
+Third, the parameters describing our model to
+assign a LAE to a halo. 
+Fourth, the statistical method we adopt to compare observations and
+simulations.  
 We describe in detail these four elements in the following subsections.
 
 
@@ -195,11 +202,11 @@ We describe in detail these four elements in the following subsections.
 \includegraphics[width=0.85\textwidth]{likelyplot_1deg_total.png}
 \end{center}
 \caption{One and two dimensional projections of the posterior
-  probability distributions of \mmin, \mmax\ and \focc\ as described in
-  the label of each sub-figure. We remark that
-those models where $\log \focc>0.00$ ($\focc>1$) correspond  to models where the number density  of halos is smaller than the number of observed LAEs but are
-still consistent because of the uncertainty in the median number
-density of LAEs in the universe due to cosmic variance. See
+  probability distributions of \mmin, \mmax\ and \focc\. 
+  The models with $\log \focc>0.00$ ($\focc>1$) correspond  to models
+  where the number density  of halos is smaller than the number of
+  observed LAEs but we consider them as consistent because of the uncertainty
+  in the median number density due to cosmic variance. See 
 Fig. \ref{fig:cosmicv0} and \S\ref{subsec:explore} for details.} 
 \label{fig:like}
 \end{figure*}
@@ -210,34 +217,46 @@ Fig. \ref{fig:cosmicv0} and \S\ref{subsec:explore} for details.}
 at $z\sim 3$  with equivalent widths of $\gtrsim$65\AA\ and a flux limit
 of $2\times10^{17}{\rm erg/cm^2/s}$ ($L\sim 7\times10^{42}{\rm erg/s} $). 
 Using spectroscopy they found a 22\% contamination fraction.
-Their observations cover 5 (out of 9) independent and co-spatial fields of the VLT LBG Redshift Survey (VLRS). 
+Their observations cover 5 (out of 9) independent and co-spatial
+fields of the VLT LBG Redshift Survey (VLRS).  
 The  total observed  area corresponds to 1.07$\rm deg^2$ that translates to
-$\sim$80$^2\hMpc^2$ in a comoving scale. \citet{Bielby16} used the
-NB497  narrow-band filter whose 77\AA\ FWHM and 154\AA\ FWTM correspond to a total observational depth of 44\hMpc\  and 82\hMpc\ comoving, respectively.
+$\sim$80$^2\hMpc^2$ in a comoving scale. 
+\citet{Bielby16} used the NB497  narrow-band filter whose 77\AA\ FWHM
+and 154\AA\ FWTM correspond to a total observational depth of
+44\hMpc\  and 82\hMpc\ comoving, respectively. 
 
-%JF
 
 \subsection{Simulation and halo catalog}
 \label{subsec:sim}
 
-We use results from the  Bolshoi simulation \citep{Bolshoi} which was performed in a cubic volume of 250 $h^{-1}$ Mpc comoving on a side. The dark matter distribution was sampled using  $2048^{3}$ particles. The cosmological parameters are consistent with Planck 2013 results \citep{Planck2014} with a matter density
+We use results from the Bolshoi simulation \citep{Bolshoi,BolshoiP} which was
+performed in a cubic volume of 250 $h^{-1}$ Mpc comoving on a side. 
+The dark matter distribution was sampled using  $2048^{3}$
+particles. 
+The cosmological parameters are consistent with Planck
+results \citep{Planck2014} with a matter density 
 $\Omega_{\rm m} = 0.307$, cosmological constant
-$\Omega_{\Lambda}=0.693$, dimensionless Hubble constant $h=0.70$, slope
+$\Omega_{\Lambda}=0.693$, dimensionless Hubble constant $h=0.678$, slope
 of the power spectrum  $n=0.96$ and normalization of the power
-spectrum $\sigma_{8}=0.82$.  
-This translates into a particle mass of  $m_{\rm p}=1.54\times 10^{8}$ $h^{-1}$ M$_{\odot}$.  
+spectrum $\sigma_{8}=0.823$.  
+This translates into a particle mass of  $m_{\rm p}=1.5\times 10^{8}$
+$h^{-1}$ M$_{\odot}$.   
 
-We use halo catalogs constructed with a Bound-Density-Maxima (BDM) algorithm. The catalogs were obtained from the publicly available
-Multidark database  \footnote{{\tt
-    http://www.multidark.org/MultiDark/}} \citep{MultiDark}. For each
-halo in the box we extract its comoving position and mass. 
-We focus our work on halos more massive than $1.54\times 10^{9}$\hMsun\ resolved with at least  $10$ particles.
-%the reasons for this choice are explained in the next sub-section. 
 
-We divide the total volume of the snapshot of the simulation at z$\sim$3
-into  27 smaller mock volumes mimicking the  comoving area and depth  
-reported in \citet{Bielby16} and described in \S \ref{subsec:obs}. 
-This allows  us to take explicitly into account the effects of cosmic variance.
+We use halo catalogs constructed with a Bound-Density-Maxima (BDM)
+algorithm. 
+The catalogs were obtained from the publicly available Multidark
+database  \footnote{\url{http://www.multidark.org/MultiDark/}}
+\citep{MultiDark}. 
+For each  halo in the box we extract its comoving position and mass.  
+We focus our work on halos more massive than $1.5\times
+10^{9}$\hMsun\ resolved with at least  $10$ particles. 
+
+
+We split the simulation volume at z$\sim$3 into  27 smaller mock
+volumes mimicking the  area and depth reported in \citet{Bielby16} and
+described in \S \ref{subsec:obs}.   
+
 
 \subsection{A model to populate halos with LAEs}
 \label{subsec:mocks}
@@ -437,7 +456,18 @@ Our analysis also allowed us to draw three results that can be used to put tight
 
 \section*{Acknowledgments} 
 
-JM acknowledges ``CONICYT-PCHA/doctorado Nacional para extranjeros/2013-63130316'' for their PhD scholarship support. 
+JM acknowledges ``CONICYT-PCHA/doctorado Nacional para
+extranjeros/2013-63130316'' for their PhD scholarship support.  
+
+The authors gratefully acknowledge the Gauss Centre for Supercomputing
+e.V. (\url{www.gauss-centre.eu}) and the Partnership for Advanced
+Supercomputing in Europe (PRACE, \url{www.prace-ri.eu}) for funding the
+MultiDark simulation project by providing computing time on the GCS
+Supercomputer SuperMUC at Leibniz Supercomputing Centre (LRZ,
+\url{www.lrz.de}). The Bolshoi simulations have been performed within the
+Bolshoi project of the University of California High-Performance
+AstroComputing Center (UC-HiPACC) and were run at the NASA Ames
+Research Center. 
 
 
 \bibliographystyle{apj}
