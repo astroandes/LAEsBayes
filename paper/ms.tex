@@ -251,6 +251,7 @@ database  \footnote{\url{http://www.multidark.org/MultiDark/}}
 For each  halo in the box we extract its comoving position and mass.  
 We focus our work on halos more massive than $1.5\times
 10^{9}$\hMsun\ resolved with at least  $10$ particles. 
+We do not take into account sub-halos.
 
 
 We split the simulation volume at z$\sim$3 into  27 smaller mock
@@ -261,16 +262,44 @@ described in \S \ref{subsec:obs}.
 \subsection{A model to populate halos with LAEs}
 \label{subsec:mocks}
 
-We build a model to assign LAEs to a DM halo. 
-We are not concerned on the exact LAE luminosity, we only care about a yes/no answer to the following question. Does this halo host a LAE?
+We build the simplest possible model to assign a LAE to each DM halo
+without trying to compute a LAE luminosity.
+  
+We first assume that a dark matter halo can host one detectable LAE at
+most.   
+This assumption is consistent with theoretical analysis of the
+correlation function \citep{Jose2013b} and observations that confirm a
+lack of class pairs in LAEs \cite{Bond2009}.  
+Then we say that a halo will host a LAE with probability $\focc$
+if and only if the halo mass is in the range $\mmin < M_{\mathrm
+  h} < \mmax$. 
+In what follows we refer to a given set of values $\focc$, $\mmin$,
+$\mmax$ as a model, $\mathcal{M}$. We also use a variable \dm to represent
+the mass range width, $\dm\equiv\ \log \mmax - \log \mmax$.
 
-We first assume that a dark matter halo can host one detectable LAE at most.  
-This assumption is consistent with theoretical analysis of the correlation function \citep{Jose2013b} and observations that confirm a lack of class pairs in LAEs \cite{Bond2009}. 
 
-Then we say that a halo will host a LAE with probability $f_{\rm occ}$ if and only if the halo mass is in the range $M_{\rm min}< M_{\mathrm h} < M_{\rm max}$.
-The probability $f_{\rm occ}$ can be thought as the occupation fraction of halos which can be automatically set as the ration of the observed number of LAEs to the number of halos within the considered mass range, that is $f_{\rm occ}\equiv N_{\rm LAE}/N_{\mathrm halos}$.
+The parameter $\focc$ can be thought as the LAE occupation fraction of
+dark matter halos.
+An astrophysical interpretation of $f_{\rm occ}$ convolves at least
+three phenomena: the actual presence of a star forming galaxy in a
+halo, the escape fraction of \ly\ radiation and its detectability as
+a LAE.   
+We do not try to disentangle these complex phenomena.
+We instead opt for an arithmentic interpretation by setting $\focc$ as
+the ratio between the observed number of LAEs and the number of halos
+within the considered mass range, that is $\focc \equiv N_{\rm
+  LAEs}/N_{\mathrm{halos}}$.  
 
-Fig. \ref{fig:cosmicv0}  shows the cumulative halo number distribution (HND) in the  mock fields of the simulation for different models $\mathcal{M}$. From this figure we can see that the number of dark matter halos along the mock fields for different models $\mathcal{M}$ varies within a factor of $\sim 2$ ($\sim 0.3$dex) tracing the cosmic variance. As a consequence, the occupation fraction varies along  the mock fields  by the same factor factor. The interpretation of the occupation fraction $f_{\rm occ}$ involves two phenomena: the actual presence of a star forming galaxy in a halo and its detectability as a LAE. 
+Fig. \ref{fig:cosmicv0}  shows the cumulative halo number density
+for all 27 subvolumes in the simulation, with a normalization by the
+average number density among fields. 
+Each line represents a different model $\mathcal{M}$ with fixed
+$\focc=1$ and $\dm=1.0$; and varying $\mmin$, 
+This Figure shows that the halo number density varies across
+sub-volumes, as an expression of cosmic variance. 
+As a consequence, the $\focc$ also varies across the mock fields  
+by the same factor factor. 
+
 
 We do not explore any physical model to disentangle these two effects. This means that our model does not assign a luminosity or escape fraction to each
 LAE.
