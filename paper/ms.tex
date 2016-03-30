@@ -202,6 +202,9 @@ width increases with \mmin. }
 \label{fig:cosmicv0}
 \end{figure}
 
+
+
+
 \section{Methodology}
 
 The base of our method is the comparison between observations and mock
@@ -218,19 +221,7 @@ simulations.
 We describe in detail these four elements in the following subsections.
 
 
-\begin{figure*}
-\begin{center}
-\includegraphics[width=0.85\textwidth]{likelyplot_1deg_total.png}
-\end{center}
-\caption{One and two dimensional projections of the posterior
-  probability distributions of \mmin, \mmax\ and \focc\. 
-  The models with $\log \focc>0.00$ ($\focc>1$) correspond  to models
-  where the number density  of halos is smaller than the number of
-  observed LAEs but we consider them as consistent because of the uncertainty
-  in the median number density due to cosmic variance. See 
-Fig. \ref{fig:cosmicv0} and \S\ref{subsec:explore} for details.} 
-\label{fig:like}
-\end{figure*}
+
 
 \subsection{Observational constraints}
 \label{subsec:obs}
@@ -338,6 +329,17 @@ mock fields.
 \subsection{Model Selection}
 \label{subsec:explore}
 
+\begin{figure}
+  \includegraphics[width=0.47\textwidth]{fig5.pdf}
+\caption{ Angular Correlation functions for $\log M_{\rm
+    min}[\rm{M_{\odot}h^{-1}}]=10.5$ and different values of $\Delta
+  M$.  
+  The shaded region in the models represents the $1-\sigma$ variation
+  due to cosmic variance. Radical different models in $\Delta M$ are consistent with
+  observations once cosmic variance is modelled in detail.} 
+\label{fig:corr}
+\end{figure}
+
 
 We make a thorough parameter space exploration of the models
 ${\mathcal M}$ by  means of a Markov Chain Monte Carlo technique using
@@ -379,7 +381,26 @@ $\rm{ACF}_{\rm obs}$.
 We compute the $\rm{ACF}_{\mathcal M}$ using the Landy \&  Szalay
 estimator  \citep{Landy1993}.   
 
+Fig. \ref{fig:corr} shows the observational ACF by
+\citet{Bielby16} compared to the ACF in three different models with a
+wide range in $\dm$.  
+This already shows that radically different models can be compatible
+with observations once cosmic variance uncertainties are modelled in
+detail. 
 
+\begin{figure*}
+\begin{center}
+\includegraphics[width=0.85\textwidth]{likelyplot_1deg_total.png}
+\end{center}
+\caption{One and two dimensional projections of the posterior
+  probability distributions of \mmin, \mmax\ and \focc\. 
+  The models with $\log \focc>0.00$ ($\focc>1$) correspond  to models
+  where the number density  of halos is smaller than the number of
+  observed LAEs but we consider them as consistent because of the uncertainty
+  in the median number density due to cosmic variance. See 
+Fig. \ref{fig:cosmicv0} and \S\ref{subsec:explore} for details.} 
+\label{fig:like}
+\end{figure*}
 
 
 \section{Results and Discussion}
@@ -472,17 +493,6 @@ This result is consistent with previous
  6.7^{+42.0}_{6.7}\times10^{10}$) using semi-analitical approaches.   
 
 
-\begin{figure}
-
-  \includegraphics[width=0.47\textwidth]{fig5.pdf}
-\caption{ Angular Correlation functions for $\log M_{\rm
-    min}[\rm{M_{\odot}h^{-1}}]=10.5$ and different values of $\Delta
-  M$.  
-  The shaded region represents the 1-sigma deviation due to cosmic
-  variance. Radical different models in $\Delta M$ are consistent with
-  observations once cosmic variance is modelled in detail.}
-\label{fig:corr}
-\end{figure}
 
 
 
