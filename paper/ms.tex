@@ -352,8 +352,10 @@ We restrict the selection to models that give a minimal number density
 $N_{\rm{halos}}>N_{\rm LAE}/3$.   
 This means that it is possible to have $N_{\rm{halos}} < N_{\rm LAE}$
 and hence $\focc\equiv N_{\rm{LAE}}/N_{\rm{halos}}>1$.   
-This only reflects the uncertainty in the number 
-density of LAEs due to cosmic variance.     
+We include the $1/3$ factor to account for the uncertainty in the number 
+density of LAEs due to cosmic variance, expecting it to be on the
+same order as the dark matter halo cosmic variance shown in
+Fig. \ref{fig:cosmicv0}.   
 
 
 The MCMC exploration is done using a total of 24 seeds and 400
@@ -441,19 +443,22 @@ distribution of \mmin.}
 \label{fig:mmed}
 \end{figure}
 
-\subsection{Median Halo Mass Within Models}
+\subsection{Median Halo Mass and Halo Mass Width within Models}
 
-We now compute the median mass, $\log M_{50}$, of the LAE hosting halos for each model
-$\mathcal{M}$; $\log M_{50}$ allows a direct comparison between our
+We now compute the median mass, $\log M_{50}$, and the $1\sigma$ halo mass
+width, $\Delta M_{1\sigma} \equiv \log M_{84} - \log M_{16}$, of the LAE hosting halos for each model
+$\mathcal{M}$ (here $M_{p}$ represents the $p$ percentile of the mass distribution);
+$\log M_{50}$ and $M_{1\sigma}$ allow a direct comparison between our
 results and previous results in the literature
 \citep[e.g.][]{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16} that used
 a more simplified approach. 
 
-In   Fig. \ref{fig:mmed} we
-show the 50 ($\log M_{50}$, black dots), the 84 ($\log M_{84}$,blue
-diamonds) and 95 ($\log M_{95}$, red squares) percentiles of the LAE
-halo mass as a function of \lmmin\ for each of the models that we run
-in our MCMC simulation.  The points are color coded according to their
+In Fig. \ref{fig:mmed} we show the $\log M_{50}$-$\Delta M_{1\sigma}$
+plane for the models selected in the $1\sigma$ posterior region for
+\mmin. The color encodes the $\mmin$ value.
+
+
+The points are color coded according to their
 \dlm\ associated value. We can see that the median mass ($M_{50}$) and
 $M_{84}$ are not very sensitive to  $\lmmax=\lmmin +\dlm$ specially
 when $\dlm\gtrsim1.0$dex. We particularly found that
