@@ -273,9 +273,8 @@ lack of class pairs in LAEs \cite{Bond2009}.
 Then we say that a halo will host a LAE with probability $\focc$
 if and only if the halo mass is in the range $\mmin < M_{\mathrm
   h} < \mmax$. 
-In what follows we refer to a given set of values $\focc$, $\mmin$,
-$\mmax$ as a model, $\mathcal{M}$. We also use a variable \dm to represent
-the mass range width, $\dm\equiv\ \log \mmax - \log \mmax$.
+We also use the variable \dm to represent the mass range width,
+$\dm\equiv\ \log \mmax - \log \mmax$. 
 
 
 The parameter $\focc$ can be thought as the LAE occupation fraction of
@@ -285,10 +284,17 @@ three phenomena: the actual presence of a star forming galaxy in a
 halo, the escape fraction of \ly\ radiation and its detectability as
 a LAE.   
 We do not try to disentangle these complex phenomena.
-We instead opt for an arithmentic interpretation by setting $\focc$ as
+We instead opt for an arithmetic interpretation by setting $\focc$ as
 the ratio between the observed number of LAEs and the number of halos
 within the considered mass range, that is $\focc \equiv N_{\rm
-  LAEs}/N_{\mathrm{halos}}$.  
+  LAEs}/N_{\mathrm{halos}}$.   
+
+For each mock catalog we also randomly remove $22\%$ LAEs to mimic the
+effect of contamination in observations \citet{Bielby16}.
+On top of that we apply rejection sampling  to our LAE selection
+taking the transmission function of the NB479 filter used in their
+observations as a radial selection factor. 
+
 
 Fig. \ref{fig:cosmicv0}  shows the cumulative halo number density
 for all 27 subvolumes in the simulation, with a normalization by the
@@ -301,45 +307,57 @@ As a consequence, the $\focc$ also varies across the mock fields
 by the same factor factor. 
 
 
-We do not explore any physical model to disentangle these two effects. This means that our model does not assign a luminosity or escape fraction to each
-LAE.
-We avoid this in order to maintain theoretical uncertainties to a minimum. 
-This flexibility allows us to explore a wide range of possible masses for
-the host halos without any strong theoretical prejudice regarding the
-details of star formation and \ly\  escape fraction.
-
-We also artificially contaminate our mock catalogs with 22$\%$ randomly distributed data points to mimic the fraction of interlopers in observations \citet{Bielby16} .
-On top of that we apply rejection sampling  to our LAE selection taking the transmission function of the NB479 filter used in their observations as a radial selection factor.
 
 In what follows we note by the letter ${\mathcal M}$ a model
 defined by a particular choice of the two parameters $M_{\rm min}$, 
-$M_{\rm  max}$. For each model  ${\mathcal M}$ we define $\tilde{f}_{\rm occ}$ as the median occupation fraction within the the mock fields and  $\Delta M \equiv \mmax-\mmin$.
+$M_{\rm  max}$. For each model  ${\mathcal M}$ we define
+$\tilde{f}_{\rm occ}$ as the median occupation fraction within the the
+mock fields.
 
 \subsection{Exploring and selecting consistent models}
 \label{subsec:explore}
-We use the angular correlation function to compare the observations with our mock catalogs. 
-This is done trough a thorough exploration of the parameter space of the models ${\mathcal M}$ by  means of a Monte Carlo Markov Chain minimization using  the EMCEE python package \citep{emcee2013}.
-We put a flat prior on $\log M_{\rm min}$ and $\log \mmax$ to vary between $9.2$ up to $13.4$, corresponding to the halo mass range of the simulation at $z=3$. 
-Given that the typical scatter  in $N_{\mathrm halos}$ is about 0.3 dex (i.e. about  a factor of 2), our parameter space is restricted to models where the median number of dark matter halos is larger than  $N_{\rm LAE}/3$. Because of this posibility of having $N_{\mathrm halos}$  smaller than $N_{\rm LAE}$ there will be some models where    $\focc\equiv N_{\rm LAE}/N_{\rm halo}>1$. Those models only reflect the uncertainty in the number density of LAEs due to cosmic variance.
+
+
+We make a thorough parameter space exploration of the models
+${\mathcal M}$ by  means of a Markov Chain Monte Carlo technique using
+the EMCEE python package \citep{emcee2013}. 
+
+We put a flat prior on $\log M_{\rm min}$ and $\log \mmax$ between
+$9.2$ up to $13.4$, corresponding to the halo mass range of 
+the simulation at $z=3$.  
+We restrict the selection to models that give a minimal number denity $N_{\rm{halos}}>N_{\rm
+  LAE}/3$.  
+This means that it is possible to have $N_{\rm
+  {halos}} < N_{\rm LAE}$ and hence $\focc\equiv N_{\rm LAE}/N_{\rm
+  halo}>1$.  
+This only reflects the uncertainty in the number 
+density of LAEs due to cosmic variance.    
 
 
 The MCMC exploration is done using a total of 24 seeds and 400
-iterations (9600 models) to sample the posterior PDF,  $P(\mmin,
-\mmax, f_{\rm occ}| \mathcal{M}) \propto \exp(-\chi_{\mathcal
-  M}^2/2)$, with 
+iterations (9600 models) to sample the posterior PDF,
+$P(\mathcal{M}|\mathrm{observations}) \propto \exp(-\chi_{\mathcal
+  M}^2/2)$, with the $\chi_{\mathcal{M}}^2$ based on the Angular
+Correlation Function (ACF), 
 
 \begin{equation}
-\chi_{\mathcal M}^2=\sum_{\theta}\left[\frac{\left( \rm{ACF}_{\mathcal M}\left(\theta\right) - \rm{ACF}_{\rm obs}\left(\theta\right)\right)^2}{ \sigma_{\rm \mathcal M}^{2}\left(\theta\right) + \sigma_{\rm obs}^{2}\left(\theta\right)}\right]
+\chi_{\mathcal M}^2=
+\sum_{\theta}\left[\frac{\left( \rm{ACF}_{\mathcal
+      M}\left(\theta\right) - \rm{ACF}_{\rm
+      obs}\left(\theta\right)\right)^2}{ \sigma_{\rm \mathcal
+      M}^{2}\left(\theta\right) + \sigma_{\rm
+      obs}^{2}\left(\theta\right)}\right] 
 \end{equation}
 %
 where  $\rm{ACF}_{\mathcal M}$ and  $\rm{ACF}_{\rm obs}$ are the ACF
 of the explored model ${\mathcal M}$ and the observational ACF
-reported by \citet{Bielby16} respectively. $\sigma_{\rm \mathcal M}$
-is the associated 1-$\sigma$ scatter  of the $\rm{ACF}_{\mathcal M}$
-as a product of cosmic variance and  $\sigma_{\rm obs}$ is the
-observational error associated to $\rm{ACF}_{\rm obs}$.  The
-$\rm{ACF}_{\mathcal M}$s are computed using the Landy \&  Szalay
-estimator  \citep{Landy1993}.  
+reported by \citet{Bielby16} respectively. 
+$\sigma_{\rm \mathcal M}$ is the associated 1-$\sigma$ scatter  of the
+$\rm{ACF}_{\mathcal M}$ as a product of cosmic variance and
+$\sigma_{\rm obs}$ is the observational error associated to
+$\rm{ACF}_{\rm obs}$.   
+We compute the $\rm{ACF}_{\mathcal M}$ using the Landy \&  Szalay
+estimator  \citep{Landy1993}.   
 
 
 
