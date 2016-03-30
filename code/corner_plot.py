@@ -17,7 +17,7 @@ rc('font', **font)
 
 parspace=genfromtxt('../output/LAEBayes_mcmc_dM_1deg_fixed.out')
 parprob=genfromtxt('../output/LAEBayes_mcmc_dM_chi_1deg_fixed.out')
-parall=genfromtxt('../output/focc_1deg_fixed.txt')
+parall=genfromtxt('../output/focc_1deg_fixed.txt',sxiprows=1)
 parspace[:,1]+=parspace[:,0]
 
 
