@@ -113,34 +113,49 @@ Cosmology: theory - large-scale structure of Universe -
 Methods: data analysis - numerical - N-body simulations
 }
 
-% JF - 1. Intro 3/10
-% JF - 2. Methodology 1/7
-
 %*************************************************************************
 \section{Introduction}
 \label{sec:introduction}
 \toref ADD NEWER REFERENCES
 Lyman-$\alpha$ emitting galaxies (LAEs) are central to a wide range
 of subjects in extragalactic astronomy. 
-LAEs can be used as probes of reionization \citep{Dijkstra11}, tracers of large scale structure \citep{Koehler2007},  signposts for low metallicity stellar populations, markers of the galaxy formation process at high redshift \citep{Dayal2009,ForeroRomero2012} and tracers of active star formation \citep{Guaita2013}. 
+LAEs can be used as probes of reionization \citep{Dijkstra11}, tracers
+of large scale structure \citep{Koehler2007},  signposts for low
+metallicity stellar populations, markers of the galaxy formation
+process at high redshift \citep{Dayal2009,ForeroRomero2012} and
+tracers of active star formation \citep{Guaita2013}.  
 
-In most of those cases, capitalizing the observations requires  understanding how LAEs are formed within an explicit cosmological context. 
-Under the current structure formation paradigm the dominant matter content of the Universe is dark matter (DM). 
-Each galaxy is thought to be hosted by a larger dark matter structure known as a halo. \citep{Peebles1980,SpringelNature05}. 
-Understanding the cosmological context of LAEs thus implies studying the galaxy-halo connection. 
+In most of those cases, capitalizing the observations requires
+understanding how LAEs are formed within an explicit cosmological
+context.  
+Under the current structure formation paradigm the dominant matter
+content of the Universe is dark matter (DM).  
+Each galaxy is thought to be hosted by a larger dark matter structure
+known as a halo. \citep{Peebles1980,SpringelNature05}.  
+Understanding the cosmological context of LAEs thus implies studying
+the galaxy-halo connection.  
 Galaxy formation models suggest that the physical processes that regulate the star formation cycle are dependent on halo mass \citep{Behroozi2013a}.
 The mass becomes the most important element in the halo-galaxy connection. 
    
 The goal becomes finding the typical DM halo mass of halos hosting LAEs.
 In the case of LAEs there are different ways to find this mass range.
-One approach is theoretical, using general astrophysical principles to find the relationship between halo mass, intrinsic \ly\ luminosities and observed \ly\ luminosities. This approach is usually implemented through semi-analytic models \citep{Garel2012,Orsi2012} and  full N-body hydrodynamical simulations \citep{Laursen2007, Dayal2009, ForeroRomero2011, Yajima2012}. 
+One approach is theoretical, using general astrophysical principles to
+find the relationship between halo mass, intrinsic \ly\ luminosities
+and observed \ly\ luminosities. This approach is usually implemented
+through semi-analytic models \citep{Garel2012,Orsi2012} and  full
+N-body hydrodynamical simulations \citep{Laursen2007, Dayal2009,
+  ForeroRomero2011, Yajima2012}.  
 
-%JF
 
-The downside of these calculations is the uncertainty in the estimation of the escape fraction of \ly\ photons. Given the resonant nature of the \ly\ line, the escape fraction is sensitive to  the dust contents, density, temperature, topology and kinematics of the neutral Hydrogen in the interstellar medium (ISM). The process of finding a consensus on the expected value
-for the \ly\ escape fraction in high redshift galaxies is still matter
-of open debate
-\citep{Neufeld1991,Verhamme2006,ForeroRomero2011,Dijkstra2012,Laursen2013,Orsi2012}.
+
+The downside of these calculations is the uncertainty in the
+estimation of the escape fraction of \ly\ photons. Given the resonant
+nature of the \ly\ line, the escape fraction is sensitive to  the dust
+contents, density, temperature, topology and kinematics of the neutral
+Hydrogen in the interstellar medium (ISM). The process of finding a
+consensus on the expected value for the \ly\ escape fraction in high
+redshift galaxies is still matter of open debate
+\citep{Neufeld1991,Verhamme2006,ForeroRomero2011,Dijkstra2012,Laursen2013,Orsi2012}. 
 
 A different approach to infer the typical mass of halos hosting
 LAEs is based on the spatial clustering information. 
@@ -154,15 +169,21 @@ observers have put constraints on the typical mass and occupation
 fraction of the putative halos hosting these galaxies
 \citep{Hayashino2004,Gawiser07,Nilsson2007,Ouchi2010,Bielby16}. 
 In these studies the observations are done on fields of $\sim 1$ deg$^{2}$ and
-the conclusions derived on the halo host mass do not elaborate on the uncertainty resulting from the cosmic variance on these fields.
+the conclusions derived on the halo host mass do not elaborate on the
+uncertainty resulting from the cosmic variance on these fields. 
 
 In this letter we investigate the impact of cosmic variance in
 constraining the mass and occupation fraction of halos hosting LAEs at $z=3$.
-We build mock surveys from a cosmological N-body to compare them against the observations in \cite{Bielby16} using the angular correlation function. 
+We build mock surveys from a cosmological N-body to compare them
+against the observations in \cite{Bielby16} using the angular
+correlation function.  
 We use a simple model to populate a halo in the simulation with a LAE   
-assuming a minimum (\mmin) and maximum mass (\mmax) for the dark matter halos hosting LAEs without predicting a \ly\  luminosity. 
-This approach bypasses all the physical uncertainties associated to star formation and radiative transfer.
-We use the Markov Chain Monte Carlo technique to obtain the likelihood of the parameters given the observational constraints.
+assuming a minimum (\mmin) and maximum mass (\mmax) for the dark
+matter halos hosting LAEs without predicting a \ly\  luminosity.  
+This approach bypasses all the physical uncertainties associated to
+star formation and radiative transfer. 
+We use the Markov Chain Monte Carlo technique to obtain the likelihood
+of the parameters given the observational constraints. 
 
 Throughout this letter we assume a $\Lambda$CDM cosmology with the
 following values for the cosmological parameters, $\Omega_{m}=0.30711$,
@@ -259,7 +280,7 @@ volumes mimicking the  area and depth reported in \citet{Bielby16} and
 described in \S \ref{subsec:obs}.   
 
 
-\subsection{A model to populate halos with LAEs}
+\subsection{A simple LAE model}
 \label{subsec:mocks}
 
 We build the simplest possible model to assign a LAE to each DM halo
@@ -274,7 +295,7 @@ Then we say that a halo will host a LAE with probability $\focc$
 if and only if the halo mass is in the range $\mmin < M_{\mathrm
   h} < \mmax$. 
 We also use the variable \dm to represent the mass range width,
-$\dm\equiv\ \log \mmax - \log \mmax$. 
+$\dm\equiv\ \log \mmax - \log \mmax$.  
 
 
 The parameter $\focc$ can be thought as the LAE occupation fraction of
@@ -314,7 +335,7 @@ $M_{\rm  max}$. For each model  ${\mathcal M}$ we define
 $\tilde{f}_{\rm occ}$ as the median occupation fraction within the the
 mock fields.
 
-\subsection{Exploring and selecting consistent models}
+\subsection{Model Selection}
 \label{subsec:explore}
 
 
@@ -325,13 +346,12 @@ the EMCEE python package \citep{emcee2013}.
 We put a flat prior on $\log M_{\rm min}$ and $\log \mmax$ between
 $9.2$ up to $13.4$, corresponding to the halo mass range of 
 the simulation at $z=3$.  
-We restrict the selection to models that give a minimal number denity $N_{\rm{halos}}>N_{\rm
-  LAE}/3$.  
-This means that it is possible to have $N_{\rm
-  {halos}} < N_{\rm LAE}$ and hence $\focc\equiv N_{\rm LAE}/N_{\rm
-  halo}>1$.  
+We restrict the selection to models that give a minimal number density 
+$N_{\rm{halos}}>N_{\rm LAE}/3$.   
+This means that it is possible to have $N_{\rm{halos}} < N_{\rm LAE}$
+and hence $\focc\equiv N_{\rm{LAE}}/N_{\rm{halos}}>1$.   
 This only reflects the uncertainty in the number 
-density of LAEs due to cosmic variance.    
+density of LAEs due to cosmic variance.     
 
 
 The MCMC exploration is done using a total of 24 seeds and 400
@@ -363,27 +383,29 @@ estimator  \citep{Landy1993}.
 
 
 \section{Results and Discussion}
+\label{sec:results}
 
+\subsection{Constraints on Model Parameters}
 
+Fig. \ref{fig:like} shows the one and two dimensional projections of
+the posterior probability distributions of the parameters in our LAE model. 
+This Figure represents our main result: \mmin, \mmax\  and \focc\ cannot
+be tightly constrained from the available observations. 
 
-
-\subsection{Constraining \mmin, \mmax\ and \focc\ in Dark Matter Halos hosting LAEs} 
-
-In Fig. \ref{fig:like} we present yhe one and two dimensional
-projections of the posterior probability distributions of \mmin, \mmax
-and \focc. We find that the \mmin and \mmax parameter space cannot be
-tightly constrained mainly because of cosmic variance and the large
-observational Poisonnian uncertainty in the ACF. We however found that
-9.6$<\log \mmin<$11.0 and 10.9$<\log\mmax<$13.0.   We interestingly
-find that \focc\ is basically completely determined by \mmin  going
-from \focc$=$0.015 when $\log\mmin=$9.6 to \focc$=$0.30 when
-$\log\mmin=$11.0
-($\focc\sim0.1\left(\mmin/10^{10.5}\right)^{0.93}$). We remark that
-those models where $\log \focc>0.00$ ($\focc>1$) correspond  to models where the number density  of halos is smaller than the number of observed LAEs but are
-still consistent because of the uncertainty in the median number
-density of LAEs in the universe due to cosmic variance (see
-Fig. \ref{fig:cosmicv0} and \S\ref{subsec:explore}).%in the number of dark matter halos along the
-                         %mock fields  
+The preferred $1-\sigma$ range for the masses is $9.6<\log \mmin<11.0$
+and $10.9<\log\mmax<13.0$.
+\focc\ is completely determined by \mmin\ from \focc$=$0.015 when
+$\log\mmin=9.6$ to $\focc=0.30$ when $\log\mmin=11.0$. 
+We compute the power-law dependece between \focc\ and \mmin\ to be 
+\begin{equation}
+\focc = 0.1\left(\frac{\mmin}{10^{10.5}\hMsun}\right)^{0.93}.
+\end{equation}
+We remind to the reader that models whith $\log \focc>0.00$ ($\focc>1$)
+correspond to cases where the halo number density is smaller 
+than the number of observed LAEs but are  still consistent because of
+the uncertainty in the median number density of LAEs in the universe
+due to cosmic variance (see Fig. \ref{fig:cosmicv0} and
+\S\ref{subsec:explore}).
 
 \begin{figure}
 \includegraphics[width=0.47\textwidth]{mmin_mmed_colordm.png}
@@ -398,18 +420,15 @@ distribution of \mmin.}
 \label{fig:mmed}
 \end{figure}
 
-\subsection{Halo mass distribution within models}
+\subsection{Median Halo Mass Within Models}
 
-Previous  attempts to constrain the DMH mass of LAEs by means of the
-ACF   present their result in terms of the median mass of LAEs that is
-derived from the derived correlation length by means of
-semi-analitical prescriptions
-\citep[e.g.][]{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16}. Instead,
-in this work we directly compare the ACF of our simulated mock
-catalogs with the observational ACF and present our results in terms
-of a  minimum and maximum mass DMH hosting LAEs. It is therefore
-necessary to connect our approach by computing the median mass of the
-DMH in each of the models $\mathcal{M}$.  In   Fig. \ref{fig:mmed} we
+We now compute the median mass, $\log M_{50}$, of the LAE hosting halos for each model
+$\mathcal{M}$; $\log M_{50}$ allows a direct comparison between our
+results and previous results in the literature
+\citep[e.g.][]{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16} that used
+a more simplified approach. 
+
+In   Fig. \ref{fig:mmed} we
 show the 50 ($\log M_{50}$, black dots), the 84 ($\log M_{84}$,blue
 diamonds) and 95 ($\log M_{95}$, red squares) percentiles of the LAE
 halo mass as a function of \lmmin\ for each of the models that we run
