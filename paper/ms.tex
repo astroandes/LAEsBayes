@@ -99,7 +99,10 @@ $^3$FACom-Instituto de F\'isica-FCEN, Universidad de Antioquia, Calle 70 No. 52-
 
 
 \begin{abstract}
-We study the impact of cosmic variance and observational uncertainties in constraining the mass and  occupation fraction ($f_{\rm occ}$) of dark matter halos hosting \ly\ Emitting  Galaxies at high redshift (LAEs).
+We study the impact of cosmic variance and observational uncertainties
+in constraining the mass and  occupation fraction ($f_{\rm occ}$) of
+dark matter halos hosting \ly\ Emitting  Galaxies at high redshift
+(LAEs). 
 We use a N-body simulation to construct mock catalogs with the same typical size  of observed fields at $z=3.1$ ($\sim 1 {\rm deg^2}$) to match the observed  angular correlation function (ACF) and number density of LAEs.  
 In our model a dark matter halo with mass in the range $M_{\rm min}<M_{\mathrm h}<M_{\rm   max}$ can only host one detectable LAE at most. By following a thorough Markov Chain Monte-Carlo exploration of the parameter space determined by $M_{\rm min}$ and $M_{\rm   max}$, our analysis shows that $f_{\rm occ}$ is uniquely determined by $M_{\rm min}$ regardless of $M_{\rm max}$ using the relation $\focc\sim0.1\left(\mmin/10^{10.5}\right)^{0.93}$ . 
 However, the current observational data only allows us to put weak constraints on $M_{\rm min}$, $M_{\rm max}$ and consequently on $f_{\rm occ}$. 
@@ -237,6 +240,17 @@ $\sim$80$^2\hMpc^2$ in a comoving scale.
 and 154\AA\ FWTM correspond to a total observational depth of
 44\hMpc\  and 82\hMpc\ comoving, respectively. 
 
+\begin{figure}
+  \includegraphics[width=0.47\textwidth]{fig5.pdf}
+\caption{ Angular Correlation functions for $\log M_{\rm
+    min}[\rm{M_{\odot}h^{-1}}]=10.5$ and different values of $\Delta
+  M$.  
+  The shaded region in the models represents the $1-\sigma$ variation
+  due to cosmic variance. Radical different models in $\Delta M$ are consistent with
+  observations once cosmic variance is modelled in detail.} 
+\label{fig:corr}
+\end{figure}
+
 
 \subsection{Simulation and halo catalog}
 \label{subsec:sim}
@@ -269,6 +283,21 @@ We do not take into account sub-halos.
 We split the simulation volume at z$\sim$3 into  27 smaller mock
 volumes mimicking the  area and depth reported in \citet{Bielby16} and
 described in \S \ref{subsec:obs}.   
+
+
+\begin{figure*}
+\begin{center}
+\includegraphics[width=0.85\textwidth]{likelyplot_1deg_total.png}
+\end{center}
+\caption{One and two dimensional projections of the posterior
+  probability distributions of \mmin, \mmax\ and \focc\. 
+  The models with $\log \focc>0.00$ ($\focc>1$) correspond  to models
+  where the number density  of halos is smaller than the number of
+  observed LAEs but we consider them as consistent because of the uncertainty
+  in the median number density due to cosmic variance. See 
+Fig. \ref{fig:cosmicv0} and \S\ref{subsec:explore} for details.} 
+\label{fig:like}
+\end{figure*}
 
 
 \subsection{A simple LAE model}
@@ -329,16 +358,6 @@ mock fields.
 \subsection{Model Selection}
 \label{subsec:explore}
 
-\begin{figure}
-  \includegraphics[width=0.47\textwidth]{fig5.pdf}
-\caption{ Angular Correlation functions for $\log M_{\rm
-    min}[\rm{M_{\odot}h^{-1}}]=10.5$ and different values of $\Delta
-  M$.  
-  The shaded region in the models represents the $1-\sigma$ variation
-  due to cosmic variance. Radical different models in $\Delta M$ are consistent with
-  observations once cosmic variance is modelled in detail.} 
-\label{fig:corr}
-\end{figure}
 
 
 We make a thorough parameter space exploration of the models
@@ -390,20 +409,6 @@ This already shows that radically different models can be compatible
 with observations once cosmic variance uncertainties are modelled in
 detail. 
 
-\begin{figure*}
-\begin{center}
-\includegraphics[width=0.85\textwidth]{likelyplot_1deg_total.png}
-\end{center}
-\caption{One and two dimensional projections of the posterior
-  probability distributions of \mmin, \mmax\ and \focc\. 
-  The models with $\log \focc>0.00$ ($\focc>1$) correspond  to models
-  where the number density  of halos is smaller than the number of
-  observed LAEs but we consider them as consistent because of the uncertainty
-  in the median number density due to cosmic variance. See 
-Fig. \ref{fig:cosmicv0} and \S\ref{subsec:explore} for details.} 
-\label{fig:like}
-\end{figure*}
-
 
 \section{Results and Discussion}
 \label{sec:results}
@@ -436,60 +441,35 @@ LAEs due to cosmic variance (see Fig. \ref{fig:cosmicv0} and
   M_{1\sigma}=\log M_{84} - \log M_{16}$, for all models with low
   $\chi^2_{\mathcal{M}}/2 < 1.0$. The median mass spans two orders of
   magnitude with a mean value around $10^{10.5}$\hMsun. The
-  width has a median of $0.3$ dex (a factor of $2$ in
-  mass) with a maximum value of $0.7$ dex (a factor of 5). This means
-  that all models consistent with observations have a very narrow
-  range in halo mass where the LAEs are expected to be hosted.} 
+  mass width $\Delta M_{1\sigma}$ has a median of $0.3$ dex (a factor
+  of $2$ in mass) with a maximum value of $0.7$ dex (a factor of
+  5). This means that all models consistent with observations have a
+  very narrow range in halo mass.}
 \label{fig:mmed}
 \end{figure}
 
 \subsection{Median Halo Mass and Halo Mass Width within Models}
 
 We now compute the median mass, $\log M_{50}$, and the $1\sigma$ halo mass
-width, $\Delta M_{1\sigma} \equiv \log M_{84} - \log M_{16}$, of the LAE hosting halos for each model
-$\mathcal{M}$ (here $M_{p}$ represents the $p$ percentile of the mass distribution);
-$\log M_{50}$ and $M_{1\sigma}$ allow a direct comparison between our
-results and previous results in the literature
+width, $\Delta M_{1\sigma} \equiv \log M_{84} - \log M_{16}$, of the
+LAE hosting halos for each model  $\mathcal{M}$ (here $M_{p}$
+represents the $p$ percentile of the mass distribution); $\log M_{50}$
+and $M_{1\sigma}$ allow a direct comparison between our results and
+previous results in the literature
 \citep[e.g.][]{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16} that used
 a more simplified approach. 
 
 In Fig. \ref{fig:mmed} we show the $\log M_{50}$-$\Delta M_{1\sigma}$
-plane for the models selected in the $1\sigma$ posterior region for
-\mmin. The color encodes the $\mmin$ value.
+plane for the models selected to have $\chi^{2}_{\mathcal{M}}/2 < 1$,
+which roughly correspond to the $1\sigma$ region in the posterior
+distribution for the model parameters. The color encodes the
+$\chi^{2}_{\mathcal{M}}/2$ value. The median mass has a wide distribution
+spanning two orders of magnitude.
 
-
-The points are color coded according to their
-\dlm\ associated value. We can see that the median mass ($M_{50}$) and
-$M_{84}$ are not very sensitive to  $\lmmax=\lmmin +\dlm$ specially
-when $\dlm\gtrsim1.0$dex. We particularly found that
-$\lmmin\lesssim\log M_{50}\lesssim\lmmin+0.2\rm{dex}$ and that
-$\lmmin+0.1\rm{dex}\lesssim\log M_{50}\lesssim\lmmin+0.5\rm{dex}$
-regardless of the value of \dlm. The latter is a consequence of the
-very steepen distribution of the dark matter mass function  and is at
-the same time the reason for the almost perfect one to one relation
-between \mmin\ and \focc. However, it can also be seen in
-Fig. \ref{fig:mmed} that $\log M_{84}$ is very sensitive to \lmmax
-($\lmmin+0.2\rm{dex}\lesssim\log
-M_{50}\lesssim\lmmin+1.5\rm{dex}$). Thereby, any differences in the
-clustering strength of models sharing the same \mmin but different
-\mmax should be mainly driven by the  $\sim16\%$ most massive  halos
-of each model $\mathcal{M}$.  
-
-In order to estimate the effect of most massive halos in
-$ACF_{\mathcal{M}}$ in Fig. \ref{fig:corr} we show the computed
-$ACF_{\mathcal{M}}$ of models with $\lmmin=0.5$ and different values
-of $\dlm$. We can see that the clustering gets stronger for larger
-values of \dlm. Nevertheless, due to the large impact of cosmic
-variance at the volume of the current observations all the models  are
-basically consistent within errors. The last result together with the
-large Poissonian observational error in the ACF explain the current
-difficulty to put tighter constrains in \lmmax\ in our model. 
-
- In Fig. \ref{fig:mmed} the green vertical lines represent  the 16, 50
- and 84 percentiles  of the posterior probability distribution of
- \mmin that we previously obtained. From this figure we find that the
- median dark matter halo mass is $\tilde{M}_{\mathrm h} =
- 10^{10.6^{+0.7}_{-0.6}} $. 
+From this distribution we obtain $\log M_{50} = 10.5\pm 0.6$ or
+equivalently $M_{50} = 3.16^{+9.34}_{-2.37}\times 10^{10}$\hMsun.  
+The $1\sigma$ uncertainty for this median value is estimated from the
+$16$ and $84$ percentile values in the $\log M_{50}$ distribution.  
 This result is consistent with previous
  estimations of  the  median dark matter halo mass reported by
  \citet{Bielby16} ($\tilde{M}_{\mathrm h} = 10^{11.0\pm0.6}$),
@@ -497,8 +477,29 @@ This result is consistent with previous
  \citet{Ouchi2010} ($\tilde{M}_{\mathrm h} =
  6.7^{+42.0}_{6.7}\times10^{10}$) using semi-analitical approaches.   
 
+However, the same Figure \ref{fig:mmed} shows something interesting
+that semi-analytical approaches were not able to predict.
+The mass width, $\Delta M{1\sigma}$, that is the width of the mass
+distribution for a given model with fixed $\mmin$ and $\mmax$, has a
+median value and $1\sigma$ uncertainty of $\Delta M{1\sigma} =
+0.55^{+0.11}_{-0.31}$ dex.
+This means that the mass range for halos hosting LAEs is very narrow,
+there is only a factor of $2$ to $4$ between the lower and upper mass
+boundary.
+
+In summary, the median mass could be anything in the range
+$10^{9.5}$\hMsun and $10^{11.5}$, but the width is highly constrained
+to be between $0.2$ and $0.6$ dex.
 
 
+In Fig. \ref{fig:corr} we show the computed
+$ACF_{\mathcal{M}}$ of models with $\lmmin=0.5$ and different values
+of $\dlm$. We can see that the clustering gets stronger for larger
+values of \dlm. Nevertheless, due to the large impact of cosmic
+variance at the volume of the current observations all the models  are
+basically consistent within errors. The last result together with the
+large Poissonian observational error in the ACF explain the current
+difficulty to put tighter constrains in \lmmax\ in our model. 
 
 
 \subsection{Constraining Dark matter halos mass  with cosmic variance}
