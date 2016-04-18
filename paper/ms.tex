@@ -504,7 +504,21 @@ difficulty to put tighter constrains in \lmmax\ in our model.
 
 
 \subsection{Constraining Dark matter halos mass  with cosmic variance}
-Fig. \ref{fig:cosmicv0}  shows the  halo number distribution (HND) in the  mock fields of the simulation for different models $\mathcal{M}$. By simple inspection one can infer an increase in the distribution with as \lmmin increase.  This trend is confirmed in Fig. \ref{fig:cosmicv}  where we plot the central 1-$\sigma$ (blue diamonds) and 2-$\sigma$  (red dots) widths  of the NDH as a function of \lmmin. We particularly found that when we consider survey fields of $\sim1{\rm deg^2}$, the central  1-$\sigma$ (2-$\sigma$) width of the HND increases monotonically from 0.05dex (0.10dex) when $\lmmin=9.5$ to 0.20dex (0.35dex) when $\lmmin=12.0$. The latter result opens the possibility to constrain the \lmmin (as well as the median mass) of LAEs by simply measure the width of the distribution of observed LAE along several observational fields mapping $\sim1{\rm deg^2}$ in area and the observational depth determined by the NB479 filter.
+Fig. \ref{fig:cosmicv0}  shows the  halo number distribution (HND) in
+the  mock fields of the simulation for different models
+$\mathcal{M}$. By simple inspection one can infer an increase in the
+distribution with as \lmmin increase.  This trend is confirmed in
+Fig. \ref{fig:cosmicv}  where we plot the central 1-$\sigma$ (blue
+diamonds) and 2-$\sigma$  (red dots) widths  of the NDH as a function
+of \lmmin. We particularly found that when we consider survey fields
+of $\sim1{\rm deg^2}$, the central  1-$\sigma$ (2-$\sigma$) width of
+the HND increases monotonically from 0.05dex (0.10dex) when
+$\lmmin=9.5$ to 0.20dex (0.35dex) when $\lmmin=12.0$. The latter
+result opens the possibility to constrain the \lmmin (as well as the
+median mass) of LAEs by simply measure the width of the distribution
+of observed LAE along several observational fields mapping $\sim1{\rm
+  deg^2}$ in area and the observational depth determined by the NB479
+filter. 
 
 
 
@@ -512,27 +526,59 @@ Fig. \ref{fig:cosmicv0}  shows the  halo number distribution (HND) in the  mock 
 
 \begin{figure}
 \includegraphics[width=0.49\textwidth]{fig6.pdf}
-\caption{Width of the halo number distribution over the 54 mock field of the simulation ($\Delta \log \left( N_{\mathrm halos}/\tilde{N}_{\mathrm halos}\right)$) of the central 68 (blue diamonds) and  95(red circles)  percentiles vs $M_{\rm min}$. Points are color coded according to their associated value of $\Delta M \equiv M_{\rm min}-M_{\rm min}$. The green line diagonal line accounts for the 1:1 relation and the green vertical lines represent  the 16, 50 and 84 percentiles  of the posterior probability distribution of \mmin.}
-\label{fig:cosmicv}
+\caption{$1\sigma$ width of the number density distribution over the
+  54 mock fields of the simulation as a function of \mmin. 
+  Only the models that have a good match with observations
+  ($\chi_{\mathcal M}/2 < 1$) are included.
+  The strong dependence of $n/ \langle n\rangle$ with \mmin was
+  parameterized as a power law with the parameters shown in the legend.
+\label{fig:cosmicv}}
 \end{figure}
 
 
 \section{Conclusions}
 
-In this letter we studied the impact of cosmic variance and observational uncertainties in constraining the mass range and  occupation fraction of dark matter halos hosting  LAEs.  
-To this end, we used the BolshoiP N-body simulation to construct  27 mock fields  with the same typical size  of observed fields at  $z=3.1$ ($\sim 1 {\rm deg^2}$).  
-In our model a dark matter halo with mass in the range $M_{\rm min}<M_{\mathrm h}<M_{\rm   max}$ can only host one detectable LAE at most. 
-We explored the parameter space determined by \mmin\ and \mmax\ using Monte Carlo Markov-Chain minimization to match the observed  ACF and mean number density of LAEs. 
+In this letter we studied the impact of cosmic variance and
+observational uncertainties in constraining the mass range and
+occupation fraction of dark matter halos hosting  LAEs.   
+To this end, we used the BolshoiP N-body simulation to construct  27
+mock fields  with the same typical size  of observed fields at
+$z=3.1$ ($\sim 1 {\rm deg^2}$).   
+In our model a dark matter halo with mass in the range $M_{\rm
+  min}<M_{\mathrm h}<M_{\rm   max}$ can only host one detectable LAE
+at most.  
+We explored the parameter space determined by \mmin\ and \mmax\ using
+Monte Carlo Markov-Chain minimization to match the observed  ACF and
+mean number density of LAEs.  
 
-Our analysis allowed us to put weak constraints on $M_{\rm min}$, $M_{\rm max}$ and $f_{\rm occ}$ where $10^{9.7}\hMsun\leq \log M_{\rm min}\leq 10^{11.2}\hMsun$, $10^{10.9}\hMsun\leq \log M_{\rm max}\leq 10^{13.0}\hMsun$ and $0.02\hMsun\leq f_{\rm occ}\leq 0.5$, spanning three orders of magnitude in halo mass.
-Previous works\citep{Hayashino2004, Gawiser07,Ouchi2008,Bielby16} have found typical masses within somehow narrower mass ranges ($\sim 10^{10.5}$-$10^{12}$).  
-The main reason for our weaker constraints and large discrepancies with previous works resides in the cosmic variance on the typical field size in observations. 
-A thorough exploration of cosmic variance impact as we present in this letter had not been presented so far in the literature.
+Our analysis allowed us to put weak constraints on $M_{\rm min}$,
+$M_{\rm max}$ and $f_{\rm occ}$ where $10^{9.7}\hMsun\leq \log M_{\rm
+  min}\leq 10^{11.2}\hMsun$, $10^{10.9}\hMsun\leq \log M_{\rm max}\leq
+10^{13.0}\hMsun$ and $0.02\hMsun\leq f_{\rm occ}\leq 0.5$, spanning
+three orders of magnitude in halo mass. 
+Previous works\citep{Hayashino2004, Gawiser07,Ouchi2008,Bielby16} have
+found typical masses within somehow narrower mass ranges ($\sim
+10^{10.5}$-$10^{12}$).   
+The main reason for our weaker constraints and large discrepancies
+with previous works resides in the cosmic variance on the typical
+field size in observations.  
+A thorough exploration of cosmic variance impact as we present in this
+letter had not been presented so far in the literature. 
 
-Our analysis also allowed us to draw three results that can be used to put tighter constraints on $M_{\rm min}$, $M_{\rm max}$ and $f_{\rm occ}$ once upcoming large LAE surveys, as the HETDEX project \citep{Hetdex2011} and the HSC ultra deep survey, are available :
+Our analysis also allowed us to draw three results that can be used to
+put tighter constraints on $M_{\rm min}$, $M_{\rm max}$ and $f_{\rm
+  occ}$ once upcoming large LAE surveys, as the HETDEX project
+\citep{Hetdex2011} and the HSC ultra deep survey, are available : 
 \begin{enumerate}
-\item $f_{\rm occ}$ and the median mass of LAEs are almost uniquely determined by $M_{\rm min}$ regardless of $M_{\rm max}$. \item measuring the width of the LAE number distribution function obtained over several fields of $\approx 1$ deg$^2$ one will be able to tightly constrain  $M_{\rm min}$, $M_{\rm med}$ and $f_{\rm occ}$ up to a factor of  2. 
-\item  $M_{\rm max}$ drives the ACF strength at short angular distances ($<1\,\rm arcmin$), therefore precise measurements of the ACF at such scales are crucial to accurately determine \mmax.
+\item $f_{\rm occ}$ and the median mass of LAEs are almost uniquely
+  determined by $M_{\rm min}$ regardless of $M_{\rm max}$. \item
+  measuring the width of the LAE number distribution function obtained
+  over several fields of $\approx 1$ deg$^2$ one will be able to
+  tightly constrain  $M_{\rm min}$, $M_{\rm med}$ and $f_{\rm occ}$ up
+  to a factor of  2.  
+\item  $M_{\rm max}$ drives the ACF strength at short angular
+  distances ($<1\,\rm arcmin$), therefore precise measurements of the
+  ACF at such scales are crucial to accurately determine \mmax. 
 \end{enumerate}
 
 
