@@ -125,8 +125,8 @@ We are also able show that \focc\ is uniquely determined by $M_{\rm
 $\focc\sim0.1(\mmin/10^{10.5}\hMsun )^{0.93}$.  
 However, the current observational data only allows us to put weak
 constraints on \mmin\ and consequently on \focc.
-We show that upcoming large surveys covering at least $50$ deg$^{2}$
-will be able to put tighter constraints on \mmin\ and \focc\ through the LAE number density
+We argue that upcoming large surveys covering at least $25$ deg$^{2}$
+should be able to put tighter constraints on \mmin\ and \focc\ through the LAE number density
 distribution width, $W_{1\sigma}$, constructed over several fields of
 $\sim 1$ deg$^{2}$ using the relationship, $W_{1\sigma} =
 0.138\times (\mmin/10^{11}\hMsun )^{0.177}$, calibrated from our results.
@@ -339,25 +339,22 @@ We also use the variable \dlm to represent the mass range width,
 $\dlm\equiv\ \log \mmax - \log \mmax$.  
 
 
-The parameter $\focc$ can be thought as the LAE occupation fraction of
-dark matter halos.
 An astrophysical interpretation of $f_{\rm occ}$ convolves at least
-three phenomena: the actual presence of a star forming galaxy in a
-halo, the escape fraction of \ly\ radiation and its detectability as
-a LAE.   
-We do not try to disentangle these complex phenomena.
-We instead opt for an arithmetic interpretation by setting $\focc$ as
-the ratio between the observed number of LAEs and the number of halos
-within the considered mass range, that is $\focc \equiv N_{\rm
+four phenomena: the actual presence of a star forming galaxy in a
+halo, a duty cycle in the star formation rate, the escape fraction of
+\ly\ radiation and its detectability as a LAE.   
+We do not try to disentangle these effects.
+We instead opt for a purely arithmetic interpretation by setting
+$\focc$ as the ratio between the observed number of LAEs and the
+number of halos within the considered mass range, that is $\focc \equiv N_{\rm
   LAEs}/N_{\mathrm{halos}}$.   
 
 For each mock catalog we also randomly remove $22\%$ of the mock-LAEs and replace 
-them with randomly distrubuted point to mimic the
-effect of contamination in \citet{Bielby16} observations.
+them with randomly distrubuted points to mimic the effect of
+contamination in \citet{Bielby16} observations. 
 On top of that we apply rejection sampling  to our LAE selection 
-along the radial direction
-taking the transmission function of the NB479 filter used in \citet{Bielby16}
-observations. 
+along the radial direction taking the transmission function of the
+NB479 filter used in \citet{Bielby16} observations. 
 
 
 Fig. \ref{fig:cosmicv0}  shows the cumulative halo number density
@@ -564,52 +561,49 @@ filter.
 In this letter we studied the impact of cosmic variance and
 observational uncertainties in constraining the mass range and
 occupation fraction of dark matter halos hosting  LAEs.   
-To this end, we used the BolshoiP N-body simulation to construct  27
-mock fields  with the same typical size  of observed fields at
-$z=3.1$ ($\sim 1 {\rm deg^2}$).   
+To this end we used the BolshoiP N-body simulation to construct  27 mock fields
+with the same typical size  of observed fields at $z=3.1$ ($\sim 1
+{\rm deg^2}$).      
 In our model a dark matter halo with mass in the range $M_{\rm
   min}<M_{\mathrm h}<M_{\rm   max}$ can only host one detectable LAE
 at most.  
 We explored the parameter space determined by \mmin\ and \mmax\ using
 Monte Carlo Markov-Chain minimization to match the observed  ACF and
-mean number density of LAEs.  
+mean number density of LAEs.    
+It is the first time that such a thorough exploration of the cosmic
+variance impact on LAEs statistics is presented in the literature.
 
-Our analysis allowed us to put weak constraints on $M_{\rm min}$,
-$M_{\rm max}$ and $f_{\rm occ}$ where $10^{9.7}\hMsun\leq \log M_{\rm
-  min}\leq 10^{11.2}\hMsun$, $10^{10.9}\hMsun\leq \log M_{\rm max}\leq
-10^{13.0}\hMsun$ and $0.02\hMsun\leq f_{\rm occ}\leq 0.5$, spanning
-three orders of magnitude in halo mass. 
-Previous works\citep{Hayashino2004, Gawiser07,Ouchi2008,Bielby16} have
-found typical masses within somehow narrower mass ranges ($\sim
-10^{10.5}$-$10^{12}$).   
-The main reason for our weaker constraints and large discrepancies
-with previous works resides in the cosmic variance on the typical
-field size in observations.  
-A thorough exploration of cosmic variance impact as we present in this
-letter had not been presented so far in the literature. 
+We find that once cosmic variance is taken into account, the
+observational data can only put weak constraints on \ \mmax\ and \focc. 
+When we translate these loos constraints into the median mass, we find
+a general consistency with previous works \citep{Hayashino2004,
+  Gawiser07,Ouchi2008} specially with the most recent one
+\citep{Bielby16}. 
 
-Our analysis also allowed us to draw three results that can be used to
-put tighter constraints on $M_{\rm min}$, $M_{\rm max}$ and $f_{\rm
-  occ}$ once upcoming large LAE surveys, as the HETDEX project
-\citep{Hetdex2011} and the HSC ultra deep survey, are available : 
+Nevertheless, our analysis allowed us to draw three results that can
+be used to put tighter constraints on \mmin, \mmax and \focc once
+upcoming large LAE surveys, such as the HETDEX project 
+\citep{Hetdex2011} and the HSC ultra deep survey, are available: 
 \begin{enumerate}
-\item $f_{\rm occ}$ and the median mass of LAEs are almost uniquely
-  determined by $M_{\rm min}$ regardless of $M_{\rm max}$. \item
-  measuring the width of the LAE number distribution function obtained
-  over several fields of $\approx 1$ deg$^2$ one will be able to
-  tightly constrain  $M_{\rm min}$, $M_{\rm med}$ and $f_{\rm occ}$ up
-  to a factor of  2.  
-\item  $M_{\rm max}$ drives the ACF strength at short angular
+\item \focc is uniquely determined by \mmin, regardless of
+  \mmax. A precise determination of \mmin\ will thus fix \focc.
+\item The width of the LAE number distribution function
+  obtained over several fields of $\approx 1$ deg$^2$ is tightly
+  correlated with \mmin. That measurement with next generation surveys
+  will be able to constrain \mmin within a factor of $\sim 2$.
+\item  \mmax drives the ACF strength at short angular
   distances ($<1\,\rm arcmin$), therefore precise measurements of the
-  ACF at such scales are crucial to accurately determine \mmax. 
+  ACF at such scales are crucial to accurately determine \mmax.  
 \end{enumerate}
-
 
 
 \section*{Acknowledgments} 
 
 JM acknowledges ``CONICYT-PCHA/doctorado Nacional para
 extranjeros/2013-63130316'' for their PhD scholarship support.  
+
+JEFR acknowledges financial support from Vicerrector\'ia de
+Investigaciones at Uniandes from a a FAPA project.
 
 The authors gratefully acknowledge the Gauss Centre for Supercomputing
 e.V. (\url{www.gauss-centre.eu}) and the Partnership for Advanced
