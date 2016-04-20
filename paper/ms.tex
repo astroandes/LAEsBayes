@@ -101,14 +101,11 @@ $^3$FACom-Instituto de F\'isica-FCEN, Universidad de Antioquia, Calle 70 No. 52-
 \begin{abstract}
 We study the impact of cosmic variance and observational uncertainties
 in constraining the mass and  occupation fraction ($f_{\rm occ}$) of
-dark matter halos hosting \ly\ Emitting  Galaxies at high redshift
-(LAEs). 
+dark matter halos hosting \ly\ Emitting  Galaxies ((LAEs) at high redshift. 
 We use a N-body simulation to construct mock catalogs with the same typical size  of observed fields at $z=3.1$ ($\sim 1 {\rm deg^2}$) to match the observed  angular correlation function (ACF) and number density of LAEs.  
-In our model a dark matter halo with mass in the range $M_{\rm min}<M_{\mathrm h}<M_{\rm   max}$ can only host one detectable LAE at most. By following a thorough Markov Chain Monte-Carlo exploration of the parameter space determined by $M_{\rm min}$ and $M_{\rm   max}$, our analysis shows that $f_{\rm occ}$ is uniquely determined by $M_{\rm min}$ regardless of $M_{\rm max}$ using the relation $\focc\sim0.1\left(\mmin/10^{10.5}\right)^{0.93}$ . 
-However, the current observational data only allows us to put weak constraints on $M_{\rm min}$, $M_{\rm max}$ and consequently on $f_{\rm occ}$. 
-Particularly, we find that $10^{9.6}\hMsun\leq M_{\rm min}\leq 10^{11.0}\hMsun$ , $10^{10.9}\hMsun\leq M_{\rm max}\leq 10^{13.0}\hMsun$ and $0.02\leq f_{\rm occ}\leq 0.30$. 
-Nevertheless, we also find that  the upcoming large surveys can help to put tighter constraints on $M_{\rm min}$ and $f_{\rm occ}$ through the width measurement of the LAE number distribution function obtained over several fields of the same size of current observations. 
-Analogously, the  improvement in the precision of the measured ACF will assist in constraining $M_{\rm max}$.  
+In our model a dark matter halo with mass in the range $M_{\rm min}<M_{\mathrm h}<M_{\rm   max}$ can only host one detectable LAE at most. By following a Markov Chain Monte-Carlo exploration of the parameter space determined by $M_{\rm min}$ and $M_{\rm   max}$, our analysis shows that $f_{\rm occ}$ is uniquely determined by $M_{\rm min}$ regardless of $M_{\rm max}$ using the relation $\focc\sim0.1\left(\mmin/10^{10.5}\right)^{0.93}$ . 
+However, the current observational data only allows us to put weak constraints on $M_{\rm min}$ and consequently on $f_{\rm occ}$. Particularly, we find that $10^{9.6}\hMsun\leq M_{\rm min}\leq 10^{11.0}\hMsun$ , $10^{10.9}\hMsun\leq M_{\rm max}\leq 10^{13.0}\hMsun$ and $0.02\leq f_{\rm occ}\leq 0.30$. 
+Nevertheless, we also find that  the upcoming large surveys can help to put tighter constraints on $M_{\rm min}$ and $f_{\rm occ}$ through the width of the distribution  of the	  LAE number density obtained over several fields of the same size of current observations.  Analogously, the  improvement in the precision of the measured ACF will assist in constraining $M_{\rm max}$.  
 \end{abstract}
 
 \keywords{
@@ -137,7 +134,7 @@ Each galaxy is thought to be hosted by a larger dark matter structure
 known as a halo. \citep{Peebles1980,SpringelNature05}.  
 Understanding the cosmological context of LAEs thus implies studying
 the galaxy-halo connection.  
-Galaxy formation models suggest that the physical processes that regulate the star formation cycle are dependent on halo mass \citep{Behroozi2013a}.
+Galaxy formation models suggest that the physical processes that regulate the star formation cycle are dependent on halo mass \citep[e.g.][]{Behroozi2013a}.
 The mass becomes the most important element in the halo-galaxy connection. 
    
 The goal becomes finding the typical DM halo mass of halos hosting LAEs.
@@ -177,8 +174,8 @@ uncertainty resulting from the cosmic variance on these fields.
 
 In this letter we investigate the impact of cosmic variance in
 constraining the mass and occupation fraction of halos hosting LAEs at $z=3$.
-We build mock surveys from a cosmological N-body to compare them
-against the observations in \cite{Bielby16} using the angular
+We build mock surveys from a cosmological N-body simulation to compare them
+against the observations of \cite{Bielby16} using the angular
 correlation function.  
 We use a simple model to populate a halo in the simulation with a LAE   
 assuming a minimum (\mmin) and maximum mass (\mmax) for the dark
@@ -201,7 +198,7 @@ s$^{-1}$ Mpc$^{-1}$.
   27 mock fields. Each line corresponds to a
   different model with increasig values of $M_{\rm min}$. 
   Different models produce different number density distributions. The
-width increases with \mmin. } 
+width of the distribution increases with \mmin. } 
 \label{fig:cosmicv0}
 \end{figure}
 
@@ -232,21 +229,21 @@ We describe in detail these four elements in the following subsections.
 at $z\sim 3$  with equivalent widths of $\gtrsim$65\AA\ and a flux limit
 of $2\times10^{17}{\rm erg/cm^2/s}$ ($L\sim 7\times10^{42}{\rm erg/s} $). 
 Using spectroscopy they found a 22\% contamination fraction.
-Their observations cover 5 (out of 9) independent and co-spatial
+Their observations cover 5 (out of 9) independent and adjacent
 fields of the VLT LBG Redshift Survey (VLRS).  
 The  total observed  area corresponds to 1.07$\rm deg^2$ that translates to
 $\sim$80$^2\hMpc^2$ in a comoving scale. 
 \citet{Bielby16} used the NB497  narrow-band filter whose 77\AA\ FWHM
-and 154\AA\ FWTM correspond to a total observational depth of
+and 154\AA\ Full width  tenth maximum (FWTM) correspond to a total observational depth of
 44\hMpc\  and 82\hMpc\ comoving, respectively. 
 
 \begin{figure}
   \includegraphics[width=0.47\textwidth]{fig5.pdf}
 \caption{ Angular Correlation functions for $\log M_{\rm
-    min}[\rm{M_{\odot}h^{-1}}]=10.5$ and different values of $\Delta
+    min}[\rm{M_{\odot}h^{-1}}]=10.5$ and different values of $\Delta \log
   M$.  
   The shaded region in the models represents the $1-\sigma$ variation
-  due to cosmic variance. Radical different models in $\Delta M$ are consistent with
+  due to cosmic variance. Radically different models in $\Delta \log M$ are consistent with
   observations once cosmic variance is modelled in detail.} 
 \label{fig:corr}
 \end{figure}
@@ -314,8 +311,8 @@ lack of class pairs in LAEs \cite{Bond2009}.
 Then we say that a halo will host a LAE with probability $\focc$
 if and only if the halo mass is in the range $\mmin < M_{\mathrm
   h} < \mmax$. 
-We also use the variable \dm to represent the mass range width,
-$\dm\equiv\ \log \mmax - \log \mmax$.  
+We also use the variable \dlm to represent the mass range width,
+$\dlm\equiv\ \log \mmax - \log \mmax$.  
 
 
 The parameter $\focc$ can be thought as the LAE occupation fraction of
@@ -330,18 +327,20 @@ the ratio between the observed number of LAEs and the number of halos
 within the considered mass range, that is $\focc \equiv N_{\rm
   LAEs}/N_{\mathrm{halos}}$.   
 
-For each mock catalog we also randomly remove $22\%$ LAEs to mimic the
-effect of contamination in observations \citet{Bielby16}.
-On top of that we apply rejection sampling  to our LAE selection
-taking the transmission function of the NB479 filter used in their
-observations as a radial selection factor. 
+For each mock catalog we also randomly remove $22\%$ of the mock-LAEs and replace 
+them with randomly distrubuted point to mimic the
+effect of contamination in \citet{Bielby16} observations.
+On top of that we apply rejection sampling  to our LAE selection 
+along the radial direction
+taking the transmission function of the NB479 filter used in \citet{Bielby16}
+observations. 
 
 
 Fig. \ref{fig:cosmicv0}  shows the cumulative halo number density
 for all 27 subvolumes in the simulation, with a normalization by the
 average number density among fields. 
 Each line represents a different model $\mathcal{M}$ with fixed
-$\focc=1$ and $\dm=1.0$; and varying $\mmin$, 
+$\focc=1$ and $\dlm=1.0$; and varying $\mmin$, 
 This Figure shows that the halo number density varies across
 sub-volumes, as an expression of cosmic variance. 
 As a consequence, the $\focc$ also varies across the mock fields  
@@ -404,7 +403,7 @@ estimator  \citep{Landy1993}.
 
 Fig. \ref{fig:corr} shows the observational ACF by
 \citet{Bielby16} compared to the ACF in three different models with a
-wide range in $\dm$.  
+wide range in $\dlm$.  
 This already shows that radically different models can be compatible
 with observations once cosmic variance uncertainties are modelled in
 detail. 
@@ -437,12 +436,12 @@ LAEs due to cosmic variance (see Fig. \ref{fig:cosmicv0} and
 
 \begin{figure}
 \includegraphics[width=0.47\textwidth]{fig4.pdf}
-\caption{Median mass, $\log M_{50}$, and mass width $\Delta
+\caption{Median mass, $\log M_{50}$, and mass width $\Delta \log
   M_{1\sigma}=\log M_{84} - \log M_{16}$, for all models with low
   $\chi^2_{\mathcal{M}}/2 < 1.0$. 
   The median mass spans two orders of magnitude with a mean value
   around $10^{10.5}$\hMsun.   
-  The mass width $\Delta M_{1\sigma}$ has a median of $0.3$ dex (a factor
+  The mass width $\Delta \log M_{1\sigma}$ has a median of $0.3$ dex (a factor
   of $2$ in mass) with a maximum value of $0.7$ dex (a factor of
   5). This means that all models consistent with observations have a
   very narrow range in halo mass.}
@@ -452,7 +451,7 @@ LAEs due to cosmic variance (see Fig. \ref{fig:cosmicv0} and
 \subsection{Median Halo Mass and Halo Mass Width within Models}
 
 We now compute the median mass, $\log M_{50}$, and the $1\sigma$ halo mass
-width, $\Delta M_{1\sigma} \equiv \log M_{84} - \log M_{16}$, of the
+width, $\Delta \log M_{1\sigma} \equiv \log M_{84} - \log M_{16}$, of the
 LAE hosting halos for each model  $\mathcal{M}$ (here $M_{p}$
 represents the $p$ percentile of the mass distribution); $\log M_{50}$
 and $M_{1\sigma}$ allow a direct comparison between our results and
@@ -460,7 +459,7 @@ previous results in the literature
 \citep[e.g.][]{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16} that used
 a more simplified approach. 
 
-In Fig. \ref{fig:mmed} we show the $\log M_{50}$-$\Delta M_{1\sigma}$
+In Fig. \ref{fig:mmed} we show the $\log M_{50}$-$\Delta \log M_{1\sigma}$
 plane for the models selected to have $\chi^{2}_{\mathcal{M}}/2 < 1$,
 which roughly correspond to the $1\sigma$ region in the posterior
 distribution for the model parameters. The color encodes the
@@ -480,9 +479,9 @@ This result is consistent with previous
 
 However, the same Figure \ref{fig:mmed} shows something 
 that semi-analytical approaches were not able to predict.
-The mass width, $\Delta M_{1\sigma}$, that is the width of the mass
+The mass width, $\Delta \log M_{1\sigma}$, that is the width of the mass
 distribution for a given model with fixed $\mmin$ and $\mmax$, has a
-median value and $1\sigma$ uncertainty of $\Delta M_{1\sigma} =
+median value and $1\sigma$ uncertainty of $\Delta \log M_{1\sigma} =
 0.55^{+0.11}_{-0.31}$ dex.
 This means that the mass range for halos hosting LAEs is very narrow.
 There is only a factor of $2$ to $4$ between the lower and upper mass
