@@ -203,7 +203,8 @@ against the observations of \cite{Bielby16} using the angular
 correlation function.  
 We use a simple model to populate a halo in the simulation with a LAE   
 assuming a minimum (\mmin) and maximum mass (\mmax) for the dark
-matter halos hosting LAEs without predicting a \ly\  luminosity.  
+matter halos hosting LAEs  without assuming  an underlying relation 
+between the \ly\  luminosity and the dark matter halo mass.  
 This approach bypasses all the physical uncertainties associated to
 star formation and radiative transfer. 
 We use the Markov Chain Monte Carlo technique to obtain the likelihood
@@ -250,9 +251,9 @@ We describe in detail these four elements in the following subsections.
 \subsection{Observational constraints}
 \label{subsec:obs}
 \citet{Bielby16} used narrow band imaging to detect 643 LAE candidates
-at $z\sim 3$  with equivalent widths of $\gtrsim$65\AA\ and a flux limit
+at $z\sim 3$  with Ly-$\alpha$ equivalent widths of $\gtrsim$65\AA\ and a Ly-$\alpha$ flux limit
 of $2\times10^{17}{\rm erg/cm^2/s}$ ($L\sim 7\times10^{42}{\rm erg/s} $). 
-Using spectroscopy they found a 22\% contamination fraction.
+Using spectroscopy they found a 22\% contamination fraction $f_{\rm c}$.
 Their observations cover 5 (out of 9) independent and adjacent
 fields of the VLT LBG Redshift Survey (VLRS).  
 The  total observed  area corresponds to 1.07$\rm deg^2$ that translates to
@@ -342,19 +343,21 @@ $\dlm\equiv\ \log \mmax - \log \mmax$.
 An astrophysical interpretation of $f_{\rm occ}$ convolves at least
 four phenomena: the actual presence of a star forming galaxy in a
 halo, a duty cycle in the star formation rate, the escape fraction of
-\ly\ radiation and its detectability as a LAE.   
-We do not try to disentangle these effects.
+\ly\ radiation and its detectability as a LAE with Ly-$\alpha$ equivalent widths of $\gtrsim$65\AA.   
+We do not try to disentangle these effects and do not assume an underlying relation between the
+$\alpha$ luminosity and the dark matter halo mass.
 We instead opt for a purely arithmetic interpretation by setting
 $\focc$ as the ratio between the observed number of LAEs and the
 number of halos within the considered mass range, that is $\focc \equiv N_{\rm
   LAEs}/N_{\mathrm{halos}}$.   
 
-For each mock catalog we also randomly remove $22\%$ of the mock-LAEs and replace 
-them with randomly distrubuted points to mimic the effect of
-contamination in \citet{Bielby16} observations. 
+For each mock catalog we also randomly remove a fraction $f_{\rm c}=0.22$  of the mock-LAEs and replace 
+them with randomly distrubuted points to mimic the effect of interloper
+contamination   in \citet{Bielby16} observations. 
 On top of that we apply rejection sampling  to our LAE selection 
 along the radial direction taking the transmission function of the
 NB479 filter used in \citet{Bielby16} observations. 
+
 
 
 Fig. \ref{fig:cosmicv0}  shows the cumulative halo number density
@@ -380,28 +383,26 @@ mock fields.
 
 
 
-We make a thorough parameter space exploration of the models
-${\mathcal M}$ by  means of a Markov Chain Monte Carlo technique using
+We  explore the parameter space of the models
+${\mathcal M}$ by  means of the Markov Chain Monte Carlo technique using
 the EMCEE python package \citep{emcee2013}. 
-
-We put a flat prior on $\log M_{\rm min}$ and $\log \mmax$ between
-$9.2$ up to $13.4$, corresponding to the halo mass range of 
-the simulation at $z=3$.  
-We restrict the selection to models that give a minimal number density 
-$N_{\rm{halos}}>N_{\rm LAE}/3$.   
-This means that it is possible to have $N_{\rm{halos}} < N_{\rm LAE}$
-and hence $\focc\equiv N_{\rm{LAE}}/N_{\rm{halos}}>1$.   
-We include the $1/3$ factor to account for the uncertainty in the number 
-density of LAEs due to cosmic variance, expecting it to be on the
-same order as the dark matter halo cosmic variance shown in
-Fig. \ref{fig:cosmicv0}.   
 
 
 The MCMC exploration is done using a total of 24 seeds and 400
-iterations (9600 models) to sample the posterior PDF,
-$P(\mathcal{M}|\mathrm{observations}) \propto \exp(-\chi_{\mathcal
-  M}^2/2)$, with the $\chi_{\mathcal{M}}^2$ based on the Angular
-Correlation Function (ACF), 
+iterations (9600 models) to sample the posterior  probability distribution function 
+($P(\mathcal{M}|\mathrm{observations}$) based on the Angular
+Correlation Function (ACF). We put a flat prior on $\log M_{\rm min}$ and $\log \mmax$ between
+$9.2$ up to $13.4$, corresponding to the halo mass range of
+the simulation at $z=3$.
+We restrict the selection to models that give a minimal number density
+$N_{\rm{halos}}>N_{\rm LAE}/3$.
+This means that it is possible to have $N_{\rm{halos}} < N_{\rm LAE}$
+and hence $\focc\equiv N_{\rm{LAE}}/N_{\rm{halos}}>1$.
+We include the $1/3$ factor to account for the uncertainty in the number
+density of LAEs due to cosmic variance, expecting it to be on the
+same order as the dark matter halo cosmic variance shown in
+Fig. \ref{fig:cosmicv0}.   Our likelihood is taken proportional to
+$ \exp(-\chi_{\mathcal  M}^2/2)$, with the $\chi_{\mathcal{M}}^2$ where:
 
 \begin{equation}
 \chi_{\mathcal M}^2=
@@ -409,18 +410,24 @@ Correlation Function (ACF),
       M}\left(\theta\right) - \rm{ACF}_{\rm
       obs}\left(\theta\right)\right)^2}{ \sigma_{\rm \mathcal
       M}^{2}\left(\theta\right) + \sigma_{\rm
-      obs}^{2}\left(\theta\right)}\right] 
+      obs}^{2}\left(\theta\right)}\right]
 \end{equation}
 %
-where  $\rm{ACF}_{\mathcal M}$ and  $\rm{ACF}_{\rm obs}$ are the ACF
+Here  $\rm{ACF}_{\mathcal M}$ and  $\rm{ACF}_{\rm obs}$ are the ACF
 of the explored model ${\mathcal M}$ and the observational ACF
-reported by \citet{Bielby16} respectively. 
+reported by \citet{Bielby16} respectively.
 $\sigma_{\rm \mathcal M}$ is the associated 1-$\sigma$ scatter  of the
 $\rm{ACF}_{\mathcal M}$ as a product of cosmic variance and
 $\sigma_{\rm obs}$ is the observational error associated to
-$\rm{ACF}_{\rm obs}$.   
+$\rm{ACF}_{\rm obs}$.
+
+
+
 We compute the $\rm{ACF}_{\mathcal M}$ using the Landy \&  Szalay
-estimator  \citep{Landy1993}.   
+estimator  \citep{Landy1993}. After this,  we correct the computed ACF
+from the contamination fraction of interlopers $f_{\rm c}$ multiplying the
+ACF by a factor of $1/(1-f_{\rm c})^{2}$  following the  procedure described in
+ \citet{Bielby16}.
 
 Fig. \ref{fig:corr} shows the observational ACF by
 \citet{Bielby16} compared to the ACF in three different models with a
@@ -462,8 +469,8 @@ LAEs due to cosmic variance (see Fig. \ref{fig:cosmicv0} and
   $\chi^2_{\mathcal{M}}/2 < 1.0$. 
   The median mass spans two orders of magnitude with a mean value
   around $10^{10.5}$\hMsun.   
-  The mass width $\Delta \log M_{1\sigma}$ has a median of $0.3$ dex (a factor
-  of $2$ in mass) with a maximum value of $0.7$ dex (a factor of
+  The mass width $\Delta \log M_{1\sigma}$ has a median of $0.55$ dex (a factor
+  of $\sim3$ in mass) with a maximum value of $0.7$ dex (a factor of
   5). This means that all models consistent with observations have a
   very narrow range in halo mass.}
 \label{fig:mmed}
@@ -478,7 +485,7 @@ represents the $p$ percentile of the mass distribution); $\log M_{50}$
 and $M_{1\sigma}$ allow a direct comparison between our results and
 previous results in the literature
 \citep[e.g.][]{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16} that used
-a more simplified approach. 
+a more simplified semi-analitical approach. 
 
 In Fig. \ref{fig:mmed} we show the $\log M_{50}$-$\Delta \log M_{1\sigma}$
 plane for the models selected to have $\chi^{2}_{\mathcal{M}}/2 < 1$,
@@ -495,8 +502,8 @@ This result is consistent with previous
  estimations of  the  median dark matter halo mass reported by
  \citet{Bielby16} ($\tilde{M}_{\mathrm h} = 10^{11.0\pm0.6}$),
  \citet{Gawiser07} ($\tilde{M}_{\mathrm h} = 10^{10.9\pm0.9}$) and
- \citet{Ouchi2010} ($\tilde{M}_{\mathrm h} =
- 6.7^{+42.0}_{6.7}\times10^{10}$) using semi-analitical approaches.   
+ \citet{Ouchi2010} ($\tilde{M}_{\mathrm h} = 10^{10.8^{+1.8}_{-0.8}$) 
+using semi-analitical approaches.   
 
 However, the same Figure \ref{fig:mmed} shows something 
 that semi-analytical approaches were not able to predict.
@@ -506,16 +513,23 @@ median value and $1\sigma$ uncertainty of $\Delta \log M_{1\sigma} =
 0.55^{+0.11}_{-0.31}$ dex.
 This means that the mass range for halos hosting LAEs is very narrow.
 There is only a factor of $2$ to $4$ between the lower and upper mass
-boundary.
+boundary of the central 68 percentile of the mass distribution. 
+\todo HERE WE NEED TO CLARIFY THAT MMAX CAN BE STILL VERY 
+LARGE BECAUSE OF THE ASSYMETRY IN THE DARK MATTER HALO MASS 
+FUNCTION MAYBE MENTIONING THE 2-SIGMA WIDTH THAT IS WAY MUCH 
+HIGHER THAN THE 1-SIGMA WIDTH. THIS IS ACTUALLY THE REASON FOR 
+THE POOR CONSTRAIN THAT WE OBTAIN IN MMAX BUT IT IS STILL IMPORTANT
+BECAUSE IT DETRMINES THE  STRENGTH OF THE CLUSTERING AT SHORT SCALES.
 
 Summarizing, the median mass could be anything in the range
-$10^{9.5}$\hMsun\ and $10^{11.5}$\hMsun\ (a $2.0$ dex range), but the width is
-highly constrained to be between $0.2$ and $0.6$ dex.  
+$10^{9.5}$\hMsun\ and $10^{11.5}$\hMsun\ (a $2.0$ dex range), 
+but the 1-$\sigma$ width of the mass distribution is highly constrained 
+to be between $0.2$ and $0.6$ dex.  
 
 
 In Fig. \ref{fig:corr} we show the computed
-$ACF_{\mathcal{M}}$ of models with $\lmmin=0.5$ and different values
-of $\dlm$. We can see that the clustering gets stronger for larger
+$ACF_{\mathcal{M}}$ of models with $\lmmin=10.5$ and different values
+of $\dlm$. We can see that the clustering gets slightly stronger for larger
 values of \dlm. Nevertheless, due to the large impact of cosmic
 variance at the volume of the current observations all the models  are
 basically consistent within errors. The last result together with the
@@ -527,7 +541,7 @@ difficulty to put tighter constrains in \lmmax\ in our model.
 Fig. \ref{fig:cosmicv0}  shows the  halo number distribution (HND) in
 the  mock fields of the simulation for different models
 $\mathcal{M}$. By simple inspection one can infer an increase in the
-distribution with as \lmmin increase.  This trend is confirmed in
+distribution with as \lmmin\ increases.  This trend is confirmed in
 Fig. \ref{fig:cosmicv}  where we plot the central 1-$\sigma$ (blue
 diamonds) and 2-$\sigma$  (red dots) widths  of the NDH as a function
 of \lmmin. We particularly found that when we consider survey fields
@@ -586,20 +600,25 @@ upcoming large LAE surveys, such as the HETDEX project
 \citep{Hetdex2011} and the HSC ultra deep survey, are available: 
 \begin{enumerate}
 \item \focc is uniquely determined by \mmin, regardless of
-  \mmax. A precise determination of \mmin\ will thus fix \focc.
+  \mmax. A precise determination of \mmin\ will thus fix \focc. As a consequence of this, for a given  \mmin the media mass is also  fixed. 
+
+\item ALSO MENTION THIS HERE BECAUSE IS A STRONG CONSTRAIN:
+ the 1-$\sigma$ width of the mass distribution is highly constrained to be between $0.2$ and $0.6$ dex. 
+
 \item The width of the LAE number distribution function
   obtained over several fields of $\approx 1$ deg$^2$ is tightly
   correlated with \mmin. That measurement with next generation surveys
   will be able to constrain \mmin within a factor of $\sim 2$.
-\item  \mmax drives the ACF strength at short angular
-  distances ($<1\,\rm arcmin$), therefore precise measurements of the
-  ACF at such scales are crucial to accurately determine \mmax.  
+\item The ACF becomes slightly stronger at short angular
+  distances ($<1\,\rm arcmin$) when \mmax\ increases therefore precise
+ measurements of the  ACF at such scales are crucial to accurately
+ determine \mmax.  
 \end{enumerate}
 
 
 \section*{Acknowledgments} 
 
-JM acknowledges ``CONICYT-PCHA/doctorado Nacional para
+JEMR acknowledges ``CONICYT-PCHA/doctorado Nacional para
 extranjeros/2013-63130316'' for their PhD scholarship support.  
 
 JEFR acknowledges financial support from Vicerrector\'ia de
