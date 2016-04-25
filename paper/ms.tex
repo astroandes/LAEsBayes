@@ -140,15 +140,17 @@ Methods: data analysis - numerical - N-body simulations
 %*************************************************************************
 \section{Introduction}
 \label{sec:introduction}
-\toref ADD NEWER REFERENCES
+
 Lyman-$\alpha$ emitting galaxies (LAEs) are central to a wide range
 of subjects in extragalactic astronomy. 
-LAEs can be used as probes of reionization \citep{Dijkstra11}, tracers
-of large scale structure \citep{Koehler2007},  signposts for low
-metallicity stellar populations, markers of the galaxy formation
-process at high redshift \citep{Dayal2009,ForeroRomero2012} and
-tracers of active star formation \citep{Guaita2013}.  
-
+LAEs can be used as probes of reionization \citep[for a recent review
+  see][and references therein]{Dijkstra14}, tracers  of large scale structure
+\citep{Koehler2007}, signposts for low metallicity stellar
+populations \citep[for a recent review see][and references
+  therein]{Hayes15}, markers of the galaxy formation process at high
+redshift \citep{Partridge67,Rhoads00,Blanc11} and tracers of active
+star formation.    
+ 
 In most of those cases, capitalizing the observations requires
 understanding how LAEs are formed within an explicit cosmological
 context.  
@@ -158,28 +160,30 @@ Each galaxy is thought to be hosted by a larger dark matter structure
 known as a halo. \citep{Peebles1980,SpringelNature05}.  
 Understanding the cosmological context of LAEs thus implies studying
 the galaxy-halo connection.  
-Galaxy formation models suggest that the physical processes that regulate the star formation cycle are dependent on halo mass \citep[e.g.][]{Behroozi2013a}.
-The mass becomes the most important element in the halo-galaxy connection. 
+Galaxy formation models suggest that the physical processes that
+regulate the star formation cycle are dependent on halo mass
+\citep[e.g.][]{Behroozi2013a}. 
+The mass becomes the most important element in the halo-galaxy
+connection.  
    
 The goal becomes finding the typical DM halo mass of halos hosting LAEs.
 In the case of LAEs there are different ways to find this mass range.
 One approach is theoretical, using general astrophysical principles to
 find the relationship between halo mass, intrinsic \ly\ luminosities
-and observed \ly\ luminosities. This approach is usually implemented
-through semi-analytic models \citep{Garel2012,Orsi2012} and  full
-N-body hydrodynamical simulations \citep{Laursen2007, Dayal2009,
-  ForeroRomero2011, Yajima2012}.  
-
-
+and observed \ly\ luminosities. 
+This approach is usually implemented through semi-analytic models
+\citep{Garel2012,Orsi2012} and  full N-body hydrodynamical simulations
+\citep{Laursen2007, Dayal2009, ForeroRomero2011, Yajima2012}.  
 
 The downside of these calculations is the uncertainty in the
-estimation of the escape fraction of \ly\ photons. Given the resonant
-nature of the \ly\ line, the escape fraction is sensitive to  the dust
-contents, density, temperature, topology and kinematics of the neutral
-Hydrogen in the interstellar medium (ISM). The process of finding a
-consensus on the expected value for the \ly\ escape fraction in high
-redshift galaxies is still matter of open debate
-\citep{Neufeld1991,Verhamme2006,ForeroRomero2011,Dijkstra2012,Laursen2013,Orsi2012}. 
+estimation of the escape fraction of \ly\ photons. 
+Given the resonant nature of the \ly\ line, the escape fraction is
+sensitive to  the dust contents, density, temperature, topology and
+kinematics of the neutral Hydrogen in the interstellar medium (ISM). 
+The process of finding a consensus on the expected value for the
+\ly\ escape fraction in high redshift galaxies is still matter of open
+debate
+\citep{Neufeld1991,Verhamme2006,ForeroRomero2012,Dijkstra2012,Laursen2013,Orsi2012,Yajima14}.       
 
 A different approach to infer the typical mass of halos hosting
 LAEs is based on the spatial clustering information. 
@@ -202,13 +206,13 @@ We build mock surveys from a cosmological N-body simulation to compare them
 against the observations of \cite{Bielby16} using the angular
 correlation function.  
 We use a simple model to populate a halo in the simulation with a LAE   
-assuming a minimum (\mmin) and maximum mass (\mmax) for the dark
+assuming a minimum, \mmin, and maximum mass, \mmax, for the dark
 matter halos hosting LAEs  without assuming  an underlying relation 
 between the \ly\  luminosity and the dark matter halo mass.  
 This approach bypasses all the physical uncertainties associated to
 star formation and radiative transfer. 
-We use the Markov Chain Monte Carlo technique to obtain the likelihood
-of the parameters given the observational constraints. 
+We then use the Markov Chain Monte Carlo technique to obtain the
+likelihood of the parameters given the observational constraints. 
 
 Throughout this letter we assume a $\Lambda$CDM cosmology with the
 following values for the cosmological parameters, $\Omega_{m}=0.30711$,
