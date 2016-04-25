@@ -17,7 +17,11 @@ rc('font', **font)
 
 parspace=genfromtxt('../output/LAEBayes_mcmc_dM_1deg_fixed.out')
 parprob=genfromtxt('../output/LAEBayes_mcmc_dM_chi_1deg_fixed.out')
-parall=genfromtxt('../output/focc_1deg_fixed.txt',sxiprows=1)
+parall=genfromtxt('../output/focc_1deg_fixed.txt',skiprows=1)
+wmmin=parspace[:,0]>9.8
+parspace=parspace[wmmin]
+parprob=parprob[wmmin]
+parall=parall[wmmin]
 parspace[:,1]+=parspace[:,0]
 
 
@@ -34,7 +38,7 @@ fig.savefig('../output/likelyplot_1deg.png',  format='png', dpi=150,bbox_inches=
 fig = corner.corner(transpose([parall[:,0][arg_ini:],(1-fc)*parall[:,2][arg_ini:]]),weight=exp(parprob)[ :len( parall[:,0] ) ][arg_ini:],bins=20, smooth=0.6, labels=[r"$\log M_{\rm min}\left[\rm{M_{\odot}h^{-1}}\right]$", r"$\log f_{\rm occ}$"],quantiles=[0.16, 0.5, 0.84])
 fig.savefig('../output/likelyplot_1degf.png', format='png', dpi=150,bbox_inches='tight')
 fig = corner.corner(transpose([parall[:,0][arg_ini:], (parall[:,1]-parall[:,0])[arg_ini:] ]), weight=exp(parprob)[ :len( parall[:,0] ) ][arg_ini:], bins=20, smooth=0.6, labels=[r"$\log M_{\rm min}\left[\rm{M_{\odot}h^{-1}}\right]$", r"$\Delta \log M\left[\rm{M_{\odot}h^{-1}}\right]$"],quantiles=[0.16, 0.5, 0.84])
-fig.savefig('../output/likelyplot_1degdM.png', format='png', dpi=150,bbox_inches='tight')
+fig.savefig('../output/fig31.pdf', format='pdf', dpi=150,bbox_inches='tight')
 
 fig = corner.corner(transpose([ (parall[:,1]-parall[:,0])[arg_ini:], (1-fc)*parall[:,2][arg_ini:] ]), weight=exp(parprob)[ :len( parall[:,0] ) ][arg_ini:], bins=20,  smooth=0.6,labels=[r"$\Delta \log M\left[\rm{M_{\odot}h^{-1}}\right]$", r"$\log f_{\rm occ}$"],quantiles=[0.16, 0.5, 0.84])
 fig.savefig('../output/likelyplot_1degdMf.png', format='png', dpi=150,bbox_inches='tight')
@@ -53,7 +57,7 @@ fig.savefig('../output/likelyplot_1deg_total_old.png', format='png', dpi=150,bbo
 
 
 fig = corner.corner(transpose([parall[:,0][arg_ini:],parall[:,1][arg_ini:],(1-fc)*parall[:,2][arg_ini:]]),weight=exp(parprob)[ :len( parall[:,0] ) ][arg_ini:],bins=20,  smooth=0.6,labels=[r"$\log M_{\rm min}\left[\rm{M_{\odot}h^{-1}}\right]$", r"$\log M_{\rm max}\left[\rm{M_{\odot}h^{-1}}\right]$",r"$\log f_{\rm occ}$"],quantiles=[0.16, 0.5, 0.84])
-fig.savefig('../output/likelyplot_1deg_total.png', format='png', dpi=150,bbox_inches='tight')
+fig.savefig('../output/fig3.pdf', format='pdf', dpi=150,bbox_inches='tight')
 
 
 
