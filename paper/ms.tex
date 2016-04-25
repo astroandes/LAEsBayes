@@ -115,10 +115,9 @@ $10^{10.9}\hMsun\leq \mmax \leq 10^{13.0}\hMsun$; followed by a
 wide range in the occupation fraction $0.02\leq \focc \leq 0.30$.   
 As a consequence the median mass, $M_{50}$, of all models consistent with
 observations has a large uncertainty $M_{50} =
-3.16^{+9.34}_{-2.37}\times 10^{10}$\hMsun, in agreement with the most recent
-observational estimates.
+3.16^{+9.34}_{-2.37}\times 10^{10}$\hMsun.
 However, we find that the same individual models have a relatively tight
-$1\sigma$ mass gap $\Delta M_{1\sigma}\approx 0.4$ dex.
+$1\sigma$ mass gap $\Delta M_{1\sigma} = 0.55^{+0.11}_{-0.31}$ dex.
 We are also able show that \focc\ is uniquely determined by $M_{\rm
   min}$, regardless of $M_{\rm max}$. 
 We argue that upcoming large surveys covering at least $25$ deg$^{2}$
@@ -497,13 +496,15 @@ From this distribution we obtain $\log M_{50} = 10.5\pm 0.6$ or
 equivalently $M_{50} = 3.16^{+9.34}_{-2.37}\times 10^{10}$\hMsun.  
 The $1\sigma$ uncertainty for this median value is estimated from the
 $16$ and $84$ percentile values in the $\log M_{50}$ distribution.  
-This result is consistent with previous
- estimations of  the  median dark matter halo mass reported by
- \citet{Bielby16} ($\tilde{M}_{\mathrm h} = 10^{11.0\pm0.6}$),
- \citet{Gawiser07} ($\tilde{M}_{\mathrm h} = 10^{10.9\pm0.9}$) and
- \citet{Ouchi2010} ($\tilde{M}_{\mathrm h} = 10^{10.8^{+1.8}_{-0.8}}$) 
-using semi-analitical approaches.   MENTION THAT OUR MASS IS SYSTEMATICALLY LOWER
-AND THAT (ONLY IF MAKE SENSE) WE DO NOT DISAGREE  THAT DARK MATTER OF BIELBY AND OTHERS  OF THEIR PARTICULAR FIELDS IRE WRONG, BUT WHEN THE COSMIC VARIANCE IS INCLUDES THAT IMPLIES THAT THA THE MEAIN MASS OF LAES IN THE UNIVERSE IS SMALLER (BECAUSE OF THE ASSIMETRY IN THE NUMBER DENSITY DISTRIBUTION FUNCTION). DO SEMIANALITIC MODELS ASSUME GAUSSIAN DISTRIBUTION OF MATTER PERTURBATIONS?
+
+Our result is consistent within the statistical uncertainties with
+previous estimates reported by
+ \citet{Bielby16} ($\tilde{M}_{\mathrm h} = 10^{11.0\pm0.6} \hMsun$),
+ \citet{Gawiser07} ($\tilde{M}_{\mathrm h} = 10^{10.9\pm0.9} \hMsun$) and
+ \citet{Ouchi2010} ($\tilde{M}_{\mathrm h} = 10^{10.8^{+1.8}_{-0.8}} \hMsun$) 
+using semi-analitical approaches.   
+In spite of the large uncertainties, we note that our median mass is
+systematically below theirs by $0.3$ to $0.5$ dex. 
 
 
 However, the same Figure \ref{fig:mmed} shows something 
@@ -515,12 +516,9 @@ median value and $1\sigma$ uncertainty of $\Delta \log M_{1\sigma} =
 This means that the mass range for halos hosting LAEs is very narrow.
 There is only a factor of $2$ to $4$ between the lower and upper mass
 boundary of the central 68 percentile of the mass distribution. 
-\todo HERE WE NEED TO CLARIFY THAT MMAX CAN BE STILL VERY 
-LARGE BECAUSE OF THE ASSYMETRY IN THE DARK MATTER HALO MASS 
-FUNCTION MAYBE MENTIONING THE 2-SIGMA WIDTH THAT IS WAY MUCH 
-HIGHER THAN THE 1-SIGMA WIDTH. THIS IS ACTUALLY THE REASON FOR 
-THE POOR CONSTRAIN THAT WE OBTAIN IN MMAX BUT IT IS STILL IMPORTANT
-BECAUSE IT DETRMINES THE  STRENGTH OF THE CLUSTERING AT SHORT SCALES.
+We emphasize that \mmax\ can still be very large while the width is
+small due to the asymetry in the dark matter halo mass function. 
+
 
 Summarizing, the median mass could be anything in the range
 $10^{9.5}$\hMsun\ and $10^{11.5}$\hMsun\ (a $2.0$ dex range), 
@@ -539,21 +537,39 @@ difficulty to put tighter constrains in \lmmax\ in our model.
 
 
 \subsection{Constraining Dark matter halos mass  with cosmic variance}
+
 Fig. \ref{fig:cosmicv0}  shows the  halo number distribution (HND) in
 the  mock fields of the simulation for different models
-$\mathcal{M}$. By simple inspection one can infer an increase in the
-distribution with as \lmmin\ increases.  This trend is confirmed in
-Fig. \ref{fig:cosmicv}  where we plot the central 1-$\sigma$ (blue
-diamonds) and 2-$\sigma$  (red dots) widths  of the NDH as a function
-of \lmmin. We particularly found that when we consider survey fields
-of $\sim1{\rm deg^2}$, the central  1-$\sigma$ (2-$\sigma$) width of
-the HND increases monotonically from 0.05dex (0.10dex) when
-$\lmmin=9.5$ to 0.20dex (0.35dex) when $\lmmin=12.0$. The latter
-result opens the possibility to constrain the \lmmin (as well as the
-median mass) of LAEs by simply measure the width of the distribution
-of observed LAE along several observational fields mapping $\sim1{\rm
-  deg^2}$ in area and the observational depth determined by the NB479
-filter. 
+$\mathcal{M}$. 
+By simple inspection one can infer that the distribution width
+increases with \mmin.
+
+In Fig. \ref{fig:cosmicv} we confirm this trend by plotting the
+HND $1\sigma$ width for good models ($\chi^{2}_{\mathcal{M}}/2 < 1$) as a function
+of \lmmin. 
+We find that considering all the mock $25$ field the $1\sigma$ width, $W_{1\sigma}$
+increases with \mmin following
+
+\begin{equation}
+W_{1\sigma} = (0.138\pm 0.002) \times \left( \frac{\mmin}{10^{11}\hMsun} \right)^{0.177\pm0.009}.
+\label{eq:width}
+\end{equation}
+
+This result opens the possibility to constrain the \lmmin (as well as the
+median mass) of LAEs by simply measuring the width of the distribution
+of observed LAE along several observational fields. 
+This idea has been already explored for $z>6$ galaxies
+\citep{Robertson10}. 
+
+To keep the validity of Eq. (\ref{eq:width}) there should at least be
+$27$ fields (to follow the same numbers we use here) of size $\sim1{\rm
+  deg^2}$ with the same observational coditions (filters, equivalent
+width cuts). 
+However, repeating the same kind of cosmic variance study for different
+survey strategies should help to provide a constraint of the same
+kind. 
+
+
 
 
 
@@ -579,9 +595,8 @@ occupation fraction of dark matter halos hosting  LAEs.
 To this end we used the BolshoiP N-body simulation to construct  27 mock fields
 with the same typical size  of observed fields at $z=3.1$ ($\sim 1
 {\rm deg^2}$).      
-In our model a dark matter halo with mass in the range $M_{\rm
-  min}<M_{\mathrm h}<M_{\rm   max}$ can only host one detectable LAE
-at most.  
+In our model a dark matter halo with mass in the range $\mmin
+<M_{h}<\mmax$ can only host one detectable LAE at most.  
 We explored the parameter space determined by \mmin\ and \mmax\ using
 Monte Carlo Markov-Chain minimization to match the observed  ACF and
 mean number density of LAEs.    
@@ -589,38 +604,35 @@ It is the first time that such a thorough exploration of the cosmic
 variance impact on LAEs statistics is presented in the literature.
 
 We find that once cosmic variance is taken into account, the
-observational data can only put weak constraints on \ \mmax\ and \focc. 
+observational data can only put weak constraints on  \mmax\ and \focc. 
 When we translate these loos constraints into the median mass, we find
 a general consistency with previous works \citep{Hayashino2004,
   Gawiser07,Ouchi2008} specially with the most recent one
 \citep{Bielby16}. 
 
-Nevertheless, our analysis allowed us to draw three results that can
+Nevertheless, our analysis allowed us to draw two results that can
 be used to put tighter constraints on \mmin and \focc once
 upcoming large LAE surveys, such as the HETDEX project 
 \citep{Hetdex2011} and the HSC ultra deep survey, are available: 
 
 \begin{enumerate}
 \item \focc is uniquely determined by \mmin, regardless of
-  \mmax. A precise determination of \mmin\ will thus fix \focc. As a consequence of this, for a given  \mmin the media mass is also  fixed. 
+  \mmax. A precise determination of \mmin\ will thus fix \focc. As a
+  consequence of this, for a given  \mmin the media mass is also
+  fixed.  
 
 \item The width of the LAE number distribution function
   obtained over several fields of $\approx 1$ deg$^2$ is tightly
-  correlated with \mmin. That measurement with next generation surveys
+  correlated with \mmin. 
+  That measurement with next generation surveys
   will be able to constrain \mmin within a factor of $\sim 2$.
-
+\end{enumerate}
 
 We also find that the 1-$\sigma$ width of the mass distribution is
 highly constrained to be between $0.2$ and $0.6$ dex. 
-This result imposes constraints on different models for LAEs formation
-in a cosmological context as to why observable LAEs are constrained
-into a narrow halo mass range.
-
-Overall, our approach highlights the importance of forward modelling
-to take explicitly into account the effects of cosmic variance.
-We expect this 
-
-\end{enumerate}
+This result can be used to test different models for LAEs formation
+in a cosmological context to better understand why observable LAEs are
+constrained into a narrow halo mass range.
 
 
 \section*{Acknowledgments} 
@@ -644,7 +656,7 @@ Research Center.
 
 \bibliographystyle{apj}
 %\bibliography{references.bib}
-\begin{thebibliography}{38}
+\begin{thebibliography}{39}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2011){Adams}, {Blanc}, {Hill}, {Gebhardt}, {Drory},
@@ -831,6 +843,9 @@ Riebe, K., Partl, A.~M., Enke, H., Forero-Romero, J., Gottlöber, S., Klypin,
   A., Lemson, G., Prada, F., Primack, J.~R., Steinmetz, M., \& Turchaninov, V.
   2013, Astronomische Nachrichten, 334, 691
 
+\bibitem[{{Robertson}(2010)}]{Robertson10}
+{Robertson}, B.~E. 2010, \apjl, 716, L229
+
 \bibitem[{{Springel} {et~al.}(2005){Springel}, {White}, {Jenkins}, {Frenk},
   {Yoshida}, {Gao}, {Navarro}, {Thacker}, {Croton}, {Helly}, {Peacock}, {Cole},
   {Thomas}, {Couchman}, {Evrard}, {Colberg}, \& {Pearce}}]{SpringelNature05}
@@ -852,6 +867,7 @@ Riebe, K., Partl, A.~M., Enke, H., Forero-Romero, J., Gottlöber, S., Klypin,
   R. 2014, \mnras, 440, 776
 
 \end{thebibliography}
+
 
 
 \end{document}
