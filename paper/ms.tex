@@ -118,23 +118,18 @@ observations has a large uncertainty $M_{50} =
 3.16^{+9.34}_{-2.37}\times 10^{10}$\hMsun, in agreement with the most recent
 observational estimates.
 However, we find that the same individual models have a relatively tight
-mass gap, $\Delta M \equiv \log_{10}\mmax - \log_{10}\mmin$, of $\Delta
-M\approx 0.3$dex.
+$1\sigma$ mass gap $\Delta M_{1\sigma}\approx 0.4$ dex.
 We are also able show that \focc\ is uniquely determined by $M_{\rm
-  min}$, regardless of $M_{\rm max}$, by
-$\focc\sim0.1(\mmin/10^{10.5}\hMsun )^{0.93}$.  
-However, the current observational data only allows us to put weak
-constraints on \mmin\ and consequently on \focc.
+  min}$, regardless of $M_{\rm max}$. 
 We argue that upcoming large surveys covering at least $25$ deg$^{2}$
 should be able to put tighter constraints on \mmin\ and \focc\ through the LAE number density
 distribution width, $W_{1\sigma}$, constructed over several fields of
-$\sim 1$ deg$^{2}$ using the relationship, $W_{1\sigma} =
-0.138\times (\mmin/10^{11}\hMsun )^{0.177}$, calibrated from our results.
+$\sim 1$ deg$^{2}$.
 \end{abstract}
 
 \keywords{
-Cosmology: theory - large-scale structure of Universe -
-Methods: data analysis - numerical - N-body simulations
+Galaxies: halos --- Galaxies: high-redshift --- Galaxies: statistics
+--- Dark Matter --- Methods: numerical 
 }
 
 %*************************************************************************
@@ -225,9 +220,9 @@ s$^{-1}$ Mpc$^{-1}$.
 \includegraphics[width=0.47\textwidth]{fig1.pdf}
 \caption{Cumulative halo number density distribution function over
   27 mock fields. Each line corresponds to a
-  different model with increasig values of $M_{\rm min}$. 
-  Different models produce different number density distributions. The
-width of the distribution increases with \mmin. } 
+  different model with increasig values of \mmin. 
+  Different models produce different number density distributions. 
+  The width of the distribution increases with \mmin. } 
 \label{fig:cosmicv0}
 \end{figure}
 
@@ -601,24 +596,30 @@ a general consistency with previous works \citep{Hayashino2004,
 \citep{Bielby16}. 
 
 Nevertheless, our analysis allowed us to draw three results that can
-be used to put tighter constraints on \mmin, \mmax and \focc once
+be used to put tighter constraints on \mmin and \focc once
 upcoming large LAE surveys, such as the HETDEX project 
 \citep{Hetdex2011} and the HSC ultra deep survey, are available: 
+
 \begin{enumerate}
 \item \focc is uniquely determined by \mmin, regardless of
   \mmax. A precise determination of \mmin\ will thus fix \focc. As a consequence of this, for a given  \mmin the media mass is also  fixed. 
-
-\item ALSO MENTION THIS HERE BECAUSE IS A STRONG CONSTRAIN:
- the 1-$\sigma$ width of the mass distribution is highly constrained to be between $0.2$ and $0.6$ dex. SOMETHING THAT IS ALSO IMPORTANT IS THAT THIS CONSTRAIN IS ASSUMING OUR MODEL IS RIGHT, IF IT HAPPENS TO BE THAT THE FUNCTION THAT RELATES LUMINOSITY WITH MASS IS VERY STEPPEN THEN THE RESULTS MAY CHANGE.
 
 \item The width of the LAE number distribution function
   obtained over several fields of $\approx 1$ deg$^2$ is tightly
   correlated with \mmin. That measurement with next generation surveys
   will be able to constrain \mmin within a factor of $\sim 2$.
-\item The ACF becomes slightly stronger at short angular
-  distances ($<1\,\rm arcmin$) when \mmax\ increases therefore precise
- measurements of the  ACF at such scales are crucial to accurately
- determine \mmax.  
+
+
+We also find that the 1-$\sigma$ width of the mass distribution is
+highly constrained to be between $0.2$ and $0.6$ dex. 
+This result imposes constraints on different models for LAEs formation
+in a cosmological context as to why observable LAEs are constrained
+into a narrow halo mass range.
+
+Overall, our approach highlights the importance of forward modelling
+to take explicitly into account the effects of cosmic variance.
+We expect this 
+
 \end{enumerate}
 
 
@@ -642,6 +643,215 @@ Research Center.
 
 
 \bibliographystyle{apj}
-\bibliography{references.bib}
+%\bibliography{references.bib}
+\begin{thebibliography}{38}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Adams} {et~al.}(2011){Adams}, {Blanc}, {Hill}, {Gebhardt}, {Drory},
+  {Hao}, {Bender}, {Byun}, {Ciardullo}, {Cornell}, {Finkelstein}, {Fry},
+  {Gawiser}, {Gronwall}, {Hopp}, {Jeong}, {Kelz}, {Kelzenberg}, {Komatsu},
+  {MacQueen}, {Murphy}, {Odoms}, {Roth}, {Schneider}, {Tufts}, \&
+  {Wilkinson}}]{Hetdex2011}
+{Adams}, J.~J., {Blanc}, G.~A., {Hill}, G.~J., {Gebhardt}, K., {Drory}, N.,
+  {Hao}, L., {Bender}, R., {Byun}, J., {Ciardullo}, R., {Cornell}, M.~E.,
+  {Finkelstein}, S.~L., {Fry}, A., {Gawiser}, E., {Gronwall}, C., {Hopp}, U.,
+  {Jeong}, D., {Kelz}, A., {Kelzenberg}, R., {Komatsu}, E., {MacQueen}, P.~J.,
+  {Murphy}, J., {Odoms}, P.~S., {Roth}, M., {Schneider}, D.~P., {Tufts}, J.~R.,
+  \& {Wilkinson}, C.~P. 2011, \apjs, 192, 5
+
+\bibitem[{{Behroozi} {et~al.}(2013){Behroozi}, {Wechsler}, \&
+  {Conroy}}]{Behroozi2013a}
+{Behroozi}, P.~S., {Wechsler}, R.~H., \& {Conroy}, C. 2013, \apj, 770, 57
+
+\bibitem[{{Bielby} {et~al.}(2016){Bielby}, {Tummuangpak}, {Shanks}, {Francke},
+  {Crighton}, {Ba{\~n}ados}, {Gonz{\'a}lez-L{\'o}pez}, {Infante}, \&
+  {Orsi}}]{Bielby16}
+{Bielby}, R.~M., {Tummuangpak}, P., {Shanks}, T., {Francke}, H., {Crighton},
+  N.~H.~M., {Ba{\~n}ados}, E., {Gonz{\'a}lez-L{\'o}pez}, J., {Infante}, L., \&
+  {Orsi}, A. 2016, \mnras, 456, 4061
+
+\bibitem[{{Blanc} {et~al.}(2011){Blanc}, {Adams}, {Gebhardt}, {Hill}, {Drory},
+  {Hao}, {Bender}, {Ciardullo}, {Finkelstein}, {Fry}, {Gawiser}, {Gronwall},
+  {Hopp}, {Jeong}, {Kelzenberg}, {Komatsu}, {MacQueen}, {Murphy}, {Roth},
+  {Schneider}, \& {Tufts}}]{Blanc11}
+{Blanc}, G.~A., {Adams}, J.~J., {Gebhardt}, K., {Hill}, G.~J., {Drory}, N.,
+  {Hao}, L., {Bender}, R., {Ciardullo}, R., {Finkelstein}, S.~L., {Fry}, A.~B.,
+  {Gawiser}, E., {Gronwall}, C., {Hopp}, U., {Jeong}, D., {Kelzenberg}, R.,
+  {Komatsu}, E., {MacQueen}, P., {Murphy}, J.~D., {Roth}, M.~M., {Schneider},
+  D.~P., \& {Tufts}, J. 2011, \apj, 736, 31
+
+\bibitem[{{Bond} {et~al.}(2009){Bond}, {Gawiser}, {Gronwall}, {Ciardullo},
+  {Altmann}, \& {Schawinski}}]{Bond2009}
+{Bond}, N.~A., {Gawiser}, E., {Gronwall}, C., {Ciardullo}, R., {Altmann}, M.,
+  \& {Schawinski}, K. 2009, \apj, 705, 639
+
+\bibitem[{{Colberg} {et~al.}(2000){Colberg}, {White}, {Yoshida}, {MacFarland},
+  {Jenkins}, {Frenk}, {Pearce}, {Evrard}, {Couchman}, {Efstathiou}, {Peacock},
+  {Thomas}, \& {Virgo Consortium}}]{Colberg00}
+{Colberg}, J.~M., {White}, S.~D.~M., {Yoshida}, N., {MacFarland}, T.~J.,
+  {Jenkins}, A., {Frenk}, C.~S., {Pearce}, F.~R., {Evrard}, A.~E., {Couchman},
+  H.~M.~P., {Efstathiou}, G., {Peacock}, J.~A., {Thomas}, P.~A., \& {Virgo
+  Consortium}. 2000, \mnras, 319, 209
+
+\bibitem[{{Dayal} {et~al.}(2009){Dayal}, {Ferrara}, {Saro}, {Salvaterra},
+  {Borgani}, \& {Tornatore}}]{Dayal2009}
+{Dayal}, P., {Ferrara}, A., {Saro}, A., {Salvaterra}, R., {Borgani}, S., \&
+  {Tornatore}, L. 2009, \mnras, 400, 2000
+
+\bibitem[{{Dijkstra}(2014)}]{Dijkstra14}
+{Dijkstra}, M. 2014, \pasa, 31, e040
+
+\bibitem[{{Dijkstra} \& {Kramer}(2012)}]{Dijkstra2012}
+{Dijkstra}, M., \& {Kramer}, R. 2012, \mnras, 424, 1672
+
+\bibitem[{{Foreman-Mackey} {et~al.}(2013){Foreman-Mackey}, {Hogg}, {Lang}, \&
+  {Goodman}}]{emcee2013}
+{Foreman-Mackey}, D., {Hogg}, D.~W., {Lang}, D., \& {Goodman}, J. 2013, \pasp,
+  125, 306
+
+\bibitem[{{Forero-Romero} {et~al.}(2011){Forero-Romero}, {Yepes},
+  {Gottl{\"o}ber}, {Knollmann}, {Cuesta}, \& {Prada}}]{ForeroRomero2011}
+{Forero-Romero}, J.~E., {Yepes}, G., {Gottl{\"o}ber}, S., {Knollmann}, S.~R.,
+  {Cuesta}, A.~J., \& {Prada}, F. 2011, \mnras, 415, 3666
+
+\bibitem[{{Forero-Romero} {et~al.}(2012){Forero-Romero}, {Yepes},
+  {Gottl{\"o}ber}, \& {Prada}}]{ForeroRomero2012}
+{Forero-Romero}, J.~E., {Yepes}, G., {Gottl{\"o}ber}, S., \& {Prada}, F. 2012,
+  \mnras, 419, 952
+
+\bibitem[{{Garel} {et~al.}(2012){Garel}, {Blaizot}, {Guiderdoni}, {Schaerer},
+  {Verhamme}, \& {Hayes}}]{Garel2012}
+{Garel}, T., {Blaizot}, J., {Guiderdoni}, B., {Schaerer}, D., {Verhamme}, A.,
+  \& {Hayes}, M. 2012, \mnras, 422, 310
+
+\bibitem[{{Gawiser} {et~al.}(2007{\natexlab{a}}){Gawiser}, {Francke}, {Lai},
+  {Schawinski}, {Gronwall}, {Ciardullo}, {Quadri}, {Orsi}, {Barrientos},
+  {Blanc}, {Fazio}, \& {Feldmeier}}]{Gawiser2007}
+{Gawiser}, E., {Francke}, H., {Lai}, K., {Schawinski}, K., {Gronwall}, C.,
+  {Ciardullo}, R., {Quadri}, R., {Orsi}, A., {Barrientos}, L.~F., {Blanc},
+  G.~A., {Fazio}, G., \& {Feldmeier}, J.~J. 2007{\natexlab{a}}, \apj, 671, 278
+
+\bibitem[{{Gawiser} {et~al.}(2007{\natexlab{b}}){Gawiser}, {Francke}, {Lai},
+  {Schawinski}, {Gronwall}, {Ciardullo}, {Quadri}, {Orsi}, {Barrientos},
+  {Blanc}, {Fazio}, {Feldmeier}, {Huang}, {Infante}, {Lira}, \&
+  {Padilla}}]{Gawiser07}
+{Gawiser}, E., {Francke}, H., {Lai}, K., {Schawinski}, K., {Gronwall}, C.,
+  {Ciardullo}, R., {Quadri}, R., {Orsi}, A., {Barrientos}, L.~F., {Blanc},
+  G.~A., {Fazio}, G., {Feldmeier}, J.~J., {Huang}, J.-s., {Infante}, L.,
+  {Lira}, P., \& {Padilla}, N. 2007{\natexlab{b}}, \apj, 671, 278
+
+\bibitem[{{Hayashino} {et~al.}(2004){Hayashino}, {Matsuda}, {Tamura},
+  {Yamauchi}, {Yamada}, {Ajiki}, {Fujita}, {Murayama}, {Nagao}, {Ohta},
+  {Okamura}, {Ouchi}, {Shimasaku}, {Shioya}, \& {Taniguchi}}]{Hayashino2004}
+{Hayashino}, T., {Matsuda}, Y., {Tamura}, H., {Yamauchi}, R., {Yamada}, T.,
+  {Ajiki}, M., {Fujita}, S.~S., {Murayama}, T., {Nagao}, T., {Ohta}, K.,
+  {Okamura}, S., {Ouchi}, M., {Shimasaku}, K., {Shioya}, Y., \& {Taniguchi}, Y.
+  2004, \aj, 128, 2073
+
+\bibitem[{{Hayes}(2015)}]{Hayes15}
+{Hayes}, M. 2015, \pasa, 32, e027
+
+\bibitem[{{Jose} {et~al.}(2013){Jose}, {Srianand}, \&
+  {Subramanian}}]{Jose2013b}
+{Jose}, C., {Srianand}, R., \& {Subramanian}, K. 2013, ArXiv e-prints
+
+\bibitem[{{Klypin} {et~al.}(2014){Klypin}, {Yepes}, {Gottlober}, {Prada}, \&
+  {Hess}}]{BolshoiP}
+{Klypin}, A., {Yepes}, G., {Gottlober}, S., {Prada}, F., \& {Hess}, S. 2014,
+  ArXiv e-prints
+
+\bibitem[{{Klypin} {et~al.}(2011){Klypin}, {Trujillo-Gomez}, \&
+  {Primack}}]{Bolshoi}
+{Klypin}, A.~A., {Trujillo-Gomez}, S., \& {Primack}, J. 2011, \apj, 740, 102
+
+\bibitem[{{Koehler} {et~al.}(2007){Koehler}, {Schuecker}, \&
+  {Gebhardt}}]{Koehler2007}
+{Koehler}, R.~S., {Schuecker}, P., \& {Gebhardt}, K. 2007, \aap, 462, 7
+
+\bibitem[{{Landy} \& {Szalay}(1993)}]{Landy1993}
+{Landy}, S.~D., \& {Szalay}, A.~S. 1993, \apj, 412, 64
+
+\bibitem[{{Laursen} {et~al.}(2013){Laursen}, {Duval}, \&
+  {{\"O}stlin}}]{Laursen2013}
+{Laursen}, P., {Duval}, F., \& {{\"O}stlin}, G. 2013, \apj, 766, 124
+
+\bibitem[{{Laursen} \& {Sommer-Larsen}(2007)}]{Laursen2007}
+{Laursen}, P., \& {Sommer-Larsen}, J. 2007, \apjl, 657, L69
+
+\bibitem[{{Neufeld}(1991)}]{Neufeld1991}
+{Neufeld}, D.~A. 1991, \apjl, 370, L85
+
+\bibitem[{{Nilsson} {et~al.}(2007){Nilsson}, {M{\o}ller}, {M{\"o}ller},
+  {Fynbo}, {Micha{\l}owski}, {Watson}, {Ledoux}, {Rosati}, {Pedersen}, \&
+  {Grove}}]{Nilsson2007}
+{Nilsson}, K.~K., {M{\o}ller}, P., {M{\"o}ller}, O., {Fynbo}, J.~P.~U.,
+  {Micha{\l}owski}, M.~J., {Watson}, D., {Ledoux}, C., {Rosati}, P.,
+  {Pedersen}, K., \& {Grove}, L.~F. 2007, \aap, 471, 71
+
+\bibitem[{{Orsi} {et~al.}(2012){Orsi}, {Lacey}, \& {Baugh}}]{Orsi2012}
+{Orsi}, A., {Lacey}, C.~G., \& {Baugh}, C.~M. 2012, \mnras, 425, 87
+
+\bibitem[{{Ouchi} {et~al.}(2008){Ouchi}, {Shimasaku}, {Akiyama}, {Simpson},
+  {Saito}, {Ueda}, {Furusawa}, {Sekiguchi}, {Yamada}, {Kodama}, {Kashikawa},
+  {Okamura}, {Iye}, {Takata}, {Yoshida}, \& {Yoshida}}]{Ouchi2008}
+{Ouchi}, M., {Shimasaku}, K., {Akiyama}, M., {Simpson}, C., {Saito}, T.,
+  {Ueda}, Y., {Furusawa}, H., {Sekiguchi}, K., {Yamada}, T., {Kodama}, T.,
+  {Kashikawa}, N., {Okamura}, S., {Iye}, M., {Takata}, T., {Yoshida}, M., \&
+  {Yoshida}, M. 2008, \apjs, 176, 301
+
+\bibitem[{{Ouchi} {et~al.}(2010){Ouchi}, {Shimasaku}, {Furusawa}, {Saito},
+  {Yoshida}, {Akiyama}, {Ono}, {Yamada}, {Ota}, {Kashikawa}, {Iye}, {Kodama},
+  {Okamura}, {Simpson}, \& {Yoshida}}]{Ouchi2010}
+{Ouchi}, M., {Shimasaku}, K., {Furusawa}, H., {Saito}, T., {Yoshida}, M.,
+  {Akiyama}, M., {Ono}, Y., {Yamada}, T., {Ota}, K., {Kashikawa}, N., {Iye},
+  M., {Kodama}, T., {Okamura}, S., {Simpson}, C., \& {Yoshida}, M. 2010, \apj,
+  723, 869
+
+\bibitem[{{Partridge} \& {Peebles}(1967)}]{Partridge67}
+{Partridge}, R.~B., \& {Peebles}, P.~J.~E. 1967, \apj, 147, 868
+
+\bibitem[{{Peebles}(1980)}]{Peebles1980}
+{Peebles}, P.~J.~E. 1980, {The large-scale structure of the universe}
+
+\bibitem[{{Planck Collaboration} {et~al.}(2014){Planck Collaboration}, {Ade},
+  {Aghanim}, {Armitage-Caplan}, {Arnaud}, {Ashdown}, {Atrio-Barandela},
+  {Aumont}, {Baccigalupi}, {Banday}, \& et~al.}]{Planck2014}
+{Planck Collaboration}, {Ade}, P.~A.~R., {Aghanim}, N., {Armitage-Caplan}, C.,
+  {Arnaud}, M., {Ashdown}, M., {Atrio-Barandela}, F., {Aumont}, J.,
+  {Baccigalupi}, C., {Banday}, A.~J., \& et~al. 2014, \aap, 571, A16
+
+\bibitem[{{Rhoads} {et~al.}(2000){Rhoads}, {Malhotra}, {Dey}, {Stern},
+  {Spinrad}, \& {Jannuzi}}]{Rhoads00}
+{Rhoads}, J.~E., {Malhotra}, S., {Dey}, A., {Stern}, D., {Spinrad}, H., \&
+  {Jannuzi}, B.~T. 2000, \apjl, 545, L85
+
+\bibitem[{Riebe {et~al.}(2013)Riebe, Partl, Enke, Forero-Romero, Gottlöber,
+  Klypin, Lemson, Prada, Primack, Steinmetz, \& Turchaninov}]{MultiDark}
+Riebe, K., Partl, A.~M., Enke, H., Forero-Romero, J., Gottlöber, S., Klypin,
+  A., Lemson, G., Prada, F., Primack, J.~R., Steinmetz, M., \& Turchaninov, V.
+  2013, Astronomische Nachrichten, 334, 691
+
+\bibitem[{{Springel} {et~al.}(2005){Springel}, {White}, {Jenkins}, {Frenk},
+  {Yoshida}, {Gao}, {Navarro}, {Thacker}, {Croton}, {Helly}, {Peacock}, {Cole},
+  {Thomas}, {Couchman}, {Evrard}, {Colberg}, \& {Pearce}}]{SpringelNature05}
+{Springel}, V., {White}, S.~D.~M., {Jenkins}, A., {Frenk}, C.~S., {Yoshida},
+  N., {Gao}, L., {Navarro}, J., {Thacker}, R., {Croton}, D., {Helly}, J.,
+  {Peacock}, J.~A., {Cole}, S., {Thomas}, P., {Couchman}, H., {Evrard}, A.,
+  {Colberg}, J., \& {Pearce}, F. 2005, \nat, 435, 629
+
+\bibitem[{{Verhamme} {et~al.}(2006){Verhamme}, {Schaerer}, \&
+  {Maselli}}]{Verhamme2006}
+{Verhamme}, A., {Schaerer}, D., \& {Maselli}, A. 2006, \aap, 460, 397
+
+\bibitem[{{Yajima} {et~al.}(2012){Yajima}, {Choi}, \& {Nagamine}}]{Yajima2012}
+{Yajima}, H., {Choi}, J.-H., \& {Nagamine}, K. 2012, \mnras, 427, 2889
+
+\bibitem[{{Yajima} {et~al.}(2014){Yajima}, {Li}, {Zhu}, {Abel}, {Gronwall}, \&
+  {Ciardullo}}]{Yajima14}
+{Yajima}, H., {Li}, Y., {Zhu}, Q., {Abel}, T., {Gronwall}, C., \& {Ciardullo},
+  R. 2014, \mnras, 440, 776
+
+\end{thebibliography}
+
 
 \end{document}
