@@ -1,0 +1,46 @@
+Referee Report 
+Reviewer's Comments:
+The manuscript "Uncertainty on the Galaxy-halo Connection for Lyman-alpha Emitters at z=3.1" by Mejia-Restrepo and Forero-Romero,
+ presents a new method to understand the clustering of z=3.1 Lyman Alpha Emitters (LAEs) using mock catalogues constructed from 
+simulations using a simple occupation model of haloes by LAEs. This is a novel approach in itself, more complete with respect to 
+what is usually applied to LAE clustering analysis. It is interesting the wide range of masses that are able to reproduce the 
+observed clustering, but I wonder how much these conclusions are affected by the priors adopted here.
+
+I find the idea very interesting, but have a few concerns which I point out next.
+
+- When looking at figure 3, it is clear that the allowed range of parameters is not wide enough to sample the full probability 
+distribution. Therefore, the mean and scatter of the parameters obtained from the one-dimensional probabilities could be biased. 
+To improve this the authors need to increase the range of allowed parameters. This can have a strong impact on their conclusions, 
+for example the one with respect to the width of the mass range of LAE hosts.
+
+- The choice of the occupation fraction focc as a fixed fraction for a given halo to be occupied by an LAE means the mass function
+ of haloes is being scaled down (in most cases) by this factor. In this sense, it is to be expected that as the minimum halo mass 
+allowed is increased, this fraction will also increase in order to maintain a fixed number of LAEs per field (more massive haloes 
+are less abundant). This should be mentioned in the text.
+
+- Also because of the fixed focc, the median halo mass and halo mass width could actually be calculated analytically, except that 
+the authors are interested in cosmic variance, which they obtain from different subvolumes in the simulation. Is this the reason 
+for the large scatter seen in figure 4?
+
+- In their chi2 analysis the authors are ignoring covariances. The authors could comment on this choice (perhaps covariances are 
+not expected to be strong at these angular separations?)
+
+Minor comments:
+
+- Is the increase of the clustering amplitude with Delta(logM) expected from the steeper increase of the bias factor for larger 
+halo masses?
+
+- The width of the distribution of Figure 5 is measured with 27 mock fields, but this does not really mean that a comparison to 
+observations requires 27 observed fields.
+
+- Please add units to the grey scales used in Figure 3, and y-axes labels to the one dimensional probability distributions.
+
+- In the introduction it is stated that previous works do not elaborate on cosmic variance, but in general they do, to some degree
+ (for instance, Guaita et al., 2010).
+
+- S2.1: is this equivalent width limit in rest-frame?
+
+- Last paragraph 2.3: rephrase first sentence "we note by the paper M"
+
+Reviewer: Nelson Padilla
+
