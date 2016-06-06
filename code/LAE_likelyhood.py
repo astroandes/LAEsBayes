@@ -15,6 +15,29 @@ matplotlib.use('Agg')
 font = {'family' : 'normal',
         'weight' : 'normal',
         'size'   : 20}
+
+from numpy import *
+import math
+
+def norm_pdf_multivariate(x, mu, sigma):
+        size = len(x)
+        if size == len(mu) and (size, size) == sigma.shape:
+            det = linalg.det(sigma)
+            if det == 0:
+                raise NameError("The covariance matrix can't be singular")
+        
+
+
+            #norm_const = np.log(1.0/ ( math.pow((2*pi),float(size)/2) * math.pow(det,1.0/2) ))
+            x_mu = matrix(x - mu)
+            inv = sigma.I
+            result = -0.5 * (x_mu * inv * x_mu.T)
+            return result.item()
+        else:
+            raise NameError("The dimensions of the input don't match")
+            
+
+
 matplotlib.rc('font', **font)
 
 from pylab import *
@@ -30,7 +53,7 @@ except: print '../output already exist. Not a problem'
 load_snap_file=1 #load the snapshot positions and massess. Default 0.
 indexes_subcat=1 #find the indexes for the subcatalogs. Default 1
 plot_ndist=1  # plot the number halo distrubition in the subacatalog. Default 0
-run_emcee=0
+run_emcee=1
 compute_RR=0
 use_trans=1 # use transmission function to select LAEs
 ncatRR=1000
@@ -41,7 +64,7 @@ Acor=Acor*Acor # Amplutide correction factor of the ACF
 
 
 
-sufix='_1deg_fixed'
+sufix='_1deg_cov'
 niter=400 #number of times to iter emcee
 ndim=2 #number of parameters, 3 in this time: mmin,mma,focc.
 nwalkers=24 # number of independent walks
@@ -54,7 +77,7 @@ dmmax=1.0
 fo=0.5
 dfo=0.5
 
-#Below are the seeds to be passed to EMCEE, Here I generete them randomly using a gaussian distribution.
+#Below are t he seeds to be passed to EMCEE, Here I generete them randomly using a gaussian distribution.
 
 mmin=Mo+dmmin*randn(nwalkers) 
 mmin=np.abs(mmin)
@@ -532,7 +555,7 @@ def corelationlike(Mmin,dM,focc,x,y,z,mass,index,n_array,xwidth,ywidth,zwidth,Dc
     th_min=theta_bins[0];th_max=theta_bins[-1]
     corr=np.zeros( len(theta)  )
     m=np.log10(mass)
-    if Mmin>=Mmax-0.00001 or focc>1 or focc<0 or Mmin<9.19 or Mmax<9.24 or  Mmax>13.4 or Mmin>12.5: chi2=np.inf; print chi2; return -1.0*np.inf
+    if Mmin>=Mmax-0.00001 or focc>1 or focc<0 or Mmin<9.6 or Mmax<9.65 or  Mmax>13.4 or Mmin>12.5: chi2=np.inf; print chi2; return -1.0*np.inf
     else:
         
         #print th_max, th_min, "thmax-min"
@@ -690,11 +713,18 @@ def corelationlike(Mmin,dM,focc,x,y,z,mass,index,n_array,xwidth,ywidth,zwidth,Dc
                 #print count, " end"
             Ac=1.0/((1.0-cont_frac)*(1.0-cont_frac))
             corr=Ac*np.ma.masked_invalid(corr/count)
+            corr_arr=Ac*np.ma.masked_invalid(corr_arr)
+            cov=np.cov(corr_arr)
+            std=np.array([np.sqrt(cov[i,i]) for i in range(len(theta))])
+            #std=np.array([np.std(corr_arr[i,:]) for i in range(len(theta))])
             
-            std=Ac*np.array([np.std(corr_arr[i,:]) for i in range(len(theta))])
+            
+            
             low=Ac*np.array([np.percentile(corr_arr[i,:],16) for i in range(len(theta))])
             up=Ac*np.array([np.percentile(corr_arr[i,:],84) for i in range(len(theta))])
             median=Ac*np.array([np.percentile(corr_arr[i,:],50) for i in range(len(theta))])
+            
+            
             err_l=median-low
             err_u=up-median
             #print "std,err_l,err_u",std,err_l,err_u
@@ -709,7 +739,9 @@ def corelationlike(Mmin,dM,focc,x,y,z,mass,index,n_array,xwidth,ywidth,zwidth,Dc
                 else:
                     dcorr[i]=err_l[i]
         if focc==1:
-            chi2=np.sum( (corr-corrobs)*(corr-corrobs)/(dcorr*dcorr+dcorrobs*dcorrobs) )/(np.ma.count(corr)-1)
+            #chi2=np.sum( (corr-corrobs)*(corr-corrobs)/(dcorr*dcorr+dcorrobs*dcorrobs) )/(np.ma.count(corr)-1)
+            chi1=np.array([norm_pdf_multivariate(corr_arr[:,i],corr,matrix(cov)) for i in range( len(corr_arr[1,:]) )])
+            chi2=-1.0*np.sum(chi1)/(1.0*len(chi1)-1.0)#/(1.0*len(theta))
         else:
             dcorr=dcorrobs
             chi2=((Nlae_teo-Nlae)*(Nlae_teo-Nlae)/(dNlae*dNlae))+np.sum( (corr-corrobs)*(corr-corrobs)/(dcorr*dcorr) )/(np.ma.count(corr)-1) 
@@ -718,7 +750,7 @@ def corelationlike(Mmin,dM,focc,x,y,z,mass,index,n_array,xwidth,ywidth,zwidth,Dc
     #print "corrobs=",corrobs
     #raw_input("Press Enter to continue...")
     if return_corr==1:
-        return theta,corr,err_u,err_l
+        return theta,corr,err_u,err_l,corr_arr
     else:
         return -0.5*chi2
 
