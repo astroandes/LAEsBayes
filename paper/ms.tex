@@ -117,12 +117,15 @@ observations has a large uncertainty $M_{50} =
 3.16^{+9.34}_{-2.37}\times 10^{10}$\hMsun.
 However, we find that the same individual models have a relatively tight
 $1\sigma$  scatter around the median mass $\Delta M_{1\sigma} = 0.55^{+0.11}_{-0.31}$ dex.
-We are also able show that \focc\ is uniquely determined by $M_{\rm
+We are also able to show that \focc\ is uniquely determined by $M_{\rm
   min}$, regardless of $M_{\rm max}$. 
 We argue that upcoming large surveys covering at least $25$ deg$^{2}$
 should be able to put tighter constraints on \mmin\ and \focc\ through the LAE number density
 distribution width, $W_{1\sigma}$, constructed over several fields of
 $\sim 1$ deg$^{2}$.
+These results suggest that taking explicitly into account the effect of cosmic
+variance using cosmological simulations is a valuable tool to 
+interpret LAEs observations at high redshift.
 \end{abstract}
 
 \keywords{
@@ -277,6 +280,19 @@ We use results from the BolshoiP simulation \citep{Bolshoi,BolshoiP}
 performed in a cubic  comoving volume of 250\hMpc\  on a side. 
 The dark matter distribution was sampled using  $2048^{3}$
 particles. 
+
+We chose this simulation based on three requirements. 
+First, the simulation should have cosmological parameters consistent
+with the most recent constraints from Cosmic Microwave Background
+experiments and provide public acces to the data.
+Second, the halo mass function from the simulation should be robust
+down to masses that include the range of possibilities from previous
+observational efforts \cite[e.g. results from][impose a lower bound of
+  $10^{10}$\hMsun.]{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16} .
+Third, the total volume of the simulation should be at least 10 times
+larger the equivalent volume of a single LAE observation field.
+This conditions are met as we describe below. 
+
 The cosmological parameters are consistent with Planck
 results \citep{Planck2014} with a matter density 
 $\Omega_{\rm m} = 0.307$, cosmological constant
@@ -284,24 +300,26 @@ $\Omega_{\Lambda}=0.693$, dimensionless Hubble constant $h=0.678$, slope
 of the power spectrum  $n=0.96$ and normalization of the power
 spectrum $\sigma_{8}=0.823$.  
 This translates into a particle mass of  $m_{\rm p}=1.5\times 10^{8}$
-$h^{-1}$ M$_{\odot}$.    
+$h^{-1}$ M$_{\odot}$. 
+Data is available to the
+public through an online
+interface \footnote{\url{http://www.multidark.org/MultiDark/}}
+\citep{MultiDark}.    
 
 
 We use halo catalogs constructed with a Bound-Density-Maxima (BDM)
 algorithm. 
-The catalogs were obtained from the publicly available Multidark
-database  \footnote{\url{http://www.multidark.org/MultiDark/}}
-\citep{MultiDark}. 
 For each  halo in the box we extract its comoving position and mass.  
 We focus our work on halos more massive than $6.0\times
 10^{9}$\hMsun\ resolved with at least  $40$ particles 
 to guarantee statistical significance and a well behaved halo mass function. 
 We do not take into account sub-halos.
 
-
 We split the simulation volume at z$\sim$3 into  27 smaller mock
 volumes mimicking the  area and depth reported in \citet{Bielby16} and
 described in \S \ref{subsec:obs}.   
+
+
 
 
 \begin{figure*}
@@ -458,6 +476,9 @@ because of the expected uncertainty in the median number density of
 LAEs due to cosmic variance (see Fig. \ref{fig:cosmicv0} and
 \S\ref{subsec:explore}). 
 
+
+
+
 \begin{figure}
 \includegraphics[width=0.47\textwidth]{fig4.pdf}
 \caption{Median mass, $\log M_{50}$, and mass width $\Delta \log
@@ -570,6 +591,46 @@ However, repeating the same kind of cosmic variance study for different
 survey strategies should help to provide a constraint of the same
 kind. 
 
+\subsection{Hints of larger uncertainties}
+
+Fig. \ref{fig:like} shows an interesting feature for \mmin. 
+The histogram (upper left) showing the probability for this parameter
+given the observational constraints does not considerably decreases for lower
+masses. 
+A valid questions is the following. Down to which values of
+\mmin\ does the probability significantly decreases? 
+
+Lower values of \mmin\ would imply a lower \focc\ and larger
+uncertainties on the parameters \mmin\, \focc and $M_{50}$.
+In other words, the limitations in our priors for \mmin\ (which
+set the limitations for the kind of numerical simulation we use) might
+be underestimating the uncertainties and slightly biasing our results
+for \mmin\, \focc\ and $M_{50}$.
+
+Although Fig. \ref{fig:mmed} suggest that models with lower values of
+$M_{\rm 50}$, i.e. lower values of \mmin, have a higher
+$\chi^2_{\mathcal{M}}$ and could be thus discarded, we suggest that a
+proper test of this hypothesis requires performing new cosmological
+simulations to be able to probe \mmin\ masses below our limit of
+$6\times  10^{9}$\hMsun. 
+
+This highlights the main thesis of this paper. 
+Namely, the high impact that cosmic variance can have on constraining
+the paremeters of our model. 
+With the current limitations in the cosmological simulations available
+to the public we cannot significantly decrease or prior on \mmin.
+We consider such test beyond the scope of this paper.
+
+This extension to larger priors cannot change other central results of
+our paper, such as the relationship between \focc\ and \mmin\, the
+narrow mass range for individual models and the possibility to
+constraint the halo mass with cosmic variance on the number density
+counts. 
+However, we suggest that future work building upon the
+technique presented in this paper should count with simulations that
+extend at least one order of magnitude below our limit $6\times
+10^{9}$\hMsun.  
+
 
 
 
@@ -612,6 +673,17 @@ a general consistency with previous works \citep{Hayashino2004,
   Gawiser07,Ouchi2008} specially with the most recent one
 \citep{Bielby16}. 
 
+This work also highlights the need to explore a wider range on the
+prior of \mmin\ if one wants to better estimate the uncertainty on
+\mmin, \focc\ and $M_{50}$.  
+In this paper we use priors given by previous observations, but our
+results suggest that once cosmic variance is explicitly taken into
+account, even lower values of \mmin\ might be in fact consistent with
+observations. 
+We recommend that future work making use of the technique presented
+in this paper should extend the prior for \mmin\ to masses at least
+one order of magnitude below $6\times 10^{9}$\hMsun.  
+
 Nevertheless, our analysis allowed us to draw two results that can
 be used to put tighter constraints on \mmin\ and \focc\ once
 upcoming large LAE surveys, such as the HETDEX project 
@@ -635,6 +707,11 @@ highly constrained to be between $0.2$ and $0.6$ dex.
 This result can be used to test different models for LAEs formation
 in a cosmological context to better understand why observable LAEs seem to be
 constrained into a narrow halo mass range.
+
+
+ 
+
+
 
 
 \section*{Acknowledgments} 

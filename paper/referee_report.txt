@@ -7,6 +7,10 @@ Reviewer's Comments:
 To improve this the authors need to increase the range of allowed parameters. This can have a strong impact on their conclusions, 
 for example the one with respect to the width of the mass range of LAE hosts. 
 
+The point raised by the referee  confirms the main thesis of our
+paper. Namely, the high impact that cosmic variance can have on
+constraining the paremeters of our model. 
+
 Examining Figure 3. one clearly sees that the histogram for M_min does
 not significantly decreases for lower masses. 
 This might be a hint that lower values of M_min are consistent with
@@ -32,13 +36,22 @@ realiable mass function below 10^{10} Msun/h and c) had total volume that
 would allow us to build statistics with at least 10 independent
 volumes. 
 The only simulation with those characteristics is Bolshoi.
+Performing the test suggested by the referee in a robust way is not
+possible given this limitation for an appropriate cosmological
+simulation. 
 
-
-We have included in the paper a summary of the reasons behind the
-limitations in the parameters we use. 
+Given the importance of this point raised by the referee (which
+strenghtens our case to explicitly take into account cosmic variance), 
+we have included in the paper a summary of the reasons behind the
+limitations in the parameters we use (Section 2.2).
+We also mention explicitly this potential bias in the new Section 3.3
+and sugggest in the conclusions as a next interesting step to
+extend our results is the use of cosmological simulations with higher
+resolution. 
+ 
 We agree with the referee that it would be interesting to push to much
 lower masses the values of m_min, and quote this in the conclusions as
-an interesting way to extend our results.
+an interesting way to extend our results. 
 
 
 
