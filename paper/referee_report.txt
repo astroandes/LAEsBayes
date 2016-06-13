@@ -1,22 +1,46 @@
 Referee Report 
 Reviewer's Comments:
-The manuscript "Uncertainty on the Galaxy-halo Connection for Lyman-alpha Emitters at z=3.1" by Mejia-Restrepo and Forero-Romero,
- presents a new method to understand the clustering of z=3.1 Lyman Alpha Emitters (LAEs) using mock catalogues constructed from 
-simulations using a simple occupation model of haloes by LAEs. This is a novel approach in itself, more complete with respect to 
-what is usually applied to LAE clustering analysis. It is interesting the wide range of masses that are able to reproduce the 
-observed clustering, but I wonder how much these conclusions are affected by the priors adopted here.
-
-I find the idea very interesting, but have a few concerns which I point out next.
 
 
 
-
-
-
-- When looking at figure 3, it is clear that the allowed range of parameters is not wide enough to sample the full probability 
-distribution. Therefore, the mean and scatter of the parameters obtained from the one-dimensional probabilities could be biased. 
+- When looking at figure 3, it is clear that the allowed range of parameters is not wide enough to sample the full probability distribution. Therefore, the mean and scatter of the parameters obtained from the one-dimensional probabilities could be biased. 
 To improve this the authors need to increase the range of allowed parameters. This can have a strong impact on their conclusions, 
-for example the one with respect to the width of the mass range of LAE hosts.
+for example the one with respect to the width of the mass range of LAE hosts. 
+
+Examining Figure 3. one clearly sees that the histogram for M_min does
+not significantly decreases for lower masses. 
+This might be a hint that lower values of M_min are consistent with
+observations.  
+M_min in turn constrains f_occ (also seen in Figure 3), while the
+upper limit in M_max is driven by the physics of dark matter
+clustering, i.e., there is an upper limit for halo masses in a fixed
+cosmological volume.
+
+The referee's request to increase the range of allowed parameters can
+thus only be realized by going to lower values of M_min. 
+We did not go to lower values of this parameter for two reasons. 
+
+First, our lower limit of 10^9.7 Msun/h is at least 0.3dex below than all the
+lower bound expectations from previous observational studies;
+Bielby+2016 had a lower bound of 10^10.4 Msun/h, Gawiser+2007 had 10^10
+Msun/h and Ouchi+2010 favors a lower limit of 10^{10} Msun/h.
+
+Second, stating from that observational evidence we chose a 
+publicly available cosmological simulation that a) had cosmological
+parameters consistent with Planck observations, b) could provide a
+realiable mass function below 10^{10} Msun/h and c) had total volume that
+would allow us to build statistics with at least 10 independent
+volumes. 
+The only simulation with those characteristics is Bolshoi.
+
+
+We have included in the paper a summary of the reasons behind the
+limitations in the parameters we use. 
+We agree with the referee that it would be interesting to push to much
+lower masses the values of m_min, and quote this in the conclusions as
+an interesting way to extend our results.
+
+
 
 JAIME PLEASE HELP ME ELABORATING A BIT MORE:
 
