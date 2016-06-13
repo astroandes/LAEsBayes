@@ -3,9 +3,14 @@ Reviewer's Comments:
 
 
 
-- When looking at figure 3, it is clear that the allowed range of parameters is not wide enough to sample the full probability distribution. Therefore, the mean and scatter of the parameters obtained from the one-dimensional probabilities could be biased. 
-To improve this the authors need to increase the range of allowed parameters. This can have a strong impact on their conclusions, 
-for example the one with respect to the width of the mass range of LAE hosts. 
+1. "When looking at figure 3, it is clear that the allowed range of
+parameters is not wide enough to sample the full probability
+distribution. Therefore, the mean and scatter of the parameters
+obtained from the one-dimensional probabilities could be biased.  
+To improve this the authors need to increase the range of allowed
+parameters. This can have a strong impact on their conclusions, for
+example the one with respect to the width of the mass range of LAE
+hosts." 
 
 The point raised by the referee  confirms the main thesis of our
 paper. Namely, the high impact that cosmic variance can have on
@@ -55,24 +60,17 @@ an interesting way to extend our results.
 
 
 
-JAIME PLEASE HELP ME ELABORATING A BIT MORE:
-
-    WE SHOULD MAKE  MORE EXPLICIT  IN THE PAPER THAT OUR MINIMUM MASS IS LIMITED BY THE RESOLUTION LIMITATIONS OF THE SIMULATION.
-BELOW SUCH THRESHOLD (	 \logM$=$9.8) THE MASS FUNCTION IS NOT WELL BEHAVED (IN THE SENSE THAT IT START TO DECREASE AS logM DECREASES).
-NOT INC
 
 
+2. "The choice of the occupation fraction focc as a fixed fraction for
+a given halo to be occupied by an LAE means the mass function of
+haloes is being scaled down (in most cases) by this factor. In this
+sense, it is to be expected that as the minimum halo mass  allowed is
+increased, this fraction will also increase in order to maintain a
+fixed number of LAEs per field (more massive haloes  are less
+abundant). This should be mentioned in the text."
 
-- The choice of the occupation fraction focc as a fixed fraction for a given halo to be occupied by an LAE means the mass function
- of haloes is being scaled down (in most cases) by this factor. In this sense, it is to be expected that as the minimum halo mass 
-allowed is increased, this fraction will also increase in order to maintain a fixed number of LAEs per field (more massive haloes 
-are less abundant). This should be mentioned in the text.
-
-THE NUMBER DENSITY OF LAEs IS FIXED AND CONSEQUENTLY THE OCCUPATON FRACTION IS ADJUSTED ACCORDINGLY (HOWEVER IT CHANGES 
-WITHIN A FACTOR ~3 FROM FIELD TO FIELD AS A CONSEQUENCES OF COSMIC VARIANCE)
-
-
-
+This is now mention at the end of Section 3.1.
 
 - Also because of the fixed focc, the median halo mass and halo mass width could actually be calculated analytically, except that 
 the authors are interested in cosmic variance, which they obtain from different subvolumes in the simulation. Is this the reason 
