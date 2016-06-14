@@ -12,7 +12,7 @@ parameters. This can have a strong impact on their conclusions, for
 example the one with respect to the width of the mass range of LAE
 hosts." 
 
-The point raised by the referee  confirms the main thesis of our
+ANSWER: The point raised by the referee  confirms the main thesis of our
 paper. Namely, the high impact that cosmic variance can have on
 constraining the paremeters of our model. 
 
@@ -79,10 +79,9 @@ for the large scatter seen in figure 4?
 JAIME PLEASE ELABORATE A BIT MORE:
       	     	       	    EACH POINT IN FIGURE 4 REFERS TO A SINGLE MODEL GIVEN BY  Mmin-Mmax. ADDITIONALLY, DUE TO THE STEPPEN 
 			    ASSYMETRY OF THE MASS FUNCTION FOR A GIVEN  MMIN, M50 IS ALMOST FIXED (WITHIN ~0.2 DEX) AND BASICALLY 
-			    THE VERTICAL SPREAD IN FIGURE 4 IS DUE TO DIFFERENT VALUES OF MMAX GIVEN MMIN. THE COMPUTED VALUES OF
-			    OF M50 AND DELTAM  TAKES INTO ACCOUNT THE EFFECT OF COSMIC VARIANCE, BECAUSE THEY ARE THE MEDIAN VALUES 
-			    OVER THE 27FIELD, AND THE POISONIAN ERROR GIVEN THE LIMITED NUMBER OF OBJECTS IN EACH FIELD. 
-			    THESE TWO EFFECTSCANNOT BE TAKEN INTO ACCOUNT BY A SIMPLE ANALYTICAL PRESCRIPTION.
+			    THE VERTICAL SPREAD IN FIGURE 4 IS DUE TO DIFFERENT VALUES OF MMAX GIVEN MMIN.
+
+                             THE COMPUTED VALUES OF M50 IN TERMS OF DELTAM_1sigma  TAKES INTO ACCOUNT THE EFFECT OF COSMIC VARIANCE AND POISSONIAN ERRORS SIMULTANEOUSLY.			   			    THESE TWO EFFECTS CANNOT BE TAKEN INTO ACCOUNT BY A SIMPLE ANALYTICAL PRESCRIPTION.
 
 
 
@@ -91,7 +90,14 @@ JAIME PLEASE ELABORATE A BIT MORE:
 not expected to be strong at these angular separations?)
 
 
-JULIAN!!!!. 
+
+La razon principal es que no tenemos una manera robusta de estimar las covarianzas a partir de los datos observacionales. 
+El campo es muy chico y los numeros de galaxias son tan bajos que para los observadores no tiene mucho sentido hacer algo de bootstraping o jacknife como se hace con los surveys grandes. El otro camino que nos quedaba era estimarlas a partir de las simulaciones, pero volvemos al problema de tener campos chicos con pocas galaxias que hacen que las posibles matrices de covarianza no sean robustas e introduzcan mas ruido estadistico del deseado. 
+Es basicamente la misma approach de otra gente con las mismas limitaciones: https://arxiv.org/abs/1507.04356 y de alguna manera es la opcion mas conservadora.
+Te escribimos para conocer tu opinion en detalle y saber si tienes en mente una referencia concreta sobre como estimar la matriz de covarianza en un caso como el nuestro.
+
+
+Waiting for Nelson's comments. 
 
 
 Minor comments:
@@ -99,14 +105,15 @@ Minor comments:
 - Is the increase of the clustering amplitude with Delta(logM) expected from the steeper increase of the bias factor for larger 
 halo masses?
 
-ANSWER: This is what we think but is not conclusive because the cosmic variance  still dominates make all the models conssistent. 
+
+ANSWER: We agree witht he referee on this apreciation and added a comment on it at the end of section 3.2. Our results are  however not conclusive because cosmic variance  still dominates and  make all the models conssistent with in uncertainties as explained in the text.
 
 
 - The width of the distribution of Figure 5 is measured with 27 mock fields, but this does not really mean that a comparison to 
 observations requires 27 observed fields.
 
-ANSWER: WE AGREE WITH THIS COMMENT. WHAT WE ACTUALLY WANTED TO SAY WAS THAT TO BE ABLE MEASURE THIS WIDTH APPOPIATELY,  WE NEED  A 
-NUMBER OF FIELDS OF THE ORDER OR LARGER THAN 27. 
+ANSWER: WE agree witht he referee in this comment.  We actually  wanted  to mean that to be able to accurately measure the distribution width, we need a number of fields of the order or larger than 27.
+
 
 
 
@@ -118,9 +125,8 @@ IS QUITE COMPLCATED AND WONT CONTRIBUTE MUCH TO THE DISCUSSION.
 
 - In the introduction it is stated that previous works do not elaborate on cosmic variance, but in general they do, to some degree
  (for instance, Guaita et al., 2010).
-SAY SOME SOMETHING LIKE PREVIOS ATTEMPS TRIED TO INCLUDE THE EFFECT OF COSMIC VARIANCE FOLLOWING SOMMERVILLE 2004. HOWEVER NONE OF THEM
-HAVE ACCOUNT FOR IT DIRECTLY FROM A  DARK MATTER SIMULATION AND ACCOUNTING AT THE SAME TIME FOR THE OBSERVATIONAL BIASES.
 
+ANSWER: We apreciate the reference. We added a couple of comments  about  their attempt to estimate cosmic variance in the introduction. 
 
 - S2.1: is this equivalent width limit in rest-frame?
 
@@ -128,6 +134,8 @@ ANSWER: Yes, we now explicity state that in the paper.
 
 
 - Last paragraph 2.3: rephrase first sentence "we note by the paper M"
+
+ANSWER: Thanks for noticing this. It is now corrected.
 
 Reviewer: Nelson Padilla
 
