@@ -1,8 +1,6 @@
 Referee Report 
 Reviewer's Comments:
 
-
-
 1. "When looking at figure 3, it is clear that the allowed range of
 parameters is not wide enough to sample the full probability
 distribution. Therefore, the mean and scatter of the parameters
@@ -12,12 +10,8 @@ parameters. This can have a strong impact on their conclusions, for
 example the one with respect to the width of the mass range of LAE
 hosts." 
 
-ANSWER: The point raised by the referee  confirms the main thesis of our
-paper. Namely, the high impact that cosmic variance can have on
-constraining the paremeters of our model. 
-
-Examining Figure 3. one clearly sees that the histogram for M_min does
-not significantly decreases for lower masses. 
+ANSWER: Indeed, examining Figure 3. one clearly sees that the histogram for
+M_min does not significantly decreases for lower masses. 
 This might be a hint that lower values of M_min are consistent with
 observations, as the referee points out.
 M_min in turn constrains f_occ (also seen in Figure 3), while the
@@ -54,10 +48,9 @@ and sugggest in the conclusions as a next interesting step to
 extend our results is the use of cosmological simulations with higher
 resolution. 
  
-We agree with the referee that it would be interesting to push to much
-lower masses the values of m_min, and quote this in the conclusions as
-an interesting way to extend our results. 
-
+We agree with the referee that it would be interesting to push the
+technique into  lower masses the values of m_min, and quote this in
+the conclusions as an interesting way to extend our results. 
 
 2. "The choice of the occupation fraction focc as a fixed fraction for
 a given halo to be occupied by an LAE means the mass function of
@@ -67,12 +60,16 @@ increased, this fraction will also increase in order to maintain a
 fixed number of LAEs per field (more massive haloes  are less
 abundant). This should be mentioned in the text."
 
-ANSWER. This is now mention at the end of Section 3.1.
+ANSWER. This is now mentioned at the end of Section 3.1.
 
-3. "Also because of the fixed focc, the median halo mass and halo mass width could actually be calculated analytically, except that  the authors are interested in cosmic variance, which they obtain from different subvolumes in the simulation. Is this the reason  for the large scatter seen in figure 4?"
+3. "Also because of the fixed focc, the median halo mass and halo mass
+width could actually be calculated analytically, except that  the
+authors are interested in cosmic variance, which they obtain from
+different subvolumes in the simulation. Is this the reason  for the
+large scatter seen in figure 4?" 
 
-ANSWER. There main reason behind the scatter in Figure 4 is not cosmic
-variance. What happens is that given value of the median mass could
+ANSWER. The main reason behind the scatter in Figure 4 is not cosmic
+variance. What happens is that a given value of the median mass could
 correspond in fact to different combinations of mmin and mmax, which
 in turn would produce a different mass width. 
 A secondary effect is the cosmic variance as the referee points out.
@@ -116,7 +113,7 @@ width, we need a number of fields of the order or larger than 27.
 3. Please add units to the grey scales used in Figure 3, and y-axes labels to the one dimensional probability distributions.
 
 ANSWER: The labels on the y-axis of Figure 3 have arbitrary
-units, the key information are the vertical lines showing the 16-84
+units, the key information are the vertical lines showing the 16-50-84
 percentiles. The grey scale also has arbitrary units, the key
 information are the levels marking the 1-2-3 sigma contours.  
 We have clarified this point in the caption.
@@ -125,7 +122,7 @@ We have clarified this point in the caption.
 elaborate on cosmic variance, but in general they do, to some degree
 (for instance, Guaita et al., 2010)."
 
-ANSWER: We apreciate the reference. We added a couple of comments
+ANSWER: We apreciate the reference. We included a detailed comment
 about  their attempt to estimate cosmic variance in the introduction.
 
 5. "S2.1: is this equivalent width limit in rest-frame?"

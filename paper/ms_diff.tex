@@ -1,7 +1,7 @@
 \documentclass{emulateapj}
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL ms_old.tex   Tue Jun 14 08:14:54 2016
-%DIF ADD ms.tex       Tue Jun 14 09:30:55 2016
+%DIF ADD ms.tex       Tue Jun 14 10:08:20 2016
 \submitted{{\it Submitted for publication in ApJ}}
 \usepackage{multirow,color,wrapfig}
 \usepackage {graphicx}
@@ -247,7 +247,7 @@ We then use the Markov Chain Monte Carlo technique to obtain the
 likelihood of the parameters given the observational constraints.
 \DIFaddbegin \DIFadd{This approach allows us to estimate cosmic variance directly from
 simulations without making any assumption  on the correlation function
-behavior. ma
+behavior. 
 }\DIFaddend 
 
 Throughout this paper we assume a $\Lambda$CDM cosmology with the
@@ -325,17 +325,17 @@ particles.
 \DIFaddbegin 
 
 \DIFadd{We chose this simulation based on three requirements. 
-First, the simulation should have cosmological parameters consistent
+First, the simulation has cosmological parameters consistent
 with the most recent constraints from Cosmic Microwave Background
 experiments and provide public acces to the data.
-Second, the halo mass function from the simulation should be robust
-down to masses that include the range of possibilities from previous
-observational efforts \mbox{%DIFAUXCMD
-\cite[e.g. results from][impose a lower bound of
-  $10^{10}$\hMsun.]{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16}
+Second, the halo mass function from the simulation is robust
+down to  $10^{10}$}\hMsun\DIFadd{, which is the lower halo mass bound suggested
+by previous observational 
+studies\mbox{%DIFAUXCMD
+\citep{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16}
 }%DIFAUXCMD
-.
-Third, the total volume of the simulation should be at least 10 times
+. 
+Third, the total volume of the simulation is at least 10 times
 larger the equivalent volume of a single LAE observation field.
 These conditions are met as we describe below. 
 }
@@ -388,7 +388,11 @@ described in \S \ref{subsec:obs}.
 \end{center}
 \caption{One and two dimensional projections of the posterior
   probability distributions of \mmin, \mmax\ and \focc. 
-  The models with $\log \focc>0.00$ ($\focc>1$) correspond  to models
+  \DIFaddbeginFL \DIFaddFL{Vertical lines in the one dimensional proyections correspond to the
+  14-50,84 percentiles of the distribtions.
+  Thick lines in the two dimensional planes mark the 1-2-3 $\sigma$
+  contours of the corresponding joint distributions.
+  }\DIFaddendFL The models with $\log \focc>0.00$ ($\focc>1$) correspond  to models
   where the number density  of halos is smaller than the number of
   observed LAEs but we consider them as consistent because of the uncertainty
   in the median number density due to cosmic variance. See 
@@ -839,11 +843,10 @@ Research Center.
 
 \bibliographystyle{apj}
 %\bibliography{references.bib}
-\DIFaddbegin 
-
-
-\DIFaddend \begin{thebibliography}{39}
-\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+\DIFdelbegin %DIFDELCMD < \begin{thebibliography}{39}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \begin{thebibliography}{43}
+\DIFaddend \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2011){Adams}, {Blanc}, {Hill}, {Gebhardt}, {Drory},
   {Hao}, {Bender}, {Byun}, {Ciardullo}, {Cornell}, {Finkelstein}, {Fry},
@@ -938,15 +941,13 @@ Research Center.
   G.~A., {Fazio}, G., {Feldmeier}, J.~J., {Huang}, J.-s., {Infante}, L.,
   {Lira}, P., \& {Padilla}, N. 2007{\natexlab{b}}, \apj, 671, 278
 
-  
-\DIFaddbegin \bibitem[{{Guaita} {et~al.}(2010){Guaita}, {Gawiser}, {Padilla},
-  {Francke}, {Bond}, {Gronwall}, {Ciardullo}, {Feldmeier}, {Sinawa}, {Blanc},
-  \& {Virani}}]{Guaita2010}
-{\DIFadd{Guaita}}\DIFadd{, L., }{\DIFadd{Gawiser}}\DIFadd{, E., }{\DIFadd{Padilla}}\DIFadd{, N., }{\DIFadd{Francke}}\DIFadd{, H.,
-	}{\DIFadd{Bond}}\DIFadd{, N.~A., }{\DIFadd{Gronwall}}\DIFadd{, C., }{\DIFadd{Ciardullo}}\DIFadd{, R., }{\DIFadd{Feldmeier}}\DIFadd{, J.~J., 
-	}{\DIFadd{Sinawa}}\DIFadd{, S., }{\DIFadd{Blanc}}\DIFadd{, G.~A., }\& {\DIFadd{Virani}}\DIFadd{, S. 2010, }\apj\DIFadd{, 714, 255
+\DIFaddbegin \bibitem[{{Guaita} {et~al.}(2010){Guaita}, {Gawiser}, {Padilla}, {Francke},
+  {Bond}, {Gronwall}, {Ciardullo}, {Feldmeier}, {Sinawa}, {Blanc}, \&
+  {Virani}}]{Guaita2010}
+{\DIFadd{Guaita}}\DIFadd{, L., }{\DIFadd{Gawiser}}\DIFadd{, E., }{\DIFadd{Padilla}}\DIFadd{, N., }{\DIFadd{Francke}}\DIFadd{, H., }{\DIFadd{Bond}}\DIFadd{, N.~A.,
+  }{\DIFadd{Gronwall}}\DIFadd{, C., }{\DIFadd{Ciardullo}}\DIFadd{, R., }{\DIFadd{Feldmeier}}\DIFadd{, J.~J., }{\DIFadd{Sinawa}}\DIFadd{, S., }{\DIFadd{Blanc}}\DIFadd{,
+  G.~A., }\& {\DIFadd{Virani}}\DIFadd{, S. 2010, }\apj\DIFadd{, 714, 255
 }
-
 
 \DIFaddend \bibitem[{{Hayashino} {et~al.}(2004){Hayashino}, {Matsuda}, {Tamura},
   {Yamauchi}, {Yamada}, {Ajiki}, {Fujita}, {Murayama}, {Nagao}, {Ohta},
@@ -961,12 +962,19 @@ Research Center.
 
 \bibitem[{{Jose} {et~al.}(2013){Jose}, {Srianand}, \&
   {Subramanian}}]{Jose2013b}
-{Jose}, C., {Srianand}, R., \& {Subramanian}, K. 2013, ArXiv e-prints
+{Jose}, C., {Srianand}, R., \& {Subramanian}, K. 2013, \DIFdelbegin \DIFdel{ArXiv e-prints
+}\DIFdelend \DIFaddbegin \mnras\DIFadd{, 435, 368
+}\DIFaddend 
 
-\bibitem[{{Klypin} {et~al.}(2014){Klypin}, {Yepes}, {Gottlober}, {Prada}, \&
-  {Hess}}]{BolshoiP}
-{Klypin}, A., {Yepes}, G., {Gottlober}, S., {Prada}, F., \& {Hess}, S. 2014,
-  ArXiv e-prints
+\DIFdelbegin %DIFDELCMD < \bibitem[{{Klypin} {et~al.}(2014){Klypin}, {Yepes}, {Gottlober}, {Prada}, \&
+%DIFDELCMD <   {Hess}}]{BolshoiP}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \bibitem[{{Klypin} {et~al.}(2016){Klypin}, {Yepes}, {Gottl{\"o}ber}, {Prada},
+  \& {He{\ss}}}]{BolshoiP}
+\DIFaddend {Klypin}, A., {Yepes}, G., {\DIFdelbegin \DIFdel{Gottlober}\DIFdelend \DIFaddbegin \DIFadd{Gottl}{\"o}\DIFadd{ber}\DIFaddend }, S., {Prada}, F., \& {\DIFdelbegin \DIFdel{Hess}\DIFdelend \DIFaddbegin \DIFadd{He}{\DIFadd{\ss}}\DIFaddend }, S.
+  \DIFdelbegin \DIFdel{2014, ArXiv e-prints
+}\DIFdelend \DIFaddbegin \DIFadd{2016, }\mnras\DIFadd{, 457, 4340
+}\DIFaddend 
 
 \bibitem[{{Klypin} {et~al.}(2011){Klypin}, {Trujillo-Gomez}, \&
   {Primack}}]{Bolshoi}
@@ -1039,8 +1047,6 @@ Research Center.
 {Rhoads}, J.~E., {Malhotra}, S., {Dey}, A., {Stern}, D., {Spinrad}, H., \&
   {Jannuzi}, B.~T. 2000, \apjl, 545, L85
 
-
-
 \bibitem[{Riebe {et~al.}(2013)Riebe, Partl, Enke, Forero-Romero, Gottlöber,
   Klypin, Lemson, Prada, Primack, Steinmetz, \& Turchaninov}]{MultiDark}
 Riebe, K., Partl, A.~M., Enke, H., Forero-Romero, J., Gottlöber, S., Klypin,
@@ -1050,13 +1056,10 @@ Riebe, K., Partl, A.~M., Enke, H., Forero-Romero, J., Gottlöber, S., Klypin,
 \bibitem[{{Robertson}(2010)}]{Robertson10}
 {Robertson}, B.~E. 2010, \apjl, 716, L229
 
-
-
-\DIFaddbegin \bibitem[{{Somerville} {et~al.}(2004){Somerville}, {Lee}, {Ferguson}, {Gardner},
-  {Moustakas}, \& {Giavalisco}}]{Somerville2004}
-{\DIFadd{Somerville}}\DIFadd{, R.~S., }{\DIFadd{Lee}}\DIFadd{, K., }{\DIFadd{Ferguson}}\DIFadd{, H.~C.,
-	}{\DIFadd{Gardner}}\DIFadd{, J.~P., }{\DIFadd{Moustakas}}\DIFadd{, L.~A., }\& {\DIFadd{Giavalisco}}\DIFadd{, M. 204, }\apj\DIFadd{,
-  600, 171
+\DIFaddbegin \bibitem[{{Somerville} {et~al.}(2004){Somerville}, {Lee}, {Ferguson},
+  {Gardner}, {Moustakas}, \& {Giavalisco}}]{Somerville2004}
+{\DIFadd{Somerville}}\DIFadd{, R.~S., }{\DIFadd{Lee}}\DIFadd{, K., }{\DIFadd{Ferguson}}\DIFadd{, H.~C., }{\DIFadd{Gardner}}\DIFadd{, J.~P.,
+  }{\DIFadd{Moustakas}}\DIFadd{, L.~A., }\& {\DIFadd{Giavalisco}}\DIFadd{, M. 2004, }\apjl\DIFadd{, 600, L171
 }
 
 \DIFaddend \bibitem[{{Springel} {et~al.}(2005){Springel}, {White}, {Jenkins}, {Frenk},
