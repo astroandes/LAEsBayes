@@ -1,7 +1,7 @@
 \documentclass{emulateapj}
 %DIF LATEXDIFF DIFFERENCE FILE
-%DIF DEL ms_old.tex   Tue Jun 14 08:14:54 2016
-%DIF ADD ms.tex       Tue Jun 14 09:30:55 2016
+%DIF DEL ms_old.tex   Tue Jun 14 10:58:46 2016
+%DIF ADD ms.tex       Tue Jun 14 11:19:15 2016
 \submitted{{\it Submitted for publication in ApJ}}
 \usepackage{multirow,color,wrapfig}
 \usepackage {graphicx}
@@ -211,16 +211,13 @@ In these studies the observations are done on fields of $\sim 1$ deg$^{2}$ and
 the conclusions derived on the halo host mass do not elaborate \DIFaddbegin \DIFadd{deeply }\DIFaddend on the
 uncertainty resulting from the cosmic variance on these fields. 
 \DIFaddbegin \DIFadd{For instance, \mbox{%DIFAUXCMD
-\citet{Guaita2010}
-}%DIFAUXCMD
+\citet{Guaita2010} }%DIFAUXCMD
 attempted to analytically 
 estimate the uncertainty from cosmic variance 
 following \mbox{%DIFAUXCMD
-\citet{Somerville2004}
-}%DIFAUXCMD
+\citet{Somerville2004} }%DIFAUXCMD
 and \mbox{%DIFAUXCMD
-\citet{Peebles1980}
-}%DIFAUXCMD
+\citet{Peebles1980}}%DIFAUXCMD
 . 
 Their prescription assumed that the correlation function can be
 represented by a power-law
@@ -332,8 +329,7 @@ Second, the halo mass function from the simulation should be robust
 down to masses that include the range of possibilities from previous
 observational efforts \mbox{%DIFAUXCMD
 \cite[e.g. results from][impose a lower bound of
-  $10^{10}$\hMsun.]{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16}
-}%DIFAUXCMD
+  $10^{10}$\hMsun.]{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16} }%DIFAUXCMD
 .
 Third, the total volume of the simulation should be at least 10 times
 larger the equivalent volume of a single LAE observation field.
@@ -352,8 +348,7 @@ $h^{-1}$ M$_{\odot}$.
 public through an online
 interface }\footnote{\url{http://www.multidark.org/MultiDark/}}
 \DIFadd{\mbox{%DIFAUXCMD
-\citep{MultiDark}
-}%DIFAUXCMD
+\citep{MultiDark}}%DIFAUXCMD
 .    
 }\DIFaddend 
 
@@ -366,8 +361,7 @@ database  }\footnote{%DIFDELCMD < \url{http://www.multidark.org/MultiDark/}%%%
 %DIFAUXCMD
 \addtocounter{footnote}{-1}%DIFAUXCMD
 \DIFdel{\mbox{%DIFAUXCMD
-\citep{MultiDark}
-}%DIFAUXCMD
+\citep{MultiDark}}%DIFAUXCMD
 . 
 }\DIFdelend For each  halo in the box we extract its comoving position and mass.  
 We focus our work on halos more massive than $6.0\times
@@ -500,8 +494,7 @@ We \DIFaddbegin \DIFadd{do not include the covariance matrix due to the
 practical impossibility to estimate it in a robust way.
 The small size of the fields and galaxies make it
 unfeasible the application of jackknife and bootstrap techniques \mbox{%DIFAUXCMD
-\citep{2009MNRAS.396...19N}
-}%DIFAUXCMD
+\citep{2009MNRAS.396...19N}}%DIFAUXCMD
 . 
 An estimate from N-body simulation faces the same problem with the
 additional limitation that we want to solve in the first place. 
@@ -513,8 +506,7 @@ not stable, even for similar models.
 Using the full error covariance matrix, when not noise
 dominated, versus only diagonal elements usually has a small effect
 on clustering analyses \mbox{%DIFAUXCMD
-\citep{2011ApJ...736...59Z}
-}%DIFAUXCMD
+\citep{2011ApJ...736...59Z}}%DIFAUXCMD
 . 
 }
 
@@ -564,7 +556,7 @@ LAEs due to cosmic variance (see Fig. \ref{fig:cosmicv0} and
 \DIFaddbegin \DIFadd{The result in Eq.(\ref{eq:focc}) can be qualitatively understood as
 follows.   
 A choice of $\focc<1$ means that the halo mass function is scaled down.
-If }\mmin\ \DIFadd{decreases the total number of halos increases because less
+If }\mmin\DIFadd{\ decreases the total number of halos increases because less
 massive halos are more abundant.
 This requires smaller values of $\focc$ to keep the total
 number of halos hosting LAEs equal to the number of LAEs in observations.
@@ -684,29 +676,41 @@ However, repeating the same kind of cosmic variance study for different
 survey strategies should help to provide a constraint of the same
 kind. 
 
-\DIFaddbegin \subsection{\DIFadd{Hints of larger uncertainties}}
+
+ \DIFaddbegin \DIFadd{To keep the validity of Eq. (\ref{eq:width}) there should be of the order of
+ $27$ field or even a larger number. Each of these fields should have  $\sim1{\rm
+  deg^2}$ in size and reproduce the same observational conditions of 
+  \mbox{%DIFAUXCMD
+\citet{Bielby16} }%DIFAUXCMD
+in terms of filters, equivalent
+width cuts .  However, repeating the same kind of cosmic variance 
+study for different survey strategies should help to provide a equivalent
+constraint. 
+}
+
+\subsection{\DIFadd{Hints of larger uncertainties}}
 
 \DIFadd{Fig. \ref{fig:like} shows an interesting feature for }\mmin\DIFadd{. 
 The histogram (upper left) showing the probability for this parameter
 given the observational constraints does not considerably decreases for lower
 masses. 
 This raises the following question. Down to which values of
-}\mmin\ \DIFadd{does the probability significantly decreases? 
+}\mmin\DIFadd{\ does the probability significantly decreases? 
 }
 
-\DIFadd{Lower values of }\mmin\ \DIFadd{would imply a lower }\focc\ \DIFadd{and larger
-uncertainties on the parameters }\mmin\, \focc \DIFadd{and $M_{50}$.
-In other words, the limitations in our priors for }\mmin\ \DIFadd{(which
+\DIFadd{Lower values of }\mmin\DIFadd{\ would imply a lower }\focc\DIFadd{\ and larger
+uncertainties on the parameters }\mmin\DIFadd{\, }\focc \DIFadd{and $M_{50}$.
+In other words, the limitations in our priors for }\mmin\DIFadd{\ (which
 set the limitations for the kind of numerical simulation we use) might
 be underestimating the uncertainties and slightly biasing our results
-for }\mmin\, \focc\ \DIFadd{and $M_{50}$.
+for }\mmin\DIFadd{\, }\focc\DIFadd{\ and $M_{50}$.
 }
 
 \DIFadd{Although Fig. \ref{fig:mmed} suggest that models with lower values of
 $M_{\rm 50}$, i.e. lower values of }\mmin\DIFadd{, have a higher
 $\chi^2_{\mathcal{M}}$ and could be thus discarded, we suggest that a
 proper test of this hypothesis requires performing new cosmological
-simulations to be able to probe }\mmin\ \DIFadd{masses below our limit of
+simulations to be able to probe }\mmin\DIFadd{\ masses below our limit of
 $6\times  10^{9}$}\hMsun\DIFadd{. 
 }
 
@@ -719,7 +723,7 @@ We consider such test beyond the scope of this paper.
 }
 
 \DIFadd{This extension to larger priors cannot change other central results of
-our paper, such as the relationship between }\focc\ \DIFadd{and }\mmin\, \DIFadd{the
+our paper, such as the relationship between }\focc\DIFadd{\ and }\mmin\DIFadd{\, the
 narrow mass range for individual models and the possibility to
 constraint the halo mass with cosmic variance on the number density
 counts. 
@@ -772,14 +776,14 @@ a general consistency with previous works \citep{Hayashino2004,
 \citep{Bielby16}. 
 
 \DIFaddbegin \DIFadd{This work also highlights the need to explore a wider range on the
-prior of }\mmin\ \DIFadd{if one wants to better estimate the uncertainty on
-}\mmin\DIFadd{, }\focc\ \DIFadd{and $M_{50}$.  
+prior of }\mmin\DIFadd{\ if one wants to better estimate the uncertainty on
+}\mmin\DIFadd{, }\focc\DIFadd{\ and $M_{50}$.  
 In this paper we use priors given by previous observations, but our
 results suggest that once cosmic variance is explicitly taken into
-account, even lower values of }\mmin\ \DIFadd{might be in fact consistent with
+account, even lower values of }\mmin\DIFadd{\ might be in fact consistent with
 observations. 
 We recommend that future work making use of the technique presented
-in this paper should extend the prior for }\mmin\ \DIFadd{to masses at least
+in this paper should extend the prior for }\mmin\DIFadd{\ to masses at least
 one order of magnitude below $6\times 10^{9}$}\hMsun\DIFadd{.  
 }
 
@@ -944,7 +948,7 @@ Research Center.
   \& {Virani}}]{Guaita2010}
 {\DIFadd{Guaita}}\DIFadd{, L., }{\DIFadd{Gawiser}}\DIFadd{, E., }{\DIFadd{Padilla}}\DIFadd{, N., }{\DIFadd{Francke}}\DIFadd{, H.,
 	}{\DIFadd{Bond}}\DIFadd{, N.~A., }{\DIFadd{Gronwall}}\DIFadd{, C., }{\DIFadd{Ciardullo}}\DIFadd{, R., }{\DIFadd{Feldmeier}}\DIFadd{, J.~J., 
-	}{\DIFadd{Sinawa}}\DIFadd{, S., }{\DIFadd{Blanc}}\DIFadd{, G.~A., }\& {\DIFadd{Virani}}\DIFadd{, S. 2010, }\apj\DIFadd{, 714, 255
+	}{\DIFadd{Sinawa}}\DIFadd{, S., }{\DIFadd{Blanc}}\DIFadd{, G.~A., \& }{\DIFadd{Virani}}\DIFadd{, S. 2010, }\apj\DIFadd{, 714, 255
 }
 
 
@@ -998,7 +1002,7 @@ Research Center.
 
 \DIFaddbegin \bibitem[{{Norberg} {et~al.}(2009){Norberg}, {Baugh}, {Gazta{\~n}aga}, \&
   {Croton}}]{2009MNRAS.396...19N}
-{\DIFadd{Norberg}}\DIFadd{, P., }{\DIFadd{Baugh}}\DIFadd{, C.~M., }{\DIFadd{Gazta}{\~n}\DIFadd{aga}}\DIFadd{, E., }\& {\DIFadd{Croton}}\DIFadd{, D.~J. 2009,
+{\DIFadd{Norberg}}\DIFadd{, P., }{\DIFadd{Baugh}}\DIFadd{, C.~M., }{\DIFadd{Gazta}{\DIFadd{\~n}}\DIFadd{aga}}\DIFadd{, E., \& }{\DIFadd{Croton}}\DIFadd{, D.~J. 2009,
   }\mnras\DIFadd{, 396, 19
 }
 
@@ -1055,7 +1059,7 @@ Riebe, K., Partl, A.~M., Enke, H., Forero-Romero, J., Gottlöber, S., Klypin,
 \DIFaddbegin \bibitem[{{Somerville} {et~al.}(2004){Somerville}, {Lee}, {Ferguson}, {Gardner},
   {Moustakas}, \& {Giavalisco}}]{Somerville2004}
 {\DIFadd{Somerville}}\DIFadd{, R.~S., }{\DIFadd{Lee}}\DIFadd{, K., }{\DIFadd{Ferguson}}\DIFadd{, H.~C.,
-	}{\DIFadd{Gardner}}\DIFadd{, J.~P., }{\DIFadd{Moustakas}}\DIFadd{, L.~A., }\& {\DIFadd{Giavalisco}}\DIFadd{, M. 204, }\apj\DIFadd{,
+	}{\DIFadd{Gardner}}\DIFadd{, J.~P., }{\DIFadd{Moustakas}}\DIFadd{, L.~A., \& }{\DIFadd{Giavalisco}}\DIFadd{, M. 204, }\apj\DIFadd{,
   600, 171
 }
 
@@ -1087,7 +1091,7 @@ Riebe, K., Partl, A.~M., Enke, H., Forero-Romero, J., Gottlöber, S., Klypin,
 {\DIFadd{Zehavi}}\DIFadd{, I., }{\DIFadd{Zheng}}\DIFadd{, Z., }{\DIFadd{Weinberg}}\DIFadd{, D.~H., }{\DIFadd{Blanton}}\DIFadd{, M.~R., }{\DIFadd{Bahcall}}\DIFadd{,
   N.~A., }{\DIFadd{Berlind}}\DIFadd{, A.~A., }{\DIFadd{Brinkmann}}\DIFadd{, J., }{\DIFadd{Frieman}}\DIFadd{, J.~A., }{\DIFadd{Gunn}}\DIFadd{, J.~E.,
   }{\DIFadd{Lupton}}\DIFadd{, R.~H., }{\DIFadd{Nichol}}\DIFadd{, R.~C., }{\DIFadd{Percival}}\DIFadd{, W.~J., }{\DIFadd{Schneider}}\DIFadd{, D.~P.,
-  }{\DIFadd{Skibba}}\DIFadd{, R.~A., }{\DIFadd{Strauss}}\DIFadd{, M.~A., }{\DIFadd{Tegmark}}\DIFadd{, M., }\& {\DIFadd{York}}\DIFadd{, D.~G. 2011,
+  }{\DIFadd{Skibba}}\DIFadd{, R.~A., }{\DIFadd{Strauss}}\DIFadd{, M.~A., }{\DIFadd{Tegmark}}\DIFadd{, M., \& }{\DIFadd{York}}\DIFadd{, D.~G. 2011,
   }\apj\DIFadd{, 736, 59
 }\DIFaddend 
 

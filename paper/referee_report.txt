@@ -82,7 +82,7 @@ A secondary effect is the cosmic variance as the referee points out.
 authors could comment on this choice (perhaps covariances are  not
 expected to be strong at these angular separations?)" 
 
-We do not include the full covariance matrix due to the practical
+ANSWER:We do not include the full covariance matrix due to the practical
 impossibility to estimate it in robust way either from observations or
 simulations. Followint Zehavi et al. 2011, using the full error
 covariance matrix, when not noise dominated, versus only diagonal
@@ -98,19 +98,19 @@ Minor comments:
   halo masses?" 
 
 
-ANSWER: We agree witht he referee on this apreciation and comment on
+ANSWER: We agree with the referee on this apreciation and comment on
 it at the end of section 3.2. Our results are  however not 
 conclusive because cosmic variance  still dominates and  make all the
-models consistent with in uncertainties as explained in the text. 
+models consistent within uncertainties as explained in the text. 
  
 
 2. "The width of the distribution of Figure 5 is measured with 27 mock
   fields, but this does not really mean that a comparison to
   observations requires 27 observed fields."
 
-ANSWER: WE agree witht he referee in this comment.  We actually
+ANSWER: We agree witht the referee in this comment.  We actually
 wanted  to mean that to be able to accurately measure the distribution
-width, we need a number of fields of the order or larger than 27. 
+width, we need a number of fields of the order of 27 field or even a larger number. 
 
 
 3. Please add units to the grey scales used in Figure 3, and y-axes labels to the one dimensional probability distributions.
