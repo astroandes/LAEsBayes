@@ -1,7 +1,7 @@
 \documentclass{emulateapj}
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL ms_old.tex   Tue Jun 14 08:14:54 2016
-%DIF ADD ms.tex       Tue Jun 14 08:18:35 2016
+%DIF ADD ms.tex       Tue Jun 14 08:33:46 2016
 \submitted{{\it Submitted for publication in ApJ}}
 \usepackage{multirow,color,wrapfig}
 \usepackage {graphicx}
@@ -135,9 +135,9 @@ However, we find that the same individual models have a relatively tight
 $1\sigma$  scatter around the median mass $\Delta M_{1\sigma} = 0.55^{+0.11}_{-0.31}$ dex.
 We are also able \DIFaddbegin \DIFadd{to }\DIFaddend show that \focc\ is uniquely determined by $M_{\rm
   min}$, regardless of $M_{\rm max}$. 
-We argue that upcoming large surveys covering at least $25$ deg$^{2}$
+We argue that upcoming large surveys covering at least \DIFdelbegin \DIFdel{$25$ }\DIFdelend \DIFaddbegin \DIFadd{$20$ }\DIFaddend deg$^{2}$
 should be able to put tighter constraints on \mmin\ and \focc\ through the LAE number density
-distribution width, $W_{1\sigma}$, constructed over several fields of
+distribution width \DIFdelbegin \DIFdel{, $W_{1\sigma}$, }\DIFdelend constructed over several fields of
 $\sim 1$ deg$^{2}$.
 \DIFaddbegin \DIFadd{These results suggest that taking explicitly into account the effect of cosmic
 variance using cosmological simulations is a valuable tool to 
@@ -209,7 +209,8 @@ fraction of the putative halos hosting these galaxies
 \citep{Hayashino2004,Gawiser07,Nilsson2007,Ouchi2010,Bielby16}. 
 In these studies the observations are done on fields of $\sim 1$ deg$^{2}$ and
 the conclusions derived on the halo host mass do not elaborate \DIFaddbegin \DIFadd{deeply }\DIFaddend on the
-uncertainty resulting from the cosmic variance on these fields. \DIFaddbegin {\bf  \DIFadd{\mbox{%DIFAUXCMD
+uncertainty resulting from the cosmic variance on these fields. 
+\DIFaddbegin \DIFadd{For instance, \mbox{%DIFAUXCMD
 \citet{Guaita2010}
 }%DIFAUXCMD
 attempted to analytically 
@@ -220,9 +221,16 @@ following \mbox{%DIFAUXCMD
 and \mbox{%DIFAUXCMD
 \citet{Peebles1980}
 }%DIFAUXCMD
-. Their prescription assumes 
-that the correlation function can represented by a power-law $\psi\left(r\right)=\left(r_{0}/r\right)^{\gamma}$. Their estimation of cosmic variance strongly depends on $r_{0}$ and $\gamma$. However, $\gamma$ is only  poorly constrained with current observations which in turns indicates that their cosmic variance estimation could not be precise.}}
-\DIFaddend 
+. 
+Their prescription assumed that the correlation function can be
+represented by a power-law
+$\psi\left(r\right)=\left(r_{0}/r\right)^{\gamma}$. 
+Their estimation of cosmic variance strongly depends on $r_{0}$ and
+$\gamma$.  
+However, $\gamma$ is only poorly constrained with current
+observations which in turns indicates that their cosmic variance
+estimation could not be precise. 
+}\DIFaddend 
 
 In this paper we investigate the impact of cosmic variance in
 constraining the mass and occupation fraction of halos hosting LAEs at $z=3$.
@@ -236,10 +244,11 @@ between the \ly\  luminosity and the dark matter halo mass.
 This approach bypasses all the physical uncertainties associated to
 star formation and radiative transfer. 
 We then use the Markov Chain Monte Carlo technique to obtain the
-likelihood of the parameters given the observational constraints. \DIFaddbegin {\bf \DIFadd{This approach 
-allow us to estimate cosmic variance directly from simulations without making any assumption 
-on the correlation function behavior.}}
-\DIFaddend 
+likelihood of the parameters given the observational constraints.
+\DIFaddbegin \DIFadd{This approach allows us to estimate cosmic variance directly from
+simulations without making any assumption  on the correlation function
+behavior. ma
+}\DIFaddend 
 
 Throughout this paper we assume a $\Lambda$CDM cosmology with the
 following values for the cosmological parameters, $\Omega_{m}=0.30711$,
@@ -282,8 +291,9 @@ We describe in detail these four elements in the following subsections.
 \subsection{Observational constraints}
 \label{subsec:obs}
 \citet{Bielby16} used narrow band imaging to detect 643 LAE candidates
-at $z\sim 3$  with Ly-$\alpha$ \DIFdelbegin \DIFdel{equivalent widths of }\DIFdelend \DIFaddbegin {\bf \DIFadd{rest-frame}} \DIFadd{equivalent widths }\DIFaddend $\gtrsim$65\AA\ and a  Ly-$\alpha$ flux limit
-of $2\times10^{17}{\rm erg/cm^2/s}$ ($L\sim 7\times10^{42}{\rm erg/s} $). 
+at $z\sim 3$  with Ly-$\alpha$ \DIFdelbegin \DIFdel{equivalent widths of }\DIFdelend \DIFaddbegin \DIFadd{rest-frame equivalent widths
+}\DIFaddend $\gtrsim$65\AA\ and a  Ly-$\alpha$ flux limit of $2\times10^{17}{\rm
+  erg/cm^2/s}$ ($L\sim 7\times10^{42}{\rm erg/s} $).  
 Using follow-up spectroscopy they found a 22\% contamination fraction $f_{\rm c}$.
 Their observations cover 5 (out of 9) independent and adjacent
 fields of the VLT LBG Redshift Survey (VLRS).  
@@ -514,11 +524,11 @@ be tightly constrained from the available observations.
 
 The preferred $1-\sigma$ range for the masses is $10.0<\log \mmin<11.2$
 and $11.0<\log\mmax<13.0$.
-\focc\ is completely determined by \mmin\ from \focc$=$0.011 when
-$\log\mmin=10.0$ to $\focc=0.39$ when $\log\mmin=11.15$. 
+\focc\ is completely determined by \mmin\ from \focc$=$\DIFdelbegin \DIFdel{0.011 }\DIFdelend \DIFaddbegin \DIFadd{0.004 }\DIFaddend when
+$\log\mmin=10.0$ to \DIFdelbegin \DIFdel{$\focc=0.39$ }\DIFdelend \DIFaddbegin \DIFadd{$\focc=0.38$ }\DIFaddend when $\log\mmin=11.15$. 
 We compute the power-law dependence between \focc\ and \mmin\ to be 
 \begin{equation}
-\focc = 0.08\left(\frac{\mmin}{10^{10.3}\hMsun}\right)^{0.77}.
+\focc = \DIFdelbegin \DIFdel{0.08}\DIFdelend \DIFaddbegin \DIFadd{0.05}\DIFaddend \left(\DIFdelbegin \DIFdel{\frac{\mmin}{10^{10.3}\hMsun}}\DIFdelend \DIFaddbegin \DIFadd{\frac{\mmin}{10^{10}\hMsun}}\DIFaddend \right)^{0.77}.
 \DIFaddbegin \label{eq:focc}
 \DIFaddend \end{equation}
 We remind the reader that models with $\log \focc>0.00$ ($\focc>1$)
@@ -529,13 +539,14 @@ LAEs due to cosmic variance (see Fig. \ref{fig:cosmicv0} and
 \S\ref{subsec:explore}). 
 
 
-\DIFaddbegin {\bf \DIFadd{The result in Eq.(\ref{eq:focc}) can be qualitatively understood as
+\DIFaddbegin \DIFadd{The result in Eq.(\ref{eq:focc}) can be qualitatively understood as
 follows.   
 A choice of $\focc<1$ means that the halo mass function is scaled down.
 If }\mmin\ \DIFadd{decreases the total number of halos increases because less
 massive halos are more abundant.
 This requires smaller values of $\focc$ to keep the total
-number of halos hosting LAEs equal to the number of LAEs in observations.}}
+number of halos hosting LAEs equal to the number of LAEs in observations.
+}
 
 
 

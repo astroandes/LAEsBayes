@@ -113,7 +113,7 @@ We are also able to show that \focc\ is uniquely determined by $M_{\rm
   min}$, regardless of $M_{\rm max}$. 
 We argue that upcoming large surveys covering at least $25$ deg$^{2}$
 should be able to put tighter constraints on \mmin\ and \focc\ through the LAE number density
-distribution width, $W_{1\sigma}$, constructed over several fields of
+distribution width constructed over several fields of
 $\sim 1$ deg$^{2}$.
 These results suggest that taking explicitly into account the effect of cosmic
 variance using cosmological simulations is a valuable tool to 
@@ -185,10 +185,18 @@ fraction of the putative halos hosting these galaxies
 \citep{Hayashino2004,Gawiser07,Nilsson2007,Ouchi2010,Bielby16}. 
 In these studies the observations are done on fields of $\sim 1$ deg$^{2}$ and
 the conclusions derived on the halo host mass do not elaborate deeply on the
-uncertainty resulting from the cosmic variance on these fields. {\bf  \citet{Guaita2010} attempted to analytically 
+uncertainty resulting from the cosmic variance on these fields. 
+For instance, \citet{Guaita2010} attempted to analytically 
 estimate the uncertainty from cosmic variance 
-following \citet{Somerville2004} and \citet{Peebles1980}. Their prescription assumes 
-that the correlation function can represented by a power-law $\psi\left(r\right)=\left(r_{0}/r\right)^{\gamma}$. Their estimation of cosmic variance strongly depends on $r_{0}$ and $\gamma$. However, $\gamma$ is only  poorly constrained with current observations which in turns indicates that their cosmic variance estimation could not be precise.}
+following \citet{Somerville2004} and \citet{Peebles1980}. 
+Their prescription assumed that the correlation function can be
+represented by a power-law
+$\psi\left(r\right)=\left(r_{0}/r\right)^{\gamma}$. 
+Their estimation of cosmic variance strongly depends on $r_{0}$ and
+$\gamma$.  
+However, $\gamma$ is only poorly constrained with current
+observations which in turns indicates that their cosmic variance
+estimation could not be precise. 
 
 In this paper we investigate the impact of cosmic variance in
 constraining the mass and occupation fraction of halos hosting LAEs at $z=3$.
@@ -202,9 +210,10 @@ between the \ly\  luminosity and the dark matter halo mass.
 This approach bypasses all the physical uncertainties associated to
 star formation and radiative transfer. 
 We then use the Markov Chain Monte Carlo technique to obtain the
-likelihood of the parameters given the observational constraints. {\bf This approach 
-allow us to estimate cosmic variance directly from simulations without making any assumption 
-on the correlation function behavior.}
+likelihood of the parameters given the observational constraints.
+This approach allows us to estimate cosmic variance directly from
+simulations without making any assumption  on the correlation function
+behavior. ma
 
 Throughout this paper we assume a $\Lambda$CDM cosmology with the
 following values for the cosmological parameters, $\Omega_{m}=0.30711$,
@@ -247,8 +256,9 @@ We describe in detail these four elements in the following subsections.
 \subsection{Observational constraints}
 \label{subsec:obs}
 \citet{Bielby16} used narrow band imaging to detect 643 LAE candidates
-at $z\sim 3$  with Ly-$\alpha$ {\bf rest-frame} equivalent widths $\gtrsim$65\AA\ and a  Ly-$\alpha$ flux limit
-of $2\times10^{17}{\rm erg/cm^2/s}$ ($L\sim 7\times10^{42}{\rm erg/s} $). 
+at $z\sim 3$  with Ly-$\alpha$ rest-frame equivalent widths
+$\gtrsim$65\AA\ and a  Ly-$\alpha$ flux limit of $2\times10^{17}{\rm
+  erg/cm^2/s}$ ($L\sim 7\times10^{42}{\rm erg/s} $).  
 Using follow-up spectroscopy they found a 22\% contamination fraction $f_{\rm c}$.
 Their observations cover 5 (out of 9) independent and adjacent
 fields of the VLT LBG Redshift Survey (VLRS).  
@@ -460,11 +470,11 @@ be tightly constrained from the available observations.
 
 The preferred $1-\sigma$ range for the masses is $10.0<\log \mmin<11.2$
 and $11.0<\log\mmax<13.0$.
-\focc\ is completely determined by \mmin\ from \focc$=$0.011 when
-$\log\mmin=10.0$ to $\focc=0.39$ when $\log\mmin=11.15$. 
+\focc\ is completely determined by \mmin\ from \focc$=$0.004 when
+$\log\mmin=10.0$ to $\focc=0.38$ when $\log\mmin=11.15$. 
 We compute the power-law dependence between \focc\ and \mmin\ to be 
 \begin{equation}
-\focc = 0.08\left(\frac{\mmin}{10^{10.3}\hMsun}\right)^{0.77}.
+\focc = 0.05\left(\frac{\mmin}{10^{10}\hMsun}\right)^{0.77}.
 \label{eq:focc}
 \end{equation}
 We remind the reader that models with $\log \focc>0.00$ ($\focc>1$)
@@ -475,13 +485,13 @@ LAEs due to cosmic variance (see Fig. \ref{fig:cosmicv0} and
 \S\ref{subsec:explore}). 
 
 
-{\bf The result in Eq.(\ref{eq:focc}) can be qualitatively understood as
+The result in Eq.(\ref{eq:focc}) can be qualitatively understood as
 follows.   
 A choice of $\focc<1$ means that the halo mass function is scaled down.
 If \mmin\ decreases the total number of halos increases because less
 massive halos are more abundant.
 This requires smaller values of $\focc$ to keep the total
-number of halos hosting LAEs equal to the number of LAEs in observations.}
+number of halos hosting LAEs equal to the number of LAEs in observations.
 
 
 

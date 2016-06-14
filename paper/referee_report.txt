@@ -19,7 +19,7 @@ constraining the paremeters of our model.
 Examining Figure 3. one clearly sees that the histogram for M_min does
 not significantly decreases for lower masses. 
 This might be a hint that lower values of M_min are consistent with
-observations.  
+observations, as the referee points out.
 M_min in turn constrains f_occ (also seen in Figure 3), while the
 upper limit in M_max is driven by the physics of dark matter
 clustering, i.e., there is an upper limit for halo masses in a fixed
@@ -27,14 +27,14 @@ cosmological volume.
 
 The referee's request to increase the range of allowed parameters can
 thus only be realized by going to lower values of M_min. 
-We did not go to lower values of this parameter for two reasons. 
+In the paper we did not go to lower values of this parameter for two reasons. 
 
 First, our lower limit of 10^9.7 Msun/h is at least 0.3dex below than all the
 lower bound expectations from previous observational studies;
 Bielby+2016 had a lower bound of 10^10.4 Msun/h, Gawiser+2007 had 10^10
 Msun/h and Ouchi+2010 favors a lower limit of 10^{10} Msun/h.
 
-Second, stating from that observational evidence we chose a 
+Second, starting from that observational evidence we chose a 
 publicly available cosmological simulation that a) had cosmological
 parameters consistent with Planck observations, b) could provide a
 realiable mass function below 10^{10} Msun/h and c) had total volume that
@@ -59,9 +59,6 @@ lower masses the values of m_min, and quote this in the conclusions as
 an interesting way to extend our results. 
 
 
-
-
-
 2. "The choice of the occupation fraction focc as a fixed fraction for
 a given halo to be occupied by an LAE means the mass function of
 haloes is being scaled down (in most cases) by this factor. In this
@@ -70,24 +67,20 @@ increased, this fraction will also increase in order to maintain a
 fixed number of LAEs per field (more massive haloes  are less
 abundant). This should be mentioned in the text."
 
-This is now mention at the end of Section 3.1.
+ANSWER. This is now mention at the end of Section 3.1.
 
-- Also because of the fixed focc, the median halo mass and halo mass width could actually be calculated analytically, except that 
-the authors are interested in cosmic variance, which they obtain from different subvolumes in the simulation. Is this the reason 
-for the large scatter seen in figure 4?
+3. "Also because of the fixed focc, the median halo mass and halo mass width could actually be calculated analytically, except that  the authors are interested in cosmic variance, which they obtain from different subvolumes in the simulation. Is this the reason  for the large scatter seen in figure 4?"
 
-JAIME PLEASE ELABORATE A BIT MORE:
-      	     	       	    EACH POINT IN FIGURE 4 REFERS TO A SINGLE MODEL GIVEN BY  Mmin-Mmax. ADDITIONALLY, DUE TO THE STEPPEN 
-			    ASSYMETRY OF THE MASS FUNCTION FOR A GIVEN  MMIN, M50 IS ALMOST FIXED (WITHIN ~0.2 DEX) AND BASICALLY 
-			    THE VERTICAL SPREAD IN FIGURE 4 IS DUE TO DIFFERENT VALUES OF MMAX GIVEN MMIN.
-
-                             THE COMPUTED VALUES OF M50 IN TERMS OF DELTAM_1sigma  TAKES INTO ACCOUNT THE EFFECT OF COSMIC VARIANCE AND POISSONIAN ERRORS SIMULTANEOUSLY.			   			    THESE TWO EFFECTS CANNOT BE TAKEN INTO ACCOUNT BY A SIMPLE ANALYTICAL PRESCRIPTION.
+ANSWER. There main reason behind the scatter in Figure 4 is not cosmic
+variance. What happens is that given value of the median mass could
+correspond in fact to different combinations of mmin and mmax, which
+in turn would produce a different mass width. 
+A secondary effect is the cosmic variance as the referee points out.
 
 
-
-
-- In their chi2 analysis the authors are ignoring covariances. The authors could comment on this choice (perhaps covariances are 
-not expected to be strong at these angular separations?)
+4. "In their chi2 analysis the authors are ignoring covariances. The
+authors could comment on this choice (perhaps covariances are  not
+expected to be strong at these angular separations?)" 
 
 
 
