@@ -213,7 +213,7 @@ We then use the Markov Chain Monte Carlo technique to obtain the
 likelihood of the parameters given the observational constraints.
 This approach allows us to estimate cosmic variance directly from
 simulations without making any assumption  on the correlation function
-behavior. ma
+behavior. 
 
 Throughout this paper we assume a $\Lambda$CDM cosmology with the
 following values for the cosmological parameters, $\Omega_{m}=0.30711$,
@@ -289,14 +289,14 @@ The dark matter distribution was sampled using  $2048^{3}$
 particles. 
 
 We chose this simulation based on three requirements. 
-First, the simulation should have cosmological parameters consistent
+First, the simulation has cosmological parameters consistent
 with the most recent constraints from Cosmic Microwave Background
 experiments and provide public acces to the data.
-Second, the halo mass function from the simulation should be robust
-down to masses that include the range of possibilities from previous
-observational efforts \cite[e.g. results from][impose a lower bound of
-  $10^{10}$\hMsun.]{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16} .
-Third, the total volume of the simulation should be at least 10 times
+Second, the halo mass function from the simulation is robust
+down to  $10^{10}$\hMsun, which is the lower halo mass bound suggested
+by previous observational 
+studies\citep{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16}. 
+Third, the total volume of the simulation is at least 10 times
 larger the equivalent volume of a single LAE observation field.
 These conditions are met as we describe below. 
 
@@ -335,6 +335,10 @@ described in \S \ref{subsec:obs}.
 \end{center}
 \caption{One and two dimensional projections of the posterior
   probability distributions of \mmin, \mmax\ and \focc. 
+  Vertical lines in the one dimensional proyections correspond to the
+  14-50,84 percentiles of the distribtions.
+  Thick lines in the two dimensional planes mark the 1-2-3 $\sigma$
+  contours of the corresponding joint distributions.
   The models with $\log \focc>0.00$ ($\focc>1$) correspond  to models
   where the number density  of halos is smaller than the number of
   observed LAEs but we consider them as consistent because of the uncertainty
@@ -779,9 +783,7 @@ Research Center.
 
 \bibliographystyle{apj}
 %\bibliography{references.bib}
-
-
-\begin{thebibliography}{39}
+\begin{thebibliography}{43}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2011){Adams}, {Blanc}, {Hill}, {Gebhardt}, {Drory},
@@ -877,14 +879,12 @@ Research Center.
   G.~A., {Fazio}, G., {Feldmeier}, J.~J., {Huang}, J.-s., {Infante}, L.,
   {Lira}, P., \& {Padilla}, N. 2007{\natexlab{b}}, \apj, 671, 278
 
-  
-\bibitem[{{Guaita} {et~al.}(2010){Guaita}, {Gawiser}, {Padilla},
-  {Francke}, {Bond}, {Gronwall}, {Ciardullo}, {Feldmeier}, {Sinawa}, {Blanc},
-  \& {Virani}}]{Guaita2010}
-{Guaita}, L., {Gawiser}, E., {Padilla}, N., {Francke}, H.,
-	{Bond}, N.~A., {Gronwall}, C., {Ciardullo}, R., {Feldmeier}, J.~J., 
-	{Sinawa}, S., {Blanc}, G.~A., \& {Virani}, S. 2010, \apj, 714, 255
-
+\bibitem[{{Guaita} {et~al.}(2010){Guaita}, {Gawiser}, {Padilla}, {Francke},
+  {Bond}, {Gronwall}, {Ciardullo}, {Feldmeier}, {Sinawa}, {Blanc}, \&
+  {Virani}}]{Guaita2010}
+{Guaita}, L., {Gawiser}, E., {Padilla}, N., {Francke}, H., {Bond}, N.~A.,
+  {Gronwall}, C., {Ciardullo}, R., {Feldmeier}, J.~J., {Sinawa}, S., {Blanc},
+  G.~A., \& {Virani}, S. 2010, \apj, 714, 255
 
 \bibitem[{{Hayashino} {et~al.}(2004){Hayashino}, {Matsuda}, {Tamura},
   {Yamauchi}, {Yamada}, {Ajiki}, {Fujita}, {Murayama}, {Nagao}, {Ohta},
@@ -899,12 +899,12 @@ Research Center.
 
 \bibitem[{{Jose} {et~al.}(2013){Jose}, {Srianand}, \&
   {Subramanian}}]{Jose2013b}
-{Jose}, C., {Srianand}, R., \& {Subramanian}, K. 2013, ArXiv e-prints
+{Jose}, C., {Srianand}, R., \& {Subramanian}, K. 2013, \mnras, 435, 368
 
-\bibitem[{{Klypin} {et~al.}(2014){Klypin}, {Yepes}, {Gottlober}, {Prada}, \&
-  {Hess}}]{BolshoiP}
-{Klypin}, A., {Yepes}, G., {Gottlober}, S., {Prada}, F., \& {Hess}, S. 2014,
-  ArXiv e-prints
+\bibitem[{{Klypin} {et~al.}(2016){Klypin}, {Yepes}, {Gottl{\"o}ber}, {Prada},
+  \& {He{\ss}}}]{BolshoiP}
+{Klypin}, A., {Yepes}, G., {Gottl{\"o}ber}, S., {Prada}, F., \& {He{\ss}}, S.
+  2016, \mnras, 457, 4340
 
 \bibitem[{{Klypin} {et~al.}(2011){Klypin}, {Trujillo-Gomez}, \&
   {Primack}}]{Bolshoi}
@@ -975,8 +975,6 @@ Research Center.
   {Spinrad}, \& {Jannuzi}}]{Rhoads00}
 {Rhoads}, J.~E., {Malhotra}, S., {Dey}, A., {Stern}, D., {Spinrad}, H., \&
   {Jannuzi}, B.~T. 2000, \apjl, 545, L85
-  
-
 
 \bibitem[{Riebe {et~al.}(2013)Riebe, Partl, Enke, Forero-Romero, Gottlöber,
   Klypin, Lemson, Prada, Primack, Steinmetz, \& Turchaninov}]{MultiDark}
@@ -987,13 +985,10 @@ Riebe, K., Partl, A.~M., Enke, H., Forero-Romero, J., Gottlöber, S., Klypin,
 \bibitem[{{Robertson}(2010)}]{Robertson10}
 {Robertson}, B.~E. 2010, \apjl, 716, L229
 
-
-
-\bibitem[{{Somerville} {et~al.}(2004){Somerville}, {Lee}, {Ferguson}, {Gardner},
-  {Moustakas}, \& {Giavalisco}}]{Somerville2004}
-{Somerville}, R.~S., {Lee}, K., {Ferguson}, H.~C.,
-	{Gardner}, J.~P., {Moustakas}, L.~A., \& {Giavalisco}, M. 204, \apj,
-  600, 171
+\bibitem[{{Somerville} {et~al.}(2004){Somerville}, {Lee}, {Ferguson},
+  {Gardner}, {Moustakas}, \& {Giavalisco}}]{Somerville2004}
+{Somerville}, R.~S., {Lee}, K., {Ferguson}, H.~C., {Gardner}, J.~P.,
+  {Moustakas}, L.~A., \& {Giavalisco}, M. 2004, \apjl, 600, L171
 
 \bibitem[{{Springel} {et~al.}(2005){Springel}, {White}, {Jenkins}, {Frenk},
   {Yoshida}, {Gao}, {Navarro}, {Thacker}, {Croton}, {Helly}, {Peacock}, {Cole},
