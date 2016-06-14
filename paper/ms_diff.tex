@@ -1,0 +1,1045 @@
+\documentclass{emulateapj}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL ms_old.tex   Tue Jun 14 08:14:54 2016
+%DIF ADD ms.tex       Tue Jun 14 08:18:35 2016
+\submitted{{\it Submitted for publication in ApJ}}
+\usepackage{multirow,color,wrapfig}
+\usepackage {graphicx}
+\usepackage{graphics}
+\usepackage[dvips]{epsfig}
+
+%=========================================================================
+%		INTERNAL MACROS
+%=========================================================================
+\def\be{\begin{equation}}
+\def\ee{\end{equation}}
+\def\ba{\begin{eqnarray}}
+\def\ea{\end{eqnarray}}
+
+% To highlight comments 
+
+%DIF 18a18
+ %DIF > 
+%DIF -------
+\newcommand{\LCDM}{$\Lambda$CDM~}
+\newcommand{\beq}{\begin{eqnarray}}  
+\newcommand{\eeq}{\end{eqnarray}}  
+\newcommand{\zz}{$z\sim 3$} 
+\newcommand{\avg}[1]{\langle{#1}\rangle}  
+\newcommand{\ly}{{\ifmmode{{\rm Ly}\alpha}\else{Ly$\alpha$}\fi}}
+\newcommand{\hMpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc}\fi}}  
+\newcommand{\hGpc}{{\ifmmode{h^{-1}{\rm Gpc}}\else{$h^{-1}$Gpc}\fi}}  
+\newcommand{\hmpc}{{\ifmmode{h^{-1}{\rm Mpc}}\else{$h^{-1}$Mpc}\fi}}  
+\newcommand{\hkpc}{{\ifmmode{h^{-1}{\rm kpc}}\else{$h^{-1}$kpc}\fi}}  
+\newcommand{\hMsun}{{\ifmmode{h^{-1}{\rm {M_{\odot}}}}\else{$h^{-1}{\rm{M_{\odot}}}$}\fi}}  
+\newcommand{\Mmin}{{\ifmmode{{M_{\rm min}}}\else{${M_{\rm min}}$}\fi}}
+\newcommand{\mmin}{{\ifmmode{{M_{\rm min}}}\else{${M_{\rm min}}$}\fi}}
+\newcommand{\mmax}{{\ifmmode{{M_{\rm max}}}\else{${M_{\rm max}}$}\fi}}
+\newcommand{\lmmin}{{\ifmmode{{\log M_{\rm min}}}\else{${\log M_{\rm min}}$}\fi}}
+\newcommand{\lmmax}{{\ifmmode{{\log M_{\rm max}}}\else{${\log M_{\rm max}}$}\fi}}
+
+\newcommand{\Mmax}{{\ifmmode{{M_{\rm max}}}\else{${M_{\rm max}}$}\fi}}
+\newcommand{\dm}{{\ifmmode{{\Delta M}}\else{$\Delta M$}\fi}}
+\newcommand{\dlm}{{\ifmmode{{\Delta \log M}}\else{$\Delta \log M$}\fi}}
+\newcommand{\focc}{{\ifmmode{{f_{\rm occ}}}\else{${f_{\rm occ}}$}\fi}}
+
+\newcommand{\Msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}  
+\newcommand{\msun}{{\ifmmode{{\rm {M_{\odot}}}}\else{${\rm{M_{\odot}}}$}\fi}}  
+\newcommand{\lya}{{Lyman$\alpha$~}}
+\newcommand{\clara}{{\texttt{CLARA}}~}
+\newcommand{\rand}{{\ifmmode{{\mathcal{R}}}\else{${\mathcal{R}}$ }\fi}}  
+%SAMPLES
+
+
+%MY COMMANDS #############################################################
+\newcommand{\sub}[1]{\mbox{\scriptsize{#1}}}
+\newcommand{\dtot}[2]{ \frac{ d #1 }{d #2} }
+\newcommand{\dpar}[2]{ \frac{ \partial #1 }{\partial #2} }
+\newcommand{\pr}[1]{ \left( #1 \right) }
+\newcommand{\corc}[1]{ \left[ #1 \right] }
+\newcommand{\lla}[1]{ \left\{ #1 \right\} }
+\newcommand{\bds}[1]{\boldsymbol{ #1 }}
+\newcommand{\oiint}{\displaystyle\bigcirc\!\!\!\!\!\!\!\!\int\!\!\!\!\!\int}
+\newcommand{\mathsize}[2]{\mbox{\fontsize{#1}{#1}\selectfont $#2$}}
+\newcommand{\eq}[2]{\begin{equation} \label{eq:#1} #2 \end{equation}}
+\newcommand{\lth}{$\lambda_{th}$ }
+\newcommand{\reff}{{\ifmmode{r_{\mbox{\tiny eff}}}\else{$r_{\mbox{\tiny eff}}$}\fi}}
+%#########################################################################
+
+%TO DO COMMANDS. Highlight region that needs extra work  #############################################################
+\newcommand{\todo}{\ifmmode \text{\Huge{\(\bullet\)}} \else {\Huge$\bullet$}\fi}
+% \newcommand{\todo}{\ifmmode {\Huge \bullet} \else {\Huge$\bullet$}\fi}
+\newcommand{\tido}{\ifmmode {\bullet} \else $\bullet$\fi}
+\newcommand{\REFS}{(\todo REFS) }
+\newcommand{\toref}{(\todo REFS)}
+%#########################################################################
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF UNDERLINE PREAMBLE %DIF PREAMBLE
+\RequirePackage[normalem]{ulem} %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue}\uwave{#1}}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red}\sout{#1}}}                      %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+%=========================================================================
+%		FRONT MATTER
+%=========================================================================
+\title{Uncertainty on the galaxy-halo connection for Lyman-$\alpha$ emitters at $z=3.1$}
+\author{
+  Juli\'an E. Mej\'ia-Restrepo \thanks{jemejia@das.uchile.cl}$^{1,3}$,
+  Jaime E. Forero-Romero \thanks{je.forero@uniandes.edu.co}$^{2}$ 
+}
+
+\affil{
+$^1$Departamento de Astronom\'{i}a, Universidad de Chile, Camino el Observatorio 1515, Santiago, Chile\\
+$^2$Departamento de F\'{i}sica, Universidad de los Andes, Cra. 1
+No. 18A-10, Edificio Ip, Bogot\'a, Colombia\\
+$^3$FACom-Instituto de F\'isica-FCEN, Universidad de Antioquia, Calle 70 No. 52-21, Medell\'in, Colombia
+}
+
+
+
+
+\begin{abstract}
+ \DIFdelbegin \DIFdel{We }\DIFdelend \DIFaddbegin \DIFadd{In this paper we }\DIFaddend study the impact of cosmic variance and observational uncertainties
+in constraining the mass and occupation fraction, \focc, of
+dark matter halos hosting \ly\ Emitting  Galaxies (LAEs) at high redshift. 
+\DIFdelbegin \DIFdel{We }\DIFdelend \DIFaddbegin \DIFadd{To this end, we }\DIFaddend construct mock catalogs from an N-body simulation to match the 
+typical size of observed fields at $z=3.1$ ($\sim 1 {\rm deg^2}$).
+In our model a dark matter halo with mass in the range $\mmin
+<M_{\mathrm h}<\mmax$ can only host one detectable LAE at most.    
+We \DIFaddbegin \DIFadd{proceed to  }\DIFaddend explore the parameter space determined by \mmin, \mmax\ and \focc\
+with a Markov Chain Monte-Carlo algorithm using \DIFdelbegin \DIFdel{as observational
+constraints }\DIFdelend the angular correlation function (ACF) and the LAEs number density  \DIFaddbegin \DIFadd{as observational constraints}\DIFaddend . 
+We find that the preferred minimum and maximum masses in our model span
+a wide range $10^{10.0}\hMsun\leq \mmin \leq 10^{11.1}\hMsun$ ,
+$10^{11.0}\hMsun\leq \mmax \leq 10^{13.0}\hMsun$; followed by a
+wide range in the occupation fraction $0.02\leq \focc \leq 0.30$.   
+As a consequence the median mass, $M_{50}$, of all \DIFdelbegin \DIFdel{models consistent with
+observations }\DIFdelend \DIFaddbegin \DIFadd{the consistent models }\DIFaddend has a large uncertainty $M_{50} =
+3.16^{+9.34}_{-2.37}\times 10^{10}$\hMsun.
+However, we find that the same individual models have a relatively tight
+$1\sigma$  scatter around the median mass $\Delta M_{1\sigma} = 0.55^{+0.11}_{-0.31}$ dex.
+We are also able \DIFaddbegin \DIFadd{to }\DIFaddend show that \focc\ is uniquely determined by $M_{\rm
+  min}$, regardless of $M_{\rm max}$. 
+We argue that upcoming large surveys covering at least $25$ deg$^{2}$
+should be able to put tighter constraints on \mmin\ and \focc\ through the LAE number density
+distribution width, $W_{1\sigma}$, constructed over several fields of
+$\sim 1$ deg$^{2}$.
+\DIFaddbegin \DIFadd{These results suggest that taking explicitly into account the effect of cosmic
+variance using cosmological simulations is a valuable tool to 
+interpret LAEs observations at high redshift.
+}\DIFaddend \end{abstract}
+
+\keywords{
+Galaxies: halos --- Galaxies: high-redshift --- Galaxies: statistics
+--- Dark Matter --- Methods: numerical 
+}
+
+%*************************************************************************
+\section{Introduction}
+\label{sec:introduction}
+
+Lyman-$\alpha$ emitting galaxies (LAEs) are central to a wide range
+of subjects in extragalactic astronomy. 
+LAEs can be used as probes of reionization \citep[for a recent review
+  see][and references therein]{Dijkstra14}, tracers  of large scale structure
+\citep{Koehler2007}, signposts for low metallicity stellar
+populations \citep[for a recent review see][and references
+  therein]{Hayes15}, markers of the galaxy formation process at high
+redshift \citep{Partridge67,Rhoads00,Blanc11} and tracers of active
+star formation.    
+
+In most of those cases, capitalizing the observations requires
+understanding how LAEs are formed within an explicit cosmological
+context.  
+Under the current structure formation paradigm, the dominant matter
+content of the Universe is dark matter (DM).  
+Each galaxy is thought to be hosted by a larger dark matter structure
+known as a halo. \citep{Peebles1980,SpringelNature05}.  
+Understanding the cosmological context of LAEs thus implies studying
+the galaxy-halo connection.  
+Galaxy formation models suggest that the physical processes that
+regulate the star formation cycle are dependent on halo mass
+\citep[e.g.][]{Behroozi2013a}. Therefore, the mass becomes 
+the most important element in the halo-galaxy connection.  
+
+The goal becomes finding the typical DM halo mass of halos hosting LAEs.
+In the case of LAEs there are different ways to find this mass range.
+One approach is theoretical, using general astrophysical principles to
+find the relationship between halo mass, intrinsic \ly\ luminosities
+and observed \ly\ luminosities. 
+This approach is usually implemented through semi-analytic models
+\citep{Garel2012,Orsi2012} and  full N-body hydrodynamical simulations
+\citep{Laursen2007, Dayal2009, ForeroRomero2011, Yajima2012}.  
+
+The downside of these calculations is the uncertainty in the
+estimation of the escape fraction of \ly\ photons. 
+Given the resonant nature of the \ly\ line, the escape fraction is
+sensitive to  the dust contents, density, temperature, topology and
+kinematics of the neutral Hydrogen in the interstellar medium (ISM). 
+The process of finding a consensus on the expected value for the
+\ly\ escape fraction in high redshift galaxies is still matter of open
+debate
+\citep{Neufeld1991,Verhamme2006,ForeroRomero2012,Dijkstra2012,Laursen2013,Orsi2012,Yajima14}.       
+
+A different approach to infer the typical mass of halos hosting
+LAEs is based on the spatial clustering information. 
+This approach uses the fact
+that in CDM cosmologies the spatial clustering of galaxies on large
+scales is entirely dictated by the halo distribution
+\citep{Colberg00}, which in turn has a strong dependence on halo
+mass. 
+Using measurements of the angular correlation function of LAEs,
+observers have put constraints on the typical mass and occupation
+fraction of the putative halos hosting these galaxies
+\citep{Hayashino2004,Gawiser07,Nilsson2007,Ouchi2010,Bielby16}. 
+In these studies the observations are done on fields of $\sim 1$ deg$^{2}$ and
+the conclusions derived on the halo host mass do not elaborate \DIFaddbegin \DIFadd{deeply }\DIFaddend on the
+uncertainty resulting from the cosmic variance on these fields. \DIFaddbegin {\bf  \DIFadd{\mbox{%DIFAUXCMD
+\citet{Guaita2010}
+}%DIFAUXCMD
+attempted to analytically 
+estimate the uncertainty from cosmic variance 
+following \mbox{%DIFAUXCMD
+\citet{Somerville2004}
+}%DIFAUXCMD
+and \mbox{%DIFAUXCMD
+\citet{Peebles1980}
+}%DIFAUXCMD
+. Their prescription assumes 
+that the correlation function can represented by a power-law $\psi\left(r\right)=\left(r_{0}/r\right)^{\gamma}$. Their estimation of cosmic variance strongly depends on $r_{0}$ and $\gamma$. However, $\gamma$ is only  poorly constrained with current observations which in turns indicates that their cosmic variance estimation could not be precise.}}
+\DIFaddend 
+
+In this paper we investigate the impact of cosmic variance in
+constraining the mass and occupation fraction of halos hosting LAEs at $z=3$.
+We build mock surveys from a cosmological N-body simulation to compare them
+against the observations of \cite{Bielby16} using the angular
+correlation function.  
+We use a simple model to populate a halo in the simulation with a LAE   
+assuming a minimum, \mmin, and maximum mass, \mmax, for the dark
+matter halos hosting LAEs.  We do not  assume  an underlying relation 
+between the \ly\  luminosity and the dark matter halo mass.  
+This approach bypasses all the physical uncertainties associated to
+star formation and radiative transfer. 
+We then use the Markov Chain Monte Carlo technique to obtain the
+likelihood of the parameters given the observational constraints. \DIFaddbegin {\bf \DIFadd{This approach 
+allow us to estimate cosmic variance directly from simulations without making any assumption 
+on the correlation function behavior.}}
+\DIFaddend 
+
+Throughout this paper we assume a $\Lambda$CDM cosmology with the
+following values for the cosmological parameters, $\Omega_{m}=0.30711$,
+$\Omega_{\Lambda}=0.69289$ and $h=0.70$, corresponding to the matter
+density, vacuum density and the Hubble constant in units of 100 km
+s$^{-1}$ Mpc$^{-1}$.  The values are consistent with \citet{Planck2014} results.
+
+
+\begin{figure}
+\includegraphics[width=0.47\textwidth]{fig1.pdf}
+\caption{Cumulative halo number density distribution function over
+  27 mock fields. Each line corresponds to a
+  different model with increasing values of \mmin. 
+  Different models produce different number density distributions. 
+  The width of the distribution increases with \mmin. } 
+\label{fig:cosmicv0}
+\end{figure}
+
+
+
+
+\section{Methodology}
+
+The base of our method is the comparison between observations and mock
+catalogs. 
+This approach allows us to take explicitly into account cosmic variance. 
+The comparison has four key elements. 
+First, the observations we take as a benchmark. 
+Second, the N-body simulation and the halo catalogs we use to build
+the mocks. 
+Third, the parameters describing our model to
+assign a LAE to a halo. 
+Fourth, the statistical method we adopt to compare observations and
+simulations.  
+We describe in detail these four elements in the following subsections.
+
+
+
+
+\subsection{Observational constraints}
+\label{subsec:obs}
+\citet{Bielby16} used narrow band imaging to detect 643 LAE candidates
+at $z\sim 3$  with Ly-$\alpha$ \DIFdelbegin \DIFdel{equivalent widths of }\DIFdelend \DIFaddbegin {\bf \DIFadd{rest-frame}} \DIFadd{equivalent widths }\DIFaddend $\gtrsim$65\AA\ and a  Ly-$\alpha$ flux limit
+of $2\times10^{17}{\rm erg/cm^2/s}$ ($L\sim 7\times10^{42}{\rm erg/s} $). 
+Using follow-up spectroscopy they found a 22\% contamination fraction $f_{\rm c}$.
+Their observations cover 5 (out of 9) independent and adjacent
+fields of the VLT LBG Redshift Survey (VLRS).  
+The  total observed  area corresponds to 1.07$\rm deg^2$ that translates to
+$\sim$80$^2\hMpc^2$ in a comoving scale. 
+\citet{Bielby16} used the NB497  narrow-band filter whose 77\AA\ FWHM
+and 154\AA\ Full width  tenth maximum (FWTM) correspond to a total observational comoving depth of
+44\hMpc\  and 82\hMpc, respectively. 
+
+\begin{figure}
+  \includegraphics[width=0.47\textwidth]{fig5.pdf}
+\caption{ Angular Correlation functions for $\log M_{\rm
+    min}[\rm{M_{\odot}h^{-1}}]=10.5$ and different values of $\Delta \log
+  M$.  
+  The shaded region in the models represents the $1-\sigma$ variation
+  due to cosmic variance. Radically different models in $\Delta \log M$ are consistent with
+  observations once cosmic variance is modeled in detail.} 
+\label{fig:corr}
+\end{figure}
+
+
+\subsection{Simulation and halo catalog}
+\label{subsec:sim}
+
+We use results from the BolshoiP simulation \citep{Bolshoi,BolshoiP} 
+performed in a cubic  comoving volume of 250\hMpc\  on a side. 
+The dark matter distribution was sampled using  $2048^{3}$
+particles. 
+\DIFaddbegin 
+
+\DIFadd{We chose this simulation based on three requirements. 
+First, the simulation should have cosmological parameters consistent
+with the most recent constraints from Cosmic Microwave Background
+experiments and provide public acces to the data.
+Second, the halo mass function from the simulation should be robust
+down to masses that include the range of possibilities from previous
+observational efforts \mbox{%DIFAUXCMD
+\cite[e.g. results from][impose a lower bound of
+  $10^{10}$\hMsun.]{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16}
+}%DIFAUXCMD
+.
+Third, the total volume of the simulation should be at least 10 times
+larger the equivalent volume of a single LAE observation field.
+These conditions are met as we describe below. 
+}
+
+\DIFaddend The cosmological parameters are consistent with Planck
+results \citep{Planck2014} with a matter density 
+$\Omega_{\rm m} = 0.307$, cosmological constant
+$\Omega_{\Lambda}=0.693$, dimensionless Hubble constant $h=0.678$, slope
+of the power spectrum  $n=0.96$ and normalization of the power
+spectrum $\sigma_{8}=0.823$.  
+This translates into a particle mass of  $m_{\rm p}=1.5\times 10^{8}$
+$h^{-1}$ M$_{\odot}$. 
+\DIFaddbegin \DIFadd{Data is available to the
+public through an online
+interface }\footnote{\url{http://www.multidark.org/MultiDark/}}
+\DIFadd{\mbox{%DIFAUXCMD
+\citep{MultiDark}
+}%DIFAUXCMD
+.    
+}\DIFaddend 
+
+
+We use halo catalogs constructed with a Bound-Density-Maxima (BDM)
+algorithm. 
+\DIFdelbegin \DIFdel{The catalogs were obtained from the publicly available Multidark
+database  }\footnote{%DIFDELCMD < \url{http://www.multidark.org/MultiDark/}%%%
+}
+%DIFAUXCMD
+\addtocounter{footnote}{-1}%DIFAUXCMD
+\DIFdel{\mbox{%DIFAUXCMD
+\citep{MultiDark}
+}%DIFAUXCMD
+. 
+}\DIFdelend For each  halo in the box we extract its comoving position and mass.  
+We focus our work on halos more massive than $6.0\times
+10^{9}$\hMsun\ resolved with at least  $40$ particles 
+to guarantee statistical significance and a well behaved halo mass function. 
+We do not take into account sub-halos.
+
+We split the simulation volume at z$\sim$3 into  27 smaller mock
+volumes mimicking the  area and depth reported in \citet{Bielby16} and
+described in \S \ref{subsec:obs}.   
+
+
+
+
+\begin{figure*}
+\begin{center}
+\includegraphics[width=0.85\textwidth]{fig3.pdf}
+\end{center}
+\caption{One and two dimensional projections of the posterior
+  probability distributions of \mmin, \mmax\ and \focc. 
+  The models with $\log \focc>0.00$ ($\focc>1$) correspond  to models
+  where the number density  of halos is smaller than the number of
+  observed LAEs but we consider them as consistent because of the uncertainty
+  in the median number density due to cosmic variance. See 
+Fig. \ref{fig:cosmicv0} and \S\ref{subsec:explore} for details.} 
+\label{fig:like}
+\end{figure*}
+
+
+\subsection{A simple LAE model}
+\label{subsec:mocks}
+
+We build the simplest possible model to assign a LAE to each DM halo
+without trying to compute a LAE luminosity.
+
+We first assume that a dark matter halo can host one detectable LAE at
+most.   
+This assumption is consistent with theoretical analysis of the
+correlation function \citep{Jose2013b} and observations that confirm a
+lack of  class pairs in LAEs \citep{Bond2009}.  
+Then we say that a halo will host a LAE with probability $\focc$
+if and only if the halo mass is in the range $\mmin < M_{\mathrm
+  h} < \mmax$. 
+We also use the variable \dlm\ to represent the mass range width,
+$\dlm\equiv\ \log \mmax - \log \mmax$.  
+
+
+An astrophysical interpretation of $f_{\rm occ}$ convolves at least
+four phenomena: the actual presence of a star forming galaxy in a
+halo, a duty cycle in the star formation rate, the escape fraction of
+\ly\ radiation and its detectability as a LAE with Ly-$\alpha$ equivalent widths of $\gtrsim$65\AA.   
+We do not try to disentangle these effects and do not assume an underlying relation between the
+$\alpha$ luminosity and the dark matter halo mass.
+We instead opt for a purely arithmetic interpretation by setting
+$\focc$ as the ratio between the observed number of LAEs and the
+number of halos within the considered mass range, that is $\focc \equiv N_{\rm
+  LAEs}/N_{\mathrm{halos}}$.   
+
+For each mock catalog we also randomly remove a fraction $f_{\rm c}=0.22$  of the mock-LAEs and replace 
+them with randomly distributed points to mimic the effect of interloper
+contamination   in \citet{Bielby16} observations. 
+On top of that we apply rejection sampling  to our LAE selection 
+along the radial direction taking the transmission function of the
+NB479 filter used in \citet{Bielby16} observations. 
+
+
+
+Fig. \ref{fig:cosmicv0}  shows the cumulative halo number density
+for all 27 sub-volumes in the simulation, with a normalization by the
+median number density among fields, $\langle n \rangle$. 
+Each line represents a different model $\mathcal{M}$ with fixed
+$\focc=1$ and $\dlm=1.0$; and varying $\mmin$, 
+This Figure shows that the halo number  density varies across
+sub-volumes, as an expression of cosmic variance. 
+As a consequence, the $\focc$ also varies across the mock fields  
+by the same factor factor. 
+
+
+
+In what follows we \DIFdelbegin \DIFdel{note by the paper }\DIFdelend \DIFaddbegin \DIFadd{will describe by the letter }\DIFaddend ${\mathcal M}$  a model
+defined by a particular choice of the two parameters $M_{\rm min}$ \DIFdelbegin \DIFdel{, 
+}\DIFdelend \DIFaddbegin \DIFadd{and
+}\DIFaddend $M_{\rm  max}$. For each model  ${\mathcal M}$ we define
+$\tilde{f}_{\rm occ}$ as the median occupation fraction within the the
+mock fields.
+
+\subsection{Model Selection}
+\label{subsec:explore}
+
+
+
+We  explore the parameter space of the models
+${\mathcal M}$ by  means of the Affine Invariant  Markov Chain Monte Carlo technique using
+the EMCEE python package \citep[][and references therein]{emcee2013}. 
+
+
+The MCMC exploration is done using a total of 24 seeds and 400
+iterations (9600 models) to sample the posterior  probability distribution function, $P(\mathcal{M}|\mathrm{observations})$, based on the Angular
+Correlation Function (ACF). We put a flat prior on $\log M_{\rm min}$ and $\log \mmax$ between
+$9.8$ up to $13.4$, corresponding to the halo mass range of
+the simulation at $z=3$.
+We restrict the selection to models that give a minimal number density
+$N_{\rm{halos}}>N_{\rm LAE}/3$.
+This means that it is possible to have $N_{\rm{halos}} < N_{\rm LAE}$
+and hence $\focc\equiv N_{\rm{LAE}}/N_{\rm{halos}}>1$.
+We include the $1/3$ factor to account for the uncertainty in the number
+density of LAEs due to cosmic variance, expecting it to be on the
+same order as the dark matter halo cosmic variance shown in
+Fig. \ref{fig:cosmicv0}.   Our likelihood is taken proportional to
+$ \exp(-\chi_{\mathcal  M}^2/2)$  where:
+
+\begin{equation}
+\chi_{\mathcal M}^2=
+\sum_{\theta}\left[\frac{\left( \rm{ACF}_{\mathcal
+      M}\left(\theta\right) - \rm{ACF}_{\rm
+      obs}\left(\theta\right)\right)^2}{ \sigma_{\rm \mathcal
+      M}^{2}\left(\theta\right) + \sigma_{\rm
+      obs}^{2}\left(\theta\right)}\right]
+\end{equation}
+%
+Here  $\rm{ACF}_{\mathcal M}$ and  $\rm{ACF}_{\rm obs}$ are the ACF
+of the explored model ${\mathcal M}$ and the observational ACF
+reported by \citet{Bielby16}, respectively.
+$\sigma_{\rm \mathcal M}$ is the associated 1-$\sigma$ scatter  of the
+$\rm{ACF}_{\mathcal M}$ as a product of cosmic variance and
+$\sigma_{\rm obs}$ is the observational error associated to
+$\rm{ACF}_{\rm obs}$.
+
+
+
+We compute the $\rm{ACF}_{\mathcal M}$ using the Landy \&  Szalay
+estimator  \citep{Landy1993}. After this,  we correct the computed ACF
+from the contamination fraction of interlopers $f_{\rm c}$ multiplying the
+ACF by a factor of $1/(1-f_{\rm c})^{2}$  following the  procedure described in
+ \citet{Bielby16}.
+
+Fig. \ref{fig:corr} shows the observational ACF by
+\citet{Bielby16} compared to the ACF in three different models with a
+wide range in $\dlm$.  
+This already shows that radically different models can be compatible
+with observations once cosmic variance uncertainties are modeled in
+detail. 
+
+
+\section{Results and Discussion}
+\label{sec:results}
+
+\subsection{Constraints on Model Parameters}
+
+Fig. \ref{fig:like} shows the one and two dimensional projections of
+the posterior probability distributions of the parameters in our LAE model. 
+This Figure represents our main result: \mmin, \mmax\  and \focc\ cannot
+be tightly constrained from the available observations. 
+
+The preferred $1-\sigma$ range for the masses is $10.0<\log \mmin<11.2$
+and $11.0<\log\mmax<13.0$.
+\focc\ is completely determined by \mmin\ from \focc$=$0.011 when
+$\log\mmin=10.0$ to $\focc=0.39$ when $\log\mmin=11.15$. 
+We compute the power-law dependence between \focc\ and \mmin\ to be 
+\begin{equation}
+\focc = 0.08\left(\frac{\mmin}{10^{10.3}\hMsun}\right)^{0.77}.
+\DIFaddbegin \label{eq:focc}
+\DIFaddend \end{equation}
+We remind the reader that models with $\log \focc>0.00$ ($\focc>1$)
+correspond to cases where the halo number density is smaller 
+than the number of observed LAEs but are  still considered consistent
+because of the expected uncertainty in the median number density of
+LAEs due to cosmic variance (see Fig. \ref{fig:cosmicv0} and
+\S\ref{subsec:explore}). 
+
+
+\DIFaddbegin {\bf \DIFadd{The result in Eq.(\ref{eq:focc}) can be qualitatively understood as
+follows.   
+A choice of $\focc<1$ means that the halo mass function is scaled down.
+If }\mmin\ \DIFadd{decreases the total number of halos increases because less
+massive halos are more abundant.
+This requires smaller values of $\focc$ to keep the total
+number of halos hosting LAEs equal to the number of LAEs in observations.}}
+
+
+
+\DIFaddend \begin{figure}
+\includegraphics[width=0.47\textwidth]{fig4.pdf}
+\caption{Median mass, $\log M_{50}$, and mass width $\Delta \log
+  M_{1\sigma}=\log M_{84} - \log M_{16}$, for all models with low
+  $\chi^2_{\mathcal{M}}/2 < 1.0$. 
+  The median mass spans two orders of magnitude with a mean value
+  around $10^{10.5}$\hMsun.   
+  The mass width $\Delta \log M_{1\sigma}$ has a median of $0.55$ dex (a factor
+  of $\sim3$ in mass) with a maximum value of $0.7$ dex (a factor of
+  5). This means that all models consistent with observations have a
+  very narrow range in halo mass.}
+\label{fig:mmed}
+\end{figure}
+
+\subsection{Median Halo Mass and Halo Mass Width within Models}
+
+We now compute the median mass, $\log M_{50}$, and the $1\sigma$ halo mass
+width, $\Delta \log M_{1\sigma} \equiv \log M_{84} - \log M_{16}$, of the
+LAE hosting halos for each model  $\mathcal{M}$ (here $M_{p}$
+represents the $p$ percentile of the mass distribution); $\log M_{50}$
+and $M_{1\sigma}$ allow a direct comparison between our results and
+previous results in the literature
+\citep[e.g.][]{Hayashino2004,Gawiser2007,Ouchi2010,Bielby16} that used
+a more simplified semi-analytical approach. 
+
+In Fig. \ref{fig:mmed} we show the $\log M_{50}$-$\Delta \log M_{1\sigma}$
+plane for the models selected to have $\chi^{2}_{\mathcal{M}}/2 < 1$,
+which roughly correspond to the $1\sigma$ region in the posterior
+distribution for the model parameters. The color encodes the
+$\chi^{2}_{\mathcal{M}}/2$ value. The median mass has a wide distribution
+spanning two orders of magnitude.
+
+From this distribution we obtain $\log M_{50} = 10.8\pm 0.6$ or
+equivalently $M_{50} = 6.3^{+18.8}_{-4.7}\times 10^{10}$\hMsun.  
+The $1\sigma$ uncertainty for this median value is estimated from the
+$16$ and $84$ percentile values in the $\log M_{50}$ distribution.  
+
+Our result is consistent within the statistical uncertainties with
+previous estimates reported by
+ \citet{Bielby16} ($M_{50} = 10^{11.0\pm0.6} \hMsun$),
+ \citet{Gawiser07} ($M_{50}= 10^{10.9\pm0.9} \hMsun$) and
+ \citet{Ouchi2010} ($M_{50} = 10^{10.8^{+1.8}_{-0.8}} \hMsun$) 
+using semi-analytical approaches.   Our result is slightly below the  \citet{Bielby16}
+ median mass estimation. This could probably be attributed to the fact that  \citet{Bielby16}
+only represent a particular field of the universe while our $\log M_{50}$  represents the
+median mass of the universe after taking into account cosmic variance that allows lower mass 
+halos to be also consistent with observations.
+
+
+
+Figure \ref{fig:mmed} also shows something 
+that semi-analytical approaches were not able to predict.
+The mass width, $\Delta \log M_{1\sigma}$, that is the width of the mass
+distribution for a given model with fixed $\mmin$ and $\mmax$, has a
+median value and $1\sigma$ uncertainty of $\Delta \log M_{1\sigma} =
+0.51^{+0.10}_{-0.30}$ dex.
+This means that the mass range for halos hosting LAEs is very narrow.
+There is only a factor of $2$ to $4$ between the lower and upper mass
+boundary of the central 68 percentile of the mass distribution. 
+We emphasize that \mmax\ can still be very large while the width is
+small due to the asymmetry in the dark matter halo mass function. 
+
+
+Summarizing, the median mass could be anything in the range
+$10^{10.2}$\hMsun\ and $10^{11.4}$\hMsun\ (a $2.0$ dex range), 
+but the 1-$\sigma$ width of the mass distribution is highly constrained 
+to be between $0.2$ and $0.6$ dex.  
+
+
+In Fig. \ref{fig:corr} we show the computed
+$ACF_{\mathcal{M}}$ of models with $\lmmin=10.5$ and different values
+of $\dlm$. We can see that the clustering gets slightly stronger for larger
+values of \dlm. Nevertheless, due to the large impact of cosmic
+variance at the volume of the current observations all the models  are
+basically consistent within errors. The last result together with the
+large Poissonian observational error in the ACF explain the current
+difficulty to put tighter constrains in \lmmax\ in our model. 
+
+
+\subsection{Constraining Dark matter halos mass  with cosmic variance}
+
+Fig. \ref{fig:cosmicv0}  shows the  halo number distribution (HND) in
+the  mock fields of the simulation for different models
+$\mathcal{M}$. 
+By simple inspection one can infer that the distribution width
+increases with \mmin.
+
+In Fig. \ref{fig:cosmicv} we confirm this trend by plotting the
+HND $1\sigma$ width for good models ($\chi^{2}_{\mathcal{M}}/2 < 1$) as a function
+of \lmmin. 
+We find that considering all the $27$ mock fields the $1\sigma$ width, $W_{1\sigma}$
+increases with \mmin following
+
+\begin{equation}
+W_{1\sigma} = (0.138\pm 0.002) \times \left( \frac{\mmin}{10^{11}\hMsun} \right)^{0.177\pm0.009}.
+\label{eq:width}
+\end{equation}
+
+This result opens the possibility to constrain the \lmmin (as well as the
+median mass) of LAEs by simply measuring the width of the distribution
+of observed LAE along several observational fields. 
+This idea has been already explored for $z>6$ galaxies
+\citep{Robertson10}. 
+
+To keep the validity of Eq. (\ref{eq:width}) there should at least be
+$27$ fields (to follow the same numbers we use here) of size $\sim1{\rm
+  deg^2}$ with the same observational conditions (filters, equivalent
+width cuts). 
+However, repeating the same kind of cosmic variance study for different
+survey strategies should help to provide a constraint of the same
+kind. 
+
+\DIFaddbegin \subsection{\DIFadd{Hints of larger uncertainties}}
+
+\DIFadd{Fig. \ref{fig:like} shows an interesting feature for }\mmin\DIFadd{. 
+The histogram (upper left) showing the probability for this parameter
+given the observational constraints does not considerably decreases for lower
+masses. 
+This raises the following question. Down to which values of
+}\mmin\ \DIFadd{does the probability significantly decreases? 
+}
+
+\DIFadd{Lower values of }\mmin\ \DIFadd{would imply a lower }\focc\ \DIFadd{and larger
+uncertainties on the parameters }\mmin\, \focc \DIFadd{and $M_{50}$.
+In other words, the limitations in our priors for }\mmin\ \DIFadd{(which
+set the limitations for the kind of numerical simulation we use) might
+be underestimating the uncertainties and slightly biasing our results
+for }\mmin\, \focc\ \DIFadd{and $M_{50}$.
+}
+
+\DIFadd{Although Fig. \ref{fig:mmed} suggest that models with lower values of
+$M_{\rm 50}$, i.e. lower values of }\mmin\DIFadd{, have a higher
+$\chi^2_{\mathcal{M}}$ and could be thus discarded, we suggest that a
+proper test of this hypothesis requires performing new cosmological
+simulations to be able to probe }\mmin\ \DIFadd{masses below our limit of
+$6\times  10^{9}$}\hMsun\DIFadd{. 
+}
+
+\DIFadd{This highlights the main thesis of this paper. 
+Namely, the high impact that cosmic variance can have on constraining
+the paremeters of our model. 
+With the current limitations in the cosmological simulations available
+to the public we cannot significantly decrease or prior on }\mmin\DIFadd{.
+We consider such test beyond the scope of this paper.
+}
+
+\DIFadd{This extension to larger priors cannot change other central results of
+our paper, such as the relationship between }\focc\ \DIFadd{and }\mmin\, \DIFadd{the
+narrow mass range for individual models and the possibility to
+constraint the halo mass with cosmic variance on the number density
+counts. 
+However, we suggest that future work building upon the
+technique presented in this paper should count with simulations that
+extend at least one order of magnitude below our limit $6\times
+10^{9}$}\hMsun\DIFadd{.  
+}
+
+
+
+
+
+\DIFaddend %*************************************************************************
+
+\begin{figure}
+\includegraphics[width=0.49\textwidth]{fig6.pdf}
+\caption{$1\sigma$ width of the number density distribution over the
+  as a function of \mmin. 
+  Only the models that have a good match with observations
+  ($\chi_{\mathcal M}/2 < 1$) are included.
+  The strong dependence of $\langle
+ n\rangle$ with \mmin was
+  parameterized as a power law with the parameters shown in the legend.
+\label{fig:cosmicv}}
+\end{figure}
+
+
+\section{Conclusions}
+
+In this paper we studied the impact of cosmic variance and
+observational uncertainties in constraining the mass range and
+occupation fraction of dark matter halos hosting  LAEs.   
+To this end we used the BolshoiP N-body simulation to construct  27 mock fields
+with the same typical size  of observed fields at $z=3.1$ ($\sim 1
+{\rm deg^2}$).      
+In our model a dark matter halo with mass in the range $\mmin
+<M_{h}<\mmax$ can only host one detectable LAE at most.  
+We explored the parameter space determined by \mmin\ and \mmax\ using 
+affine invariant Monte Carlo Markov-Chain minimization to match
+ the observed  ACF and mean number density of LAEs.    
+It is the first time that such a thorough exploration of the cosmic
+variance impact on LAEs statistics is presented in the literature.
+
+We find that once cosmic variance is taken into account, the
+observational data can only put weak constraints on  \mmin\ and \focc. 
+When we translate these loose constraints into the median mass, we find
+a general consistency with previous works \citep{Hayashino2004,
+  Gawiser07,Ouchi2008} specially with the most recent one
+\citep{Bielby16}. 
+
+\DIFaddbegin \DIFadd{This work also highlights the need to explore a wider range on the
+prior of }\mmin\ \DIFadd{if one wants to better estimate the uncertainty on
+}\mmin\DIFadd{, }\focc\ \DIFadd{and $M_{50}$.  
+In this paper we use priors given by previous observations, but our
+results suggest that once cosmic variance is explicitly taken into
+account, even lower values of }\mmin\ \DIFadd{might be in fact consistent with
+observations. 
+We recommend that future work making use of the technique presented
+in this paper should extend the prior for }\mmin\ \DIFadd{to masses at least
+one order of magnitude below $6\times 10^{9}$}\hMsun\DIFadd{.  
+}
+
+\DIFaddend Nevertheless, our analysis allowed us to draw two results that can
+be used to put tighter constraints on \mmin\ and \focc\ once
+upcoming large LAE surveys, such as the HETDEX project 
+\citep{Hetdex2011} and the HSC ultra deep survey, are available: 
+
+\begin{enumerate}
+\item \focc\ is uniquely determined by \mmin, regardless of
+  \mmax. A precise determination of \mmin\ will thus fix \focc. As a
+  consequence of this, for a given  \mmin\ the median mass is also
+  fixed.  
+
+\item The width of the LAE number distribution function
+  obtained over several fields of $\approx 1$ deg$^2$ is tightly
+  correlated with \mmin. 
+  That measurement with next generation surveys
+  will be able to constrain \mmin within a factor of $\sim 2$.
+\end{enumerate}
+
+We also find that the 1-$\sigma$ width of the mass distribution is
+highly constrained to be between $0.2$ and $0.6$ dex. 
+This result can be used to test different models for LAEs formation
+in a cosmological context to better understand why observable LAEs seem to be
+constrained into a narrow halo mass range.
+
+
+ 
+
+
+
+
+\section*{Acknowledgments} 
+
+\DIFaddbegin \DIFadd{The authors acknowldge the referee, Nelson Padilla, for useful
+remarks and questions that helped us to improve the quality and
+clarity of our paper. 
+}
+
+\DIFaddend JEMR acknowledges ``CONICYT-PCHA/doctorado Nacional para
+extranjeros/2013-63130316'' for their PhD scholarship support.  
+
+JEFR acknowledges financial support from Vicerrector\'ia de
+Investigaciones at Uniandes from a a FAPA project.
+
+The authors gratefully acknowledge the Gauss Centre for Supercomputing
+e.V. (\url{www.gauss-centre.eu}) and the Partnership for Advanced
+Supercomputing in Europe (PRACE, \url{www.prace-ri.eu}) for funding the
+MultiDark simulation project by providing computing time on the GCS
+Supercomputer SuperMUC at Leibniz Supercomputing Centre (LRZ,
+\url{www.lrz.de}). The Bolshoi simulations have been performed within the
+Bolshoi project of the University of California High-Performance
+AstroComputing Center (UC-HiPACC) and were run at the NASA Ames
+Research Center. 
+
+
+\bibliographystyle{apj}
+%\bibliography{references.bib}
+\begin{thebibliography}{39}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{{Adams} {et~al.}(2011){Adams}, {Blanc}, {Hill}, {Gebhardt}, {Drory},
+  {Hao}, {Bender}, {Byun}, {Ciardullo}, {Cornell}, {Finkelstein}, {Fry},
+  {Gawiser}, {Gronwall}, {Hopp}, {Jeong}, {Kelz}, {Kelzenberg}, {Komatsu},
+  {MacQueen}, {Murphy}, {Odoms}, {Roth}, {Schneider}, {Tufts}, \&
+  {Wilkinson}}]{Hetdex2011}
+{Adams}, J.~J., {Blanc}, G.~A., {Hill}, G.~J., {Gebhardt}, K., {Drory}, N.,
+  {Hao}, L., {Bender}, R., {Byun}, J., {Ciardullo}, R., {Cornell}, M.~E.,
+  {Finkelstein}, S.~L., {Fry}, A., {Gawiser}, E., {Gronwall}, C., {Hopp}, U.,
+  {Jeong}, D., {Kelz}, A., {Kelzenberg}, R., {Komatsu}, E., {MacQueen}, P.~J.,
+  {Murphy}, J., {Odoms}, P.~S., {Roth}, M., {Schneider}, D.~P., {Tufts}, J.~R.,
+  \& {Wilkinson}, C.~P. 2011, \apjs, 192, 5
+
+\bibitem[{{Behroozi} {et~al.}(2013){Behroozi}, {Wechsler}, \&
+  {Conroy}}]{Behroozi2013a}
+{Behroozi}, P.~S., {Wechsler}, R.~H., \& {Conroy}, C. 2013, \apj, 770, 57
+
+\bibitem[{{Bielby} {et~al.}(2016){Bielby}, {Tummuangpak}, {Shanks}, {Francke},
+  {Crighton}, {Ba{\~n}ados}, {Gonz{\'a}lez-L{\'o}pez}, {Infante}, \&
+  {Orsi}}]{Bielby16}
+{Bielby}, R.~M., {Tummuangpak}, P., {Shanks}, T., {Francke}, H., {Crighton},
+  N.~H.~M., {Ba{\~n}ados}, E., {Gonz{\'a}lez-L{\'o}pez}, J., {Infante}, L., \&
+  {Orsi}, A. 2016, \mnras, 456, 4061
+
+\bibitem[{{Blanc} {et~al.}(2011){Blanc}, {Adams}, {Gebhardt}, {Hill}, {Drory},
+  {Hao}, {Bender}, {Ciardullo}, {Finkelstein}, {Fry}, {Gawiser}, {Gronwall},
+  {Hopp}, {Jeong}, {Kelzenberg}, {Komatsu}, {MacQueen}, {Murphy}, {Roth},
+  {Schneider}, \& {Tufts}}]{Blanc11}
+{Blanc}, G.~A., {Adams}, J.~J., {Gebhardt}, K., {Hill}, G.~J., {Drory}, N.,
+  {Hao}, L., {Bender}, R., {Ciardullo}, R., {Finkelstein}, S.~L., {Fry}, A.~B.,
+  {Gawiser}, E., {Gronwall}, C., {Hopp}, U., {Jeong}, D., {Kelzenberg}, R.,
+  {Komatsu}, E., {MacQueen}, P., {Murphy}, J.~D., {Roth}, M.~M., {Schneider},
+  D.~P., \& {Tufts}, J. 2011, \apj, 736, 31
+
+\bibitem[{{Bond} {et~al.}(2009){Bond}, {Gawiser}, {Gronwall}, {Ciardullo},
+  {Altmann}, \& {Schawinski}}]{Bond2009}
+{Bond}, N.~A., {Gawiser}, E., {Gronwall}, C., {Ciardullo}, R., {Altmann}, M.,
+  \& {Schawinski}, K. 2009, \apj, 705, 639
+
+\bibitem[{{Colberg} {et~al.}(2000){Colberg}, {White}, {Yoshida}, {MacFarland},
+  {Jenkins}, {Frenk}, {Pearce}, {Evrard}, {Couchman}, {Efstathiou}, {Peacock},
+  {Thomas}, \& {Virgo Consortium}}]{Colberg00}
+{Colberg}, J.~M., {White}, S.~D.~M., {Yoshida}, N., {MacFarland}, T.~J.,
+  {Jenkins}, A., {Frenk}, C.~S., {Pearce}, F.~R., {Evrard}, A.~E., {Couchman},
+  H.~M.~P., {Efstathiou}, G., {Peacock}, J.~A., {Thomas}, P.~A., \& {Virgo
+  Consortium}. 2000, \mnras, 319, 209
+
+\bibitem[{{Dayal} {et~al.}(2009){Dayal}, {Ferrara}, {Saro}, {Salvaterra},
+  {Borgani}, \& {Tornatore}}]{Dayal2009}
+{Dayal}, P., {Ferrara}, A., {Saro}, A., {Salvaterra}, R., {Borgani}, S., \&
+  {Tornatore}, L. 2009, \mnras, 400, 2000
+
+\bibitem[{{Dijkstra}(2014)}]{Dijkstra14}
+{Dijkstra}, M. 2014, \pasa, 31, e040
+
+\bibitem[{{Dijkstra} \& {Kramer}(2012)}]{Dijkstra2012}
+{Dijkstra}, M., \& {Kramer}, R. 2012, \mnras, 424, 1672
+
+\bibitem[{{Foreman-Mackey} {et~al.}(2013){Foreman-Mackey}, {Hogg}, {Lang}, \&
+  {Goodman}}]{emcee2013}
+{Foreman-Mackey}, D., {Hogg}, D.~W., {Lang}, D., \& {Goodman}, J. 2013, \pasp,
+  125, 306
+
+\bibitem[{{Forero-Romero} {et~al.}(2011){Forero-Romero}, {Yepes},
+  {Gottl{\"o}ber}, {Knollmann}, {Cuesta}, \& {Prada}}]{ForeroRomero2011}
+{Forero-Romero}, J.~E., {Yepes}, G., {Gottl{\"o}ber}, S., {Knollmann}, S.~R.,
+  {Cuesta}, A.~J., \& {Prada}, F. 2011, \mnras, 415, 3666
+
+\bibitem[{{Forero-Romero} {et~al.}(2012){Forero-Romero}, {Yepes},
+  {Gottl{\"o}ber}, \& {Prada}}]{ForeroRomero2012}
+{Forero-Romero}, J.~E., {Yepes}, G., {Gottl{\"o}ber}, S., \& {Prada}, F. 2012,
+  \mnras, 419, 952
+
+\bibitem[{{Garel} {et~al.}(2012){Garel}, {Blaizot}, {Guiderdoni}, {Schaerer},
+  {Verhamme}, \& {Hayes}}]{Garel2012}
+{Garel}, T., {Blaizot}, J., {Guiderdoni}, B., {Schaerer}, D., {Verhamme}, A.,
+  \& {Hayes}, M. 2012, \mnras, 422, 310
+
+\bibitem[{{Gawiser} {et~al.}(2007{\natexlab{a}}){Gawiser}, {Francke}, {Lai},
+  {Schawinski}, {Gronwall}, {Ciardullo}, {Quadri}, {Orsi}, {Barrientos},
+  {Blanc}, {Fazio}, \& {Feldmeier}}]{Gawiser2007}
+{Gawiser}, E., {Francke}, H., {Lai}, K., {Schawinski}, K., {Gronwall}, C.,
+  {Ciardullo}, R., {Quadri}, R., {Orsi}, A., {Barrientos}, L.~F., {Blanc},
+  G.~A., {Fazio}, G., \& {Feldmeier}, J.~J. 2007{\natexlab{a}}, \apj, 671, 278
+
+\bibitem[{{Gawiser} {et~al.}(2007{\natexlab{b}}){Gawiser}, {Francke}, {Lai},
+  {Schawinski}, {Gronwall}, {Ciardullo}, {Quadri}, {Orsi}, {Barrientos},
+  {Blanc}, {Fazio}, {Feldmeier}, {Huang}, {Infante}, {Lira}, \&
+  {Padilla}}]{Gawiser07}
+{Gawiser}, E., {Francke}, H., {Lai}, K., {Schawinski}, K., {Gronwall}, C.,
+  {Ciardullo}, R., {Quadri}, R., {Orsi}, A., {Barrientos}, L.~F., {Blanc},
+  G.~A., {Fazio}, G., {Feldmeier}, J.~J., {Huang}, J.-s., {Infante}, L.,
+  {Lira}, P., \& {Padilla}, N. 2007{\natexlab{b}}, \apj, 671, 278
+
+  
+\DIFaddbegin \bibitem[{{Guaita} {et~al.}(2010){Guaita}, {Gawiser}, {Padilla},
+  {Francke}, {Bond}, {Gronwall}, {Ciardullo}, {Feldmeier}, {Sinawa}, {Blanc},
+  \& {Virani}}]{Guaita2010}
+{\DIFadd{Guaita}}\DIFadd{, L., }{\DIFadd{Gawiser}}\DIFadd{, E., }{\DIFadd{Padilla}}\DIFadd{, N., }{\DIFadd{Francke}}\DIFadd{, H.,
+	}{\DIFadd{Bond}}\DIFadd{, N.~A., }{\DIFadd{Gronwall}}\DIFadd{, C., }{\DIFadd{Ciardullo}}\DIFadd{, R., }{\DIFadd{Feldmeier}}\DIFadd{, J.~J., 
+	}{\DIFadd{Sinawa}}\DIFadd{, S., }{\DIFadd{Blanc}}\DIFadd{, G.~A., }\& {\DIFadd{Virani}}\DIFadd{, S. 2010, }\apj\DIFadd{, 714, 255
+}
+
+
+\DIFaddend \bibitem[{{Hayashino} {et~al.}(2004){Hayashino}, {Matsuda}, {Tamura},
+  {Yamauchi}, {Yamada}, {Ajiki}, {Fujita}, {Murayama}, {Nagao}, {Ohta},
+  {Okamura}, {Ouchi}, {Shimasaku}, {Shioya}, \& {Taniguchi}}]{Hayashino2004}
+{Hayashino}, T., {Matsuda}, Y., {Tamura}, H., {Yamauchi}, R., {Yamada}, T.,
+  {Ajiki}, M., {Fujita}, S.~S., {Murayama}, T., {Nagao}, T., {Ohta}, K.,
+  {Okamura}, S., {Ouchi}, M., {Shimasaku}, K., {Shioya}, Y., \& {Taniguchi}, Y.
+  2004, \aj, 128, 2073
+
+\bibitem[{{Hayes}(2015)}]{Hayes15}
+{Hayes}, M. 2015, \pasa, 32, e027
+
+\bibitem[{{Jose} {et~al.}(2013){Jose}, {Srianand}, \&
+  {Subramanian}}]{Jose2013b}
+{Jose}, C., {Srianand}, R., \& {Subramanian}, K. 2013, ArXiv e-prints
+
+\bibitem[{{Klypin} {et~al.}(2014){Klypin}, {Yepes}, {Gottlober}, {Prada}, \&
+  {Hess}}]{BolshoiP}
+{Klypin}, A., {Yepes}, G., {Gottlober}, S., {Prada}, F., \& {Hess}, S. 2014,
+  ArXiv e-prints
+
+\bibitem[{{Klypin} {et~al.}(2011){Klypin}, {Trujillo-Gomez}, \&
+  {Primack}}]{Bolshoi}
+{Klypin}, A.~A., {Trujillo-Gomez}, S., \& {Primack}, J. 2011, \apj, 740, 102
+
+\bibitem[{{Koehler} {et~al.}(2007){Koehler}, {Schuecker}, \&
+  {Gebhardt}}]{Koehler2007}
+{Koehler}, R.~S., {Schuecker}, P., \& {Gebhardt}, K. 2007, \aap, 462, 7
+
+\bibitem[{{Landy} \& {Szalay}(1993)}]{Landy1993}
+{Landy}, S.~D., \& {Szalay}, A.~S. 1993, \apj, 412, 64
+
+\bibitem[{{Laursen} {et~al.}(2013){Laursen}, {Duval}, \&
+  {{\"O}stlin}}]{Laursen2013}
+{Laursen}, P., {Duval}, F., \& {{\"O}stlin}, G. 2013, \apj, 766, 124
+
+\bibitem[{{Laursen} \& {Sommer-Larsen}(2007)}]{Laursen2007}
+{Laursen}, P., \& {Sommer-Larsen}, J. 2007, \apjl, 657, L69
+
+\bibitem[{{Neufeld}(1991)}]{Neufeld1991}
+{Neufeld}, D.~A. 1991, \apjl, 370, L85
+
+\bibitem[{{Nilsson} {et~al.}(2007){Nilsson}, {M{\o}ller}, {M{\"o}ller},
+  {Fynbo}, {Micha{\l}owski}, {Watson}, {Ledoux}, {Rosati}, {Pedersen}, \&
+  {Grove}}]{Nilsson2007}
+{Nilsson}, K.~K., {M{\o}ller}, P., {M{\"o}ller}, O., {Fynbo}, J.~P.~U.,
+  {Micha{\l}owski}, M.~J., {Watson}, D., {Ledoux}, C., {Rosati}, P.,
+  {Pedersen}, K., \& {Grove}, L.~F. 2007, \aap, 471, 71
+
+\bibitem[{{Orsi} {et~al.}(2012){Orsi}, {Lacey}, \& {Baugh}}]{Orsi2012}
+{Orsi}, A., {Lacey}, C.~G., \& {Baugh}, C.~M. 2012, \mnras, 425, 87
+
+\bibitem[{{Ouchi} {et~al.}(2008){Ouchi}, {Shimasaku}, {Akiyama}, {Simpson},
+  {Saito}, {Ueda}, {Furusawa}, {Sekiguchi}, {Yamada}, {Kodama}, {Kashikawa},
+  {Okamura}, {Iye}, {Takata}, {Yoshida}, \& {Yoshida}}]{Ouchi2008}
+{Ouchi}, M., {Shimasaku}, K., {Akiyama}, M., {Simpson}, C., {Saito}, T.,
+  {Ueda}, Y., {Furusawa}, H., {Sekiguchi}, K., {Yamada}, T., {Kodama}, T.,
+  {Kashikawa}, N., {Okamura}, S., {Iye}, M., {Takata}, T., {Yoshida}, M., \&
+  {Yoshida}, M. 2008, \apjs, 176, 301
+
+\bibitem[{{Ouchi} {et~al.}(2010){Ouchi}, {Shimasaku}, {Furusawa}, {Saito},
+  {Yoshida}, {Akiyama}, {Ono}, {Yamada}, {Ota}, {Kashikawa}, {Iye}, {Kodama},
+  {Okamura}, {Simpson}, \& {Yoshida}}]{Ouchi2010}
+{Ouchi}, M., {Shimasaku}, K., {Furusawa}, H., {Saito}, T., {Yoshida}, M.,
+  {Akiyama}, M., {Ono}, Y., {Yamada}, T., {Ota}, K., {Kashikawa}, N., {Iye},
+  M., {Kodama}, T., {Okamura}, S., {Simpson}, C., \& {Yoshida}, M. 2010, \apj,
+  723, 869
+
+\bibitem[{{Partridge} \& {Peebles}(1967)}]{Partridge67}
+{Partridge}, R.~B., \& {Peebles}, P.~J.~E. 1967, \apj, 147, 868
+
+\bibitem[{{Peebles}(1980)}]{Peebles1980}
+{Peebles}, P.~J.~E. 1980, {The large-scale structure of the universe}
+
+\bibitem[{{Planck Collaboration} {et~al.}(2014){Planck Collaboration}, {Ade},
+  {Aghanim}, {Armitage-Caplan}, {Arnaud}, {Ashdown}, {Atrio-Barandela},
+  {Aumont}, {Baccigalupi}, {Banday}, \& et~al.}]{Planck2014}
+{Planck Collaboration}, {Ade}, P.~A.~R., {Aghanim}, N., {Armitage-Caplan}, C.,
+  {Arnaud}, M., {Ashdown}, M., {Atrio-Barandela}, F., {Aumont}, J.,
+  {Baccigalupi}, C., {Banday}, A.~J., \& et~al. 2014, \aap, 571, A16
+
+\bibitem[{{Rhoads} {et~al.}(2000){Rhoads}, {Malhotra}, {Dey}, {Stern},
+  {Spinrad}, \& {Jannuzi}}]{Rhoads00}
+{Rhoads}, J.~E., {Malhotra}, S., {Dey}, A., {Stern}, D., {Spinrad}, H., \&
+  {Jannuzi}, B.~T. 2000, \apjl, 545, L85
+
+
+
+\bibitem[{Riebe {et~al.}(2013)Riebe, Partl, Enke, Forero-Romero, Gottlöber,
+  Klypin, Lemson, Prada, Primack, Steinmetz, \& Turchaninov}]{MultiDark}
+Riebe, K., Partl, A.~M., Enke, H., Forero-Romero, J., Gottlöber, S., Klypin,
+  A., Lemson, G., Prada, F., Primack, J.~R., Steinmetz, M., \& Turchaninov, V.
+  2013, Astronomische Nachrichten, 334, 691
+
+\bibitem[{{Robertson}(2010)}]{Robertson10}
+{Robertson}, B.~E. 2010, \apjl, 716, L229
+\DIFaddbegin 
+
+
+
+\bibitem[{{Somerville} {et~al.}(2004){Somerville}, {Lee}, {Ferguson}, {Gardner},
+  {Moustakas}, \& {Giavalisco}}]{Somerville2004}
+{\DIFadd{Somerville}}\DIFadd{, R.~S., }{\DIFadd{Lee}}\DIFadd{, K., }{\DIFadd{Ferguson}}\DIFadd{, H.~C.,
+	}{\DIFadd{Gardner}}\DIFadd{, J.~P., }{\DIFadd{Moustakas}}\DIFadd{, L.~A., }\& {\DIFadd{Giavalisco}}\DIFadd{, M. 204, }\apj\DIFadd{,
+  600, 171
+}\DIFaddend 
+
+\bibitem[{{Springel} {et~al.}(2005){Springel}, {White}, {Jenkins}, {Frenk},
+  {Yoshida}, {Gao}, {Navarro}, {Thacker}, {Croton}, {Helly}, {Peacock}, {Cole},
+  {Thomas}, {Couchman}, {Evrard}, {Colberg}, \& {Pearce}}]{SpringelNature05}
+{Springel}, V., {White}, S.~D.~M., {Jenkins}, A., {Frenk}, C.~S., {Yoshida},
+  N., {Gao}, L., {Navarro}, J., {Thacker}, R., {Croton}, D., {Helly}, J.,
+  {Peacock}, J.~A., {Cole}, S., {Thomas}, P., {Couchman}, H., {Evrard}, A.,
+  {Colberg}, J., \& {Pearce}, F. 2005, \nat, 435, 629
+
+\bibitem[{{Verhamme} {et~al.}(2006){Verhamme}, {Schaerer}, \&
+  {Maselli}}]{Verhamme2006}
+{Verhamme}, A., {Schaerer}, D., \& {Maselli}, A. 2006, \aap, 460, 397
+
+\bibitem[{{Yajima} {et~al.}(2012){Yajima}, {Choi}, \& {Nagamine}}]{Yajima2012}
+{Yajima}, H., {Choi}, J.-H., \& {Nagamine}, K. 2012, \mnras, 427, 2889
+
+\bibitem[{{Yajima} {et~al.}(2014){Yajima}, {Li}, {Zhu}, {Abel}, {Gronwall}, \&
+  {Ciardullo}}]{Yajima14}
+{Yajima}, H., {Li}, Y., {Zhu}, Q., {Abel}, T., {Gronwall}, C., \& {Ciardullo},
+  R. 2014, \mnras, 440, 776
+
+\end{thebibliography}
+
+
+
+\end{document}
