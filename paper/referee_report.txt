@@ -1,9 +1,10 @@
 
-We would like to thank the referee, Nelson Padilla,  for the valueable and
-constructive comments that have helped us to improve the quality of the paper. Below 
-we answer in-line each of the referee's comments and refer to the part of the paper
-where that we have updated  according to his comments. We also attach a new version of the paper 
-where we highlight the changes we did on it. 
+We would like to thank the referee, Nelson Padilla,  for the valuable and
+constructive comments that have helped us to improve the quality of the paper. Below  we answer in-line each of the referee's comments and refer to the part of the paper where that we have updated  according to his comments. 
+
+We also attach a new version of the paper where we highlight the changes.
+
+
 
 
 
