@@ -1,7 +1,7 @@
 \documentclass{emulateapj}
 %DIF LATEXDIFF DIFFERENCE FILE
 %DIF DEL ms_old.tex   Tue Jun 14 08:14:54 2016
-%DIF ADD ms.tex       Tue Jun 14 08:33:46 2016
+%DIF ADD ms.tex       Tue Jun 14 09:30:55 2016
 \submitted{{\it Submitted for publication in ApJ}}
 \usepackage{multirow,color,wrapfig}
 \usepackage {graphicx}
@@ -135,7 +135,7 @@ However, we find that the same individual models have a relatively tight
 $1\sigma$  scatter around the median mass $\Delta M_{1\sigma} = 0.55^{+0.11}_{-0.31}$ dex.
 We are also able \DIFaddbegin \DIFadd{to }\DIFaddend show that \focc\ is uniquely determined by $M_{\rm
   min}$, regardless of $M_{\rm max}$. 
-We argue that upcoming large surveys covering at least \DIFdelbegin \DIFdel{$25$ }\DIFdelend \DIFaddbegin \DIFadd{$20$ }\DIFaddend deg$^{2}$
+We argue that upcoming large surveys covering at least $25$ deg$^{2}$
 should be able to put tighter constraints on \mmin\ and \focc\ through the LAE number density
 distribution width \DIFdelbegin \DIFdel{, $W_{1\sigma}$, }\DIFdelend constructed over several fields of
 $\sim 1$ deg$^{2}$.
@@ -496,9 +496,31 @@ $\rm{ACF}_{\mathcal M}$ as a product of cosmic variance and
 $\sigma_{\rm obs}$ is the observational error associated to
 $\rm{ACF}_{\rm obs}$.
 
+We \DIFaddbegin \DIFadd{do not include the covariance matrix due to the
+practical impossibility to estimate it in a robust way.
+The small size of the fields and galaxies make it
+unfeasible the application of jackknife and bootstrap techniques \mbox{%DIFAUXCMD
+\citep{2009MNRAS.396...19N}
+}%DIFAUXCMD
+. 
+An estimate from N-body simulation faces the same problem with the
+additional limitation that we want to solve in the first place. 
+Namely, not knowing the range of halo masses that produces the
+observed clustering signal.  
+Tests that we performed in the simulation show that, due to the small
+number of points to estimate the clustering, the covariance matrix is
+not stable, even for similar models. 
+Using the full error covariance matrix, when not noise
+dominated, versus only diagonal elements usually has a small effect
+on clustering analyses \mbox{%DIFAUXCMD
+\citep{2011ApJ...736...59Z}
+}%DIFAUXCMD
+. 
+}
 
 
-We compute the $\rm{ACF}_{\mathcal M}$ using the Landy \&  Szalay
+
+\DIFadd{We }\DIFaddend compute the $\rm{ACF}_{\mathcal M}$ using the Landy \&  Szalay
 estimator  \citep{Landy1993}. After this,  we correct the computed ACF
 from the contamination fraction of interlopers $f_{\rm c}$ multiplying the
 ACF by a factor of $1/(1-f_{\rm c})^{2}$  following the  procedure described in
@@ -817,7 +839,10 @@ Research Center.
 
 \bibliographystyle{apj}
 %\bibliography{references.bib}
-\begin{thebibliography}{39}
+\DIFaddbegin 
+
+
+\DIFaddend \begin{thebibliography}{39}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
 \bibitem[{{Adams} {et~al.}(2011){Adams}, {Blanc}, {Hill}, {Gebhardt}, {Drory},
@@ -971,7 +996,13 @@ Research Center.
   {Micha{\l}owski}, M.~J., {Watson}, D., {Ledoux}, C., {Rosati}, P.,
   {Pedersen}, K., \& {Grove}, L.~F. 2007, \aap, 471, 71
 
-\bibitem[{{Orsi} {et~al.}(2012){Orsi}, {Lacey}, \& {Baugh}}]{Orsi2012}
+\DIFaddbegin \bibitem[{{Norberg} {et~al.}(2009){Norberg}, {Baugh}, {Gazta{\~n}aga}, \&
+  {Croton}}]{2009MNRAS.396...19N}
+{\DIFadd{Norberg}}\DIFadd{, P., }{\DIFadd{Baugh}}\DIFadd{, C.~M., }{\DIFadd{Gazta}{\~n}\DIFadd{aga}}\DIFadd{, E., }\& {\DIFadd{Croton}}\DIFadd{, D.~J. 2009,
+  }\mnras\DIFadd{, 396, 19
+}
+
+\DIFaddend \bibitem[{{Orsi} {et~al.}(2012){Orsi}, {Lacey}, \& {Baugh}}]{Orsi2012}
 {Orsi}, A., {Lacey}, C.~G., \& {Baugh}, C.~M. 2012, \mnras, 425, 87
 
 \bibitem[{{Ouchi} {et~al.}(2008){Ouchi}, {Shimasaku}, {Akiyama}, {Simpson},
@@ -1018,18 +1049,17 @@ Riebe, K., Partl, A.~M., Enke, H., Forero-Romero, J., Gottlöber, S., Klypin,
 
 \bibitem[{{Robertson}(2010)}]{Robertson10}
 {Robertson}, B.~E. 2010, \apjl, 716, L229
-\DIFaddbegin 
 
 
 
-\bibitem[{{Somerville} {et~al.}(2004){Somerville}, {Lee}, {Ferguson}, {Gardner},
+\DIFaddbegin \bibitem[{{Somerville} {et~al.}(2004){Somerville}, {Lee}, {Ferguson}, {Gardner},
   {Moustakas}, \& {Giavalisco}}]{Somerville2004}
 {\DIFadd{Somerville}}\DIFadd{, R.~S., }{\DIFadd{Lee}}\DIFadd{, K., }{\DIFadd{Ferguson}}\DIFadd{, H.~C.,
 	}{\DIFadd{Gardner}}\DIFadd{, J.~P., }{\DIFadd{Moustakas}}\DIFadd{, L.~A., }\& {\DIFadd{Giavalisco}}\DIFadd{, M. 204, }\apj\DIFadd{,
   600, 171
-}\DIFaddend 
+}
 
-\bibitem[{{Springel} {et~al.}(2005){Springel}, {White}, {Jenkins}, {Frenk},
+\DIFaddend \bibitem[{{Springel} {et~al.}(2005){Springel}, {White}, {Jenkins}, {Frenk},
   {Yoshida}, {Gao}, {Navarro}, {Thacker}, {Croton}, {Helly}, {Peacock}, {Cole},
   {Thomas}, {Couchman}, {Evrard}, {Colberg}, \& {Pearce}}]{SpringelNature05}
 {Springel}, V., {White}, S.~D.~M., {Jenkins}, A., {Frenk}, C.~S., {Yoshida},
@@ -1048,9 +1078,19 @@ Riebe, K., Partl, A.~M., Enke, H., Forero-Romero, J., Gottlöber, S., Klypin,
   {Ciardullo}}]{Yajima14}
 {Yajima}, H., {Li}, Y., {Zhu}, Q., {Abel}, T., {Gronwall}, C., \& {Ciardullo},
   R. 2014, \mnras, 440, 776
+\DIFaddbegin 
+
+\bibitem[{{Zehavi} {et~al.}(2011){Zehavi}, {Zheng}, {Weinberg}, {Blanton},
+  {Bahcall}, {Berlind}, {Brinkmann}, {Frieman}, {Gunn}, {Lupton}, {Nichol},
+  {Percival}, {Schneider}, {Skibba}, {Strauss}, {Tegmark}, \&
+  {York}}]{2011ApJ...736...59Z}
+{\DIFadd{Zehavi}}\DIFadd{, I., }{\DIFadd{Zheng}}\DIFadd{, Z., }{\DIFadd{Weinberg}}\DIFadd{, D.~H., }{\DIFadd{Blanton}}\DIFadd{, M.~R., }{\DIFadd{Bahcall}}\DIFadd{,
+  N.~A., }{\DIFadd{Berlind}}\DIFadd{, A.~A., }{\DIFadd{Brinkmann}}\DIFadd{, J., }{\DIFadd{Frieman}}\DIFadd{, J.~A., }{\DIFadd{Gunn}}\DIFadd{, J.~E.,
+  }{\DIFadd{Lupton}}\DIFadd{, R.~H., }{\DIFadd{Nichol}}\DIFadd{, R.~C., }{\DIFadd{Percival}}\DIFadd{, W.~J., }{\DIFadd{Schneider}}\DIFadd{, D.~P.,
+  }{\DIFadd{Skibba}}\DIFadd{, R.~A., }{\DIFadd{Strauss}}\DIFadd{, M.~A., }{\DIFadd{Tegmark}}\DIFadd{, M., }\& {\DIFadd{York}}\DIFadd{, D.~G. 2011,
+  }\apj\DIFadd{, 736, 59
+}\DIFaddend 
 
 \end{thebibliography}
-
-
 
 \end{document}

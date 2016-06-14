@@ -82,53 +82,59 @@ A secondary effect is the cosmic variance as the referee points out.
 authors could comment on this choice (perhaps covariances are  not
 expected to be strong at these angular separations?)" 
 
-
-
-La razon principal es que no tenemos una manera robusta de estimar las covarianzas a partir de los datos observacionales. 
-El campo es muy chico y los numeros de galaxias son tan bajos que para los observadores no tiene mucho sentido hacer algo de bootstraping o jacknife como se hace con los surveys grandes. El otro camino que nos quedaba era estimarlas a partir de las simulaciones, pero volvemos al problema de tener campos chicos con pocas galaxias que hacen que las posibles matrices de covarianza no sean robustas e introduzcan mas ruido estadistico del deseado. 
-Es basicamente la misma approach de otra gente con las mismas limitaciones: https://arxiv.org/abs/1507.04356 y de alguna manera es la opcion mas conservadora.
-Te escribimos para conocer tu opinion en detalle y saber si tienes en mente una referencia concreta sobre como estimar la matriz de covarianza en un caso como el nuestro.
-
-
-Waiting for Nelson's comments. 
+We do not include the full covariance matrix due to the practical
+impossibility to estimate it in robust way either from observations or
+simulations. Followint Zehavi et al. 2011, using the full error
+covariance matrix, when not noise dominated, versus only diagonal
+elements usually has a small effect on clustering analyses . 
+We have included a new paragraph in section 2.4 clarifying this
+decision.
 
 
 Minor comments:
 
-- Is the increase of the clustering amplitude with Delta(logM) expected from the steeper increase of the bias factor for larger 
-halo masses?
+1. " Is the increase of the clustering amplitude with Delta(logM)
+  expected from the steeper increase of the bias factor for larger
+  halo masses?" 
 
 
-ANSWER: We agree witht he referee on this apreciation and added a comment on it at the end of section 3.2. Our results are  however not conclusive because cosmic variance  still dominates and  make all the models conssistent with in uncertainties as explained in the text.
+ANSWER: We agree witht he referee on this apreciation and comment on
+it at the end of section 3.2. Our results are  however not 
+conclusive because cosmic variance  still dominates and  make all the
+models consistent with in uncertainties as explained in the text. 
+ 
+
+2. "The width of the distribution of Figure 5 is measured with 27 mock
+  fields, but this does not really mean that a comparison to
+  observations requires 27 observed fields."
+
+ANSWER: WE agree witht he referee in this comment.  We actually
+wanted  to mean that to be able to accurately measure the distribution
+width, we need a number of fields of the order or larger than 27. 
 
 
-- The width of the distribution of Figure 5 is measured with 27 mock fields, but this does not really mean that a comparison to 
-observations requires 27 observed fields.
+3. Please add units to the grey scales used in Figure 3, and y-axes labels to the one dimensional probability distributions.
 
-ANSWER: WE agree witht he referee in this comment.  We actually  wanted  to mean that to be able to accurately measure the distribution width, we need a number of fields of the order or larger than 27.
+ANSWER: The labels on the y-axis of Figure 3 have arbitrary
+units, the key information are the vertical lines showing the 16-84
+percentiles. The grey scale also has arbitrary units, the key
+information are the levels marking the 1-2-3 sigma contours.  
+We have clarified this point in the caption.
 
+4. "In the introduction it is stated that previous works do not
+elaborate on cosmic variance, but in general they do, to some degree
+(for instance, Guaita et al., 2010)."
 
+ANSWER: We apreciate the reference. We added a couple of comments
+about  their attempt to estimate cosmic variance in the introduction.
 
-
-- Please add units to the grey scales used in Figure 3, and y-axes labels to the one dimensional probability distributions.
-
-ANSWER: JAIME PLEASE, BE POLITE HERE. THE CONTOURS AND PROYECTIONS ALREADY GIVE AN IDEA OF THE DISTRIBUTIONS. ADDING THESE NUMBERS
-IS QUITE COMPLCATED AND WONT CONTRIBUTE MUCH TO THE DISCUSSION. 
-
-
-- In the introduction it is stated that previous works do not elaborate on cosmic variance, but in general they do, to some degree
- (for instance, Guaita et al., 2010).
-
-ANSWER: We apreciate the reference. We added a couple of comments  about  their attempt to estimate cosmic variance in the introduction. 
-
-- S2.1: is this equivalent width limit in rest-frame?
+5. "S2.1: is this equivalent width limit in rest-frame?"
 
 ANSWER: Yes, we now explicity state that in the paper. 
 
 
-- Last paragraph 2.3: rephrase first sentence "we note by the paper M"
+6. "Last paragraph 2.3: rephrase first sentence "we note by the paper M"
 
-ANSWER: Thanks for noticing this. It is now corrected.
+ANSWER: Corrected.
 
-Reviewer: Nelson Padilla
 

@@ -442,6 +442,21 @@ $\rm{ACF}_{\mathcal M}$ as a product of cosmic variance and
 $\sigma_{\rm obs}$ is the observational error associated to
 $\rm{ACF}_{\rm obs}$.
 
+We do not include the covariance matrix due to the
+practical impossibility to estimate it in a robust way.
+The small size of the fields and galaxies make it
+unfeasible the application of jackknife and bootstrap techniques \citep{2009MNRAS.396...19N}. 
+An estimate from N-body simulation faces the same problem with the
+additional limitation that we want to solve in the first place. 
+Namely, not knowing the range of halo masses that produces the
+observed clustering signal.  
+Tests that we performed in the simulation show that, due to the small
+number of points to estimate the clustering, the covariance matrix is
+not stable, even for similar models. 
+Using the full error covariance matrix, when not noise
+dominated, versus only diagonal elements usually has a small effect
+on clustering analyses \citep{2011ApJ...736...59Z}. 
+
 
 
 We compute the $\rm{ACF}_{\mathcal M}$ using the Landy \&  Szalay
@@ -755,6 +770,8 @@ Research Center.
 
 \bibliographystyle{apj}
 %\bibliography{references.bib}
+
+
 \begin{thebibliography}{39}
 \expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
 
@@ -908,6 +925,11 @@ Research Center.
   {Micha{\l}owski}, M.~J., {Watson}, D., {Ledoux}, C., {Rosati}, P.,
   {Pedersen}, K., \& {Grove}, L.~F. 2007, \aap, 471, 71
 
+\bibitem[{{Norberg} {et~al.}(2009){Norberg}, {Baugh}, {Gazta{\~n}aga}, \&
+  {Croton}}]{2009MNRAS.396...19N}
+{Norberg}, P., {Baugh}, C.~M., {Gazta{\~n}aga}, E., \& {Croton}, D.~J. 2009,
+  \mnras, 396, 19
+
 \bibitem[{{Orsi} {et~al.}(2012){Orsi}, {Lacey}, \& {Baugh}}]{Orsi2012}
 {Orsi}, A., {Lacey}, C.~G., \& {Baugh}, C.~M. 2012, \mnras, 425, 87
 
@@ -984,8 +1006,16 @@ Riebe, K., Partl, A.~M., Enke, H., Forero-Romero, J., Gottlöber, S., Klypin,
 {Yajima}, H., {Li}, Y., {Zhu}, Q., {Abel}, T., {Gronwall}, C., \& {Ciardullo},
   R. 2014, \mnras, 440, 776
 
+\bibitem[{{Zehavi} {et~al.}(2011){Zehavi}, {Zheng}, {Weinberg}, {Blanton},
+  {Bahcall}, {Berlind}, {Brinkmann}, {Frieman}, {Gunn}, {Lupton}, {Nichol},
+  {Percival}, {Schneider}, {Skibba}, {Strauss}, {Tegmark}, \&
+  {York}}]{2011ApJ...736...59Z}
+{Zehavi}, I., {Zheng}, Z., {Weinberg}, D.~H., {Blanton}, M.~R., {Bahcall},
+  N.~A., {Berlind}, A.~A., {Brinkmann}, J., {Frieman}, J.~A., {Gunn}, J.~E.,
+  {Lupton}, R.~H., {Nichol}, R.~C., {Percival}, W.~J., {Schneider}, D.~P.,
+  {Skibba}, R.~A., {Strauss}, M.~A., {Tegmark}, M., \& {York}, D.~G. 2011,
+  \apj, 736, 59
+
 \end{thebibliography}
-
-
 
 \end{document}
